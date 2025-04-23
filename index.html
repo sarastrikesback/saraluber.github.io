@@ -8,12 +8,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     :root {
-      --sage: #a9c1a2;
-      --yellow-soft: #fff7a1;
+      --sage: #c1d7c2;
+      --sage-gradient-start: #d4e3d5;
+      --sage-gradient-end: #a9c1a2;
+      --yellow-soft: #fff9c4;
       --teal: #14b8a6;
       --gray-bg: #f8fafc;
       --white: #ffffff;
       --black: #1f2937;
+      --pink-hover: #f48fb1;
     }
 
     * {
@@ -31,15 +34,18 @@
     }
 
     header {
-      background-color: var(--sage);
+      background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end)),
+                  url('https://www.transparenttextures.com/patterns/soft-wallpaper.png'); /* Subtle texture */
+      background-size: cover;
       color: var(--black);
       padding: 1rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: bold;
+      cursor: pointer;
     }
 
     nav {
@@ -62,7 +68,7 @@
     }
 
     nav a:hover {
-      background-color: var(--teal);
+      background-color: var(--pink-hover); /* Pink hover color */
       color: var(--white);
     }
 
@@ -111,23 +117,69 @@
       color: var(--black);
       text-decoration: none;
     }
+
+    .headshot-placeholder {
+      width: 150px;
+      height: 150px;
+      background-color: var(--sage);
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .resume-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .resume-section h3 {
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .resume-section ul {
+      padding-left: 1.5rem;
+    }
+
+    .resume-section ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .personal-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .personal-gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .personal-gallery img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sara Luber</h1>
+    <h1 onclick="showTab('about')">Sara Luber</h1>
     <p>Political Data Analyst | Environmental Protection Advocate</p>
     <nav>
       <a onclick="showTab('about')">About</a>
       <a onclick="showTab('resume')">Resume</a>
       <a onclick="showTab('portfolio')">Portfolio</a>
-      <a onclick="showTab('personal')">Let's Get Personal</a>
       <a onclick="showTab('contact')">Contact</a>
     </nav>
   </header>
 
   <main>
     <section id="about" class="active">
+      <div class="headshot-placeholder"></div>
       <h2>About Me</h2>
       <p>Hi! I'm Sara — a data-savvy political science grad with a passion for renewable energy, climate justice, and communications. I currently work at the EPA and am pivoting into political data analysis and publishing. This site is my colorful space to showcase what I bring to the table!</p>
       <p>Based in Raleigh, NC — open to remote opportunities and relocation.</p>
@@ -135,17 +187,46 @@
 
     <section id="resume">
       <h2>Resume</h2>
-      <p>Here's a snapshot of my education, work experience, and technical skills. [Link to downloadable resume PDF here]</p>
+      <p>Here's a snapshot of my education, work experience, and technical skills. <a href="SaraLuber_Resume2025.pdf" target="_blank">Download my resume</a></p>
+      <div class="resume-columns">
+        <div class="resume-section">
+          <h3>Education</h3>
+          <ul>
+            <li>BA in Political Science, Minor in Environmental Science — NC State University</li>
+            <li>Professional Certificates: IBM Data Analytics, IBM Data Science</li>
+          </ul>
+        </div>
+
+        <div class="resume-section">
+          <h3>Experience</h3>
+          <ul>
+            <li>Executive Assistant — Environmental Protection Agency (2022–Present)</li>
+            <li>Correspondent — Technician (NC State's Student Newspaper)</li>
+          </ul>
+        </div>
+
+        <div class="resume-section">
+          <h3>Skills</h3>
+          <ul>
+            <li>Tools: Microsoft Excel, Microsoft 365, Python, SQL</li>
+            <li>Strengths: Communications, Policy Research, Visual Storytelling</li>
+          </ul>
+        </div>
+
+        <div class="resume-section">
+          <h3>Extras</h3>
+          <ul>
+            <li>🎓 Working on certifications in data visualization and media writing</li>
+            <li>✏️ Currently drafting a Substack newsletter on climate news & policy breakdowns</li>
+            <li>📍 Planning a move to Boston in Spring 2026!</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="portfolio">
       <h2>Portfolio</h2>
       <p>Coming soon: data dashboards, reports, environmental justice maps, and more!</p>
-    </section>
-
-    <section id="personal">
-      <h2>Let's Get Personal</h2>
-      <p>Outside of work, I love getting creative! I’ve participated in local sewing and craft shows, and regularly attend book signings and literary events. This section will grow to include blog-style updates, photos, and passion projects!</p>
     </section>
 
     <section id="contact">
@@ -155,6 +236,7 @@
         <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i>443-547-2317</a>
         <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i>LinkedIn Profile</a>
       </div>
+      <p>I am currently located in Raleigh, NC, but I am open to remote and relocation opportunities!</p>
     </section>
   </main>
 
