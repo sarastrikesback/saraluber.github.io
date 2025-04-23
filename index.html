@@ -35,9 +35,11 @@
 
     header {
       background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end)),
-                  url('https://www.transparenttextures.com/patterns/soft-wallpaper.png'); /* Subtle texture */
-      background-size: cover;
+                  url('https://www.transparenttextures.com/patterns/flower-dust.png'); /* Prominent floral texture */
+      background-size: 200px 200px; /* Increased size for a bolder floral pattern */
       background-position: center;
+      background-attachment: fixed; /* Keeps the background fixed as you scroll */
+      opacity: 0.9; /* Makes the floral background more visible */
       color: var(--black);
       padding: 1rem;
       text-align: center;
@@ -173,7 +175,9 @@
 
     .floral-background {
       background-image: url('https://www.transparenttextures.com/patterns/flower-dust.png'); /* Subtle floral pattern */
-      background-size: 100px 100px;
+      background-size: 200px 200px;
+      background-position: center;
+      opacity: 0.8; /* Increased visibility */
     }
   </style>
 </head>
