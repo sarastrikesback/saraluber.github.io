@@ -9,7 +9,7 @@
 body {
   font-family: 'Georgia', serif;
   background-color: var(--main-bg);
-  background-image: url("dark-exa.png"); /* make sure this file is in the same directory */
+  background-image: url("dark-exa.htm");
   color: var(--text-color);
   line-height: 1.6;
   padding: 20px;
