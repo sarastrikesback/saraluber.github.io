@@ -48,7 +48,7 @@ nav a:hover {
 }
 
 section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 10px;
 }
@@ -80,15 +80,8 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
-.headshot-image {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
+/* About Section Layout */
 .about-container {
   display: flex;
   align-items: flex-start;
@@ -96,12 +89,19 @@ footer {
   flex-wrap: wrap;
 }
 
+/* Headshot Styling */
 .headshot-image {
   width: 160px;
   height: 160px;
   object-fit: cover;
   border-radius: 12px;
-  border: 4px solid #2e7d32; /* deep sage green from your theme */
+  border: 4px solid var(--accent);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+}
+
+/* Paragraph next to headshot */
+.about-container p {
+  flex: 1;
+  min-width: 250px;
 }
