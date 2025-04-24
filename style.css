@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-  background-color: #f8c9c3; /* lighter pink */
+  background-color: #f6bcbc; /* medium-light pink */
   padding: 20px;
   text-align: center;
 }
@@ -37,7 +37,7 @@ nav {
   font-weight: 600;
   padding: 10px;
   border-radius: 5px;
-  background-color: #f8c9c3; /* lighter pink */
+  background-color: #f6bcbc;
   transition: background-color 0.3s ease;
 }
 
@@ -148,7 +148,7 @@ main section.active {
 
 /* Footer */
 footer {
-  background-color: #f8c9c3;
+  background-color: #f6bcbc;
   text-align: center;
   padding: 15px;
 }
