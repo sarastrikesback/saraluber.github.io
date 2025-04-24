@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-  background-color: #f6bcbc; /* medium-light pink */
+  background-color: #f9a9b8; /* new soft coral pink */
   padding: 20px;
   text-align: center;
 }
@@ -37,7 +37,7 @@ nav {
   font-weight: 600;
   padding: 10px;
   border-radius: 5px;
-  background-color: #f6bcbc;
+  background-color: #f9a9b8;
   transition: background-color 0.3s ease;
 }
 
@@ -59,7 +59,7 @@ main {
 }
 
 main h2 {
-  color: #f5b7b1;
+  color: #f9a9b8;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
@@ -148,7 +148,7 @@ main section.active {
 
 /* Footer */
 footer {
-  background-color: #f6bcbc;
+  background-color: #f9a9b8;
   text-align: center;
   padding: 15px;
 }
