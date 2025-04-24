@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-  background-color: #f9a9b8; /* new soft coral pink */
+  background-color: #c9e4f6; /* soft blue */
   padding: 20px;
   text-align: center;
 }
@@ -37,12 +37,12 @@ nav {
   font-weight: 600;
   padding: 10px;
   border-radius: 5px;
-  background-color: #f9a9b8;
+  background-color: #c9e4f6;
   transition: background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: #ff8da1;
+  background-color: #a4d4ec;
 }
 
 /* Active Tab Color */
@@ -59,7 +59,7 @@ main {
 }
 
 main h2 {
-  color: #f9a9b8;
+  color: #c9e4f6;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
@@ -82,14 +82,14 @@ main section.active {
 
 .resume-section {
   flex: 1 1 200px;
-  background-color: #fff0f0;
+  background-color: #eef8fb;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .resume-section h3 {
-  color: #cc5c5c;
+  color: #4a8caf;
   font-size: 1.2rem;
 }
 
@@ -102,7 +102,7 @@ main section.active {
 }
 
 .gallery-wrapper > div {
-  background-color: #fff0f0;
+  background-color: #eef8fb;
   border-radius: 15px;
   padding: 15px;
   flex: 1 1 200px;
@@ -110,7 +110,7 @@ main section.active {
 }
 
 .gallery-wrapper h3 {
-  color: #cc5c5c;
+  color: #4a8caf;
 }
 
 /* About Me Section */
@@ -143,12 +143,12 @@ main section.active {
 
 .contact-icons i {
   margin-right: 8px;
-  color: #cc5c5c;
+  color: #4a8caf;
 }
 
 /* Footer */
 footer {
-  background-color: #f9a9b8;
+  background-color: #c9e4f6;
   text-align: center;
   padding: 15px;
 }
