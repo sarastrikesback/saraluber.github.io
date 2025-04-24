@@ -2,14 +2,14 @@
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #fdf5f5;
-  color: #333;
+  color: #2c3e50; /* darker text for contrast */
   margin: 0;
   padding: 0;
 }
 
 /* Header */
 header {
-  background-color: #c9e4f6; /* soft blue */
+  background-color: #B0C4DE; /* Light Steel Blue */
   padding: 20px;
   text-align: center;
 }
@@ -18,11 +18,13 @@ header h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   cursor: pointer;
+  color: #2c3e50;
 }
 
 header p {
   font-size: 1.1rem;
   margin-top: 5px;
+  color: #2c3e50;
 }
 
 /* Navigation */
@@ -33,16 +35,16 @@ nav {
 .nav-link {
   margin: 0 15px;
   text-decoration: none;
-  color: #333;
+  color: #2c3e50;
   font-weight: 600;
   padding: 10px;
   border-radius: 5px;
-  background-color: #c9e4f6;
+  background-color: #B0C4DE;
   transition: background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: #a4d4ec;
+  background-color: #9bb3d3; /* darker blue for hover */
 }
 
 /* Active Tab Color */
@@ -59,11 +61,12 @@ main {
 }
 
 main h2 {
-  color: #c9e4f6;
+  color: #B0C4DE;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
 
+/* Tabs Content */
 main section {
   display: none;
 }
@@ -82,14 +85,14 @@ main section.active {
 
 .resume-section {
   flex: 1 1 200px;
-  background-color: #eef8fb;
+  background-color: #e8eff7; /* lighter blue background for cards */
   border-radius: 15px;
   padding: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .resume-section h3 {
-  color: #4a8caf;
+  color: #3b5998; /* navy-blue */
   font-size: 1.2rem;
 }
 
@@ -102,7 +105,7 @@ main section.active {
 }
 
 .gallery-wrapper > div {
-  background-color: #eef8fb;
+  background-color: #e8eff7;
   border-radius: 15px;
   padding: 15px;
   flex: 1 1 200px;
@@ -110,7 +113,7 @@ main section.active {
 }
 
 .gallery-wrapper h3 {
-  color: #4a8caf;
+  color: #3b5998;
 }
 
 /* About Me Section */
@@ -137,24 +140,24 @@ main section.active {
 
 .contact-icons a {
   text-decoration: none;
-  color: #333;
+  color: #2c3e50;
   font-weight: 600;
 }
 
 .contact-icons i {
   margin-right: 8px;
-  color: #4a8caf;
+  color: #3b5998;
 }
 
 /* Footer */
 footer {
-  background-color: #c9e4f6;
+  background-color: #B0C4DE;
   text-align: center;
   padding: 15px;
 }
 
 footer p {
-  color: #333;
+  color: #2c3e50;
   font-weight: 600;
   font-size: 1rem;
 }
