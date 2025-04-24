@@ -4,16 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sara Luber's professional portfolio and resume site." />
-  <!-- Favicon Setup -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
   <title>Sara Luber | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    /* Include the CSS from below here */
-  </style>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -22,29 +19,26 @@
     <nav>
       <a href="#" onclick="showTab('about'); return false;">Home</a>
       <a href="#" onclick="showTab('resume'); return false;">Resume</a>
-      <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank" rel="noopener noreferrer" title="Download Resume">
-        <i class="bi bi-file-earmark-arrow-down-fill"></i>
-      </a>
       <a href="#" onclick="showTab('portfolio'); return false;">Projects</a>
       <a href="#" onclick="showTab('contact'); return false;">Contact</a>
+      <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank" title="Download Resume">
+        <i class="bi bi-file-earmark-arrow-down-fill"></i>
+      </a>
     </nav>
-    <button id="nav-toggle" class="nav-toggle">☰</button>
   </header>
 
   <main>
     <section id="about" class="active">
       <h2>About Me</h2>
       <div class="about-container">
-        <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" class="headshot-image">
-        <p>
-          Hi! I'm Sara - need to add additional info here ...maybe pull from LinkedIn already drafted language?
-        </p>
+        <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" class="headshot-image" />
+        <p>Hi! I'm Sara — a passionate political data analyst and storyteller who loves helping people make sense of the world through visuals and clear communication. Currently working at the EPA, but always dreaming up creative side projects.</p>
       </div>
     </section>
 
     <section id="resume">
       <h2>Resume</h2>
-      <p>Here's a snapshot of my education, work experience, and technical skills. <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank">Download my resume</a></p>
+      <p>Here's a snapshot of my education, experience, and skills. <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank">Download my resume</a></p>
       <div class="resume-columns">
         <div class="resume-section">
           <h3>Education</h3>
@@ -58,14 +52,14 @@
           <h3>Experience</h3>
           <ul>
             <li>Executive Assistant — Environmental Protection Agency (2022–Present)</li>
-            <li>Correspondent — Technician (NC State's Student Newspaper)</li>
+            <li>Correspondent — Technician (NC State Student Newspaper)</li>
           </ul>
         </div>
 
         <div class="resume-section">
           <h3>Skills</h3>
           <ul>
-            <li>Tools: Microsoft Excel, Microsoft 365, Python, SQL</li>
+            <li>Tools: Excel, Microsoft 365, Python, SQL</li>
             <li>Strengths: Communications, Policy Research, Visual Storytelling</li>
           </ul>
         </div>
@@ -73,8 +67,8 @@
         <div class="resume-section">
           <h3>Extras</h3>
           <ul>
-            <li>🎓 Working on certifications in data visualization and media writing</li>
-            <li>✏️ Currently drafting a Substack newsletter on climate news & policy breakdowns</li>
+            <li>🎓 Studying data viz and media writing</li>
+            <li>✏️ Drafting a Substack on climate + policy</li>
             <li>📍 Planning a move to Boston in Spring 2026!</li>
           </ul>
         </div>
@@ -83,30 +77,32 @@
 
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <div>
-        <h3>Writing Samples</h3>
-        <p>Explore my articles, blog posts, and policy analyses here.</p>
-        <a href="#">Writing Samples Link</a>
-      </div>
-      <div>
-        <h3>Python Projects</h3>
-        <p>Check out my Python-driven projects and visualizations.</p>
-        <a href="#">Python Projects Link</a>
-      </div>
-      <div>
-        <h3>Power BI Projects</h3>
-        <p>Explore my dashboards and visual storytelling with Power BI.</p>
-        <a href="#">Power BI Projects Link</a>
+      <div class="gallery-wrapper">
+        <div>
+          <h3>Writing Samples</h3>
+          <p>Articles, blogs, and policy breakdowns.</p>
+          <a href="#">View Writing</a>
+        </div>
+        <div>
+          <h3>Python Projects</h3>
+          <p>Data visualizations and analysis in Python.</p>
+          <a href="#">View Python</a>
+        </div>
+        <div>
+          <h3>Power BI Dashboards</h3>
+          <p>Visual storytelling through dashboards.</p>
+          <a href="#">View Dashboards</a>
+        </div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="contact-icons">
-        <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i>sarafluber@gmail.com</a>
-        <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i>443-547-2317</a>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i>LinkedIn Profile</a>
-        <p><i class="bi bi-geo-alt-fill location-icon"></i>Currently located in Raleigh, NC, open to remote and relocation opportunities.</p>
+        <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i> sarafluber@gmail.com</a>
+        <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i> 443-547-2317</a>
+        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        <p><i class="bi bi-geo-alt-fill location-icon"></i> Raleigh, NC — Open to remote & relocation!</p>
       </div>
     </section>
   </main>
@@ -117,21 +113,9 @@
 
   <script>
     function showTab(id) {
-      const sections = document.querySelectorAll('main section');
-      sections.forEach(section => section.classList.remove('active'));
+      document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
-      
-      const links = document.querySelectorAll('nav a');
-      links.forEach(link => link.classList.remove('active'));
-      const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-      activeLink.classList.add('active');
     }
-
-    // Mobile navigation toggle
-    document.getElementById('nav-toggle').addEventListener('click', () => {
-      const navbar = document.querySelector('nav');
-      navbar.classList.toggle('active');
-    });
   </script>
 </body>
 </html>
