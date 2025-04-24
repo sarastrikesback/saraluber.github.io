@@ -1,8 +1,8 @@
 /* General Styles */
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #fdf5f5;
-  color: #2c3e50; /* darker text for contrast */
+  background-color: #B0C4DE; /* Light Steel Blue */
+  color: #2c3e50; /* Darker text for contrast */
   margin: 0;
   padding: 0;
 }
@@ -44,7 +44,7 @@ nav {
 }
 
 .nav-link:hover {
-  background-color: #9bb3d3; /* darker blue for hover */
+  background-color: #9bb3d3; /* Darker blue for hover */
 }
 
 /* Active Tab Color */
@@ -83,16 +83,24 @@ main section.active {
   justify-content: space-between;
 }
 
+.resume-section,
+.gallery-wrapper > div,
+.about-container,
+.contact-icons {
+  background-color: #dbe3ea; /* Soft gray/steel blue */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #2c3e50; /* Ensures readable font inside boxes */
+}
+
 .resume-section {
   flex: 1 1 200px;
-  background-color: #e8eff7; /* lighter blue background for cards */
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .resume-section h3 {
-  color: #3b5998; /* navy-blue */
+  color: #3b5998; /* Navy blue for section headers */
   font-size: 1.2rem;
 }
 
@@ -104,16 +112,8 @@ main section.active {
   flex-wrap: wrap;
 }
 
-.gallery-wrapper > div {
-  background-color: #e8eff7;
-  border-radius: 15px;
-  padding: 15px;
-  flex: 1 1 200px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 .gallery-wrapper h3 {
-  color: #3b5998;
+  color: #3b5998; /* Navy blue for section headers */
 }
 
 /* About Me Section */
@@ -127,7 +127,7 @@ main section.active {
 .headshot-image {
   max-width: 150px;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Section */
@@ -160,16 +160,4 @@ footer p {
   color: #2c3e50;
   font-weight: 600;
   font-size: 1rem;
-}
-
-/* Box / Section Container Styling */
-.resume-section,
-.gallery-wrapper > div,
-.about-container,
-.contact-icons {
-  background-color: #dbe3ea; /* soft gray/steel blue */
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
