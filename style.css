@@ -198,3 +198,20 @@ footer p {
 .resume-link:hover {
   background-color: #9bb3d3;
 }
+
+/* Styling for certificate links */
+.certificate-links {
+  margin-top: 20px;
+}
+
+.certificate-links a {
+  display: block;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.certificate-links a:hover {
+  text-decoration: underline;
+}
