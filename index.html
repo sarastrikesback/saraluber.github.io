@@ -1,81 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sara Luber's professional portfolio and resume site." />
-  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
-  <title>Sara Luber | Portfolio</title>
+<!-- About Me Section -->
+<section id="about" class="active">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" class="headshot-image" />
+    <p>Hi! I'm Sara — a passionate political data analyst and storyteller who loves helping people make sense of the world through visuals and clear communication. Currently working at the EPA, but always dreaming up creative side projects.</p>
+  </div>
+</section>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<!-- Resume Section -->
+<section id="resume">
+  <h2>Resume</h2>
+  <p>Here's a snapshot of my education, experience, and skills. <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank">Download my resume</a></p>
+  <div class="resume-columns">
+    <div class="resume-section">
+      <h3>Education</h3>
+      <ul>
+        <li>BA in Political Science, Minor in Environmental Science — NC State University</li>
+        <li>Professional Certificates: IBM Data Analytics, IBM Data Science</li>
+      </ul>
+    </div>
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1 onclick="showTab('about')">Sara Luber</h1>
-    <p>Political Data Analyst | Environmental Protection Advocate</p>
-    <nav>
-      <a href="#" onclick="showTab('about'); return false;" class="nav-link" id="about-tab">Home</a>
-      <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
-      <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
-      <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
-    </nav>
-  </header>
+    <div class="resume-section">
+      <h3>Experience</h3>
+      <ul>
+        <li>Executive Assistant — Environmental Protection Agency (2022–Present)</li>
+        <li>Correspondent — Technician (NC State Student Newspaper)</li>
+      </ul>
+    </div>
 
-  <main>
-    <section id="about" class="active">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" class="headshot-image" />
-        <p>Hi! I'm Sara — a passionate political data analyst and storyteller who loves helping people make sense of the world through visuals and clear communication. Currently working at the EPA, but always dreaming up creative side projects.</p>
-      </div>
-    </section>
+    <div class="resume-section">
+      <h3>Skills</h3>
+      <ul>
+        <li>Tools: Excel, Microsoft 365, Python, SQL</li>
+        <li>Strengths: Communications, Policy Research, Visual Storytelling</li>
+      </ul>
+    </div>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Here's a snapshot of my education, experience, and skills.</p>
-      <div class="resume-columns">
-        <div class="resume-section">
-          <h3>Education</h3>
-          <ul>
-            <li>BA in Political Science, Minor in Environmental Science — NC State University</li>
-            <li>Professional Certificates: IBM Data Analytics, IBM Data Science</li>
-          </ul>
-        </div>
+    <div class="resume-section">
+      <h3>Extras</h3>
+      <ul>
+        <li>🎓 Studying data viz and media writing</li>
+        <li>✏️ Drafting a Substack on climate + policy</li>
+        <li>📍 Planning a move to Boston in Spring 2026!</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        <div class="resume-section">
-          <h3>Experience</h3>
-          <ul>
-            <li>Executive Assistant — Environmental Protection Agency (2022–Present)</li>
-            <li>Correspondent — Technician (NC State Student Newspaper)</li>
-          </ul>
-        </div>
-
-        <div class="resume-section">
-          <h3>Skills</h3>
-          <ul>
-            <li>Tools: Excel, Microsoft 365, Python, SQL</li>
-            <li>Strengths: Communications, Policy Research, Visual Storytelling</li>
-          </ul>
-        </div>
-
-        <div class="resume-section">
-          <h3>Extras</h3>
-          <ul>
-            <li>🎓 Studying data viz and media writing</li>
-            <li>✏️ Drafting a Substack on climate + policy</li>
-            <li>📍 Planning a move to Boston in Spring 2026!</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
+<!-- Portfolio Section -->
+<section id="portfolio">
   <h2>Portfolio</h2>
   <p>Here's a collection of my work across various projects.</p>
   <div class="portfolio-columns">
@@ -99,35 +72,13 @@
   </div>
 </section>
 
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-icons">
-        <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i> sarafluber@gmail.com</a>
-        <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i> 443-547-2317</a>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
-        <p><i class="bi bi-geo-alt-fill location-icon"></i> Raleigh, NC — Open to remote & relocation!</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Sara Luber — designed with creativity & color 🌸</p>
-  </footer>
-
-  <script>
-    function showTab(id) {
-      // Reset active tab styles
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.style.backgroundColor = 'lightpink'; // light pink for inactive tabs
-      });
-      document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-
-      // Set active tab color
-      const activeTab = document.getElementById(`${id}-tab`);
-      activeTab.style.backgroundColor = 'lavender'; // lavender for active tab
-    }
-  </script>
-</body>
-</html>
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i> sarafluber@gmail.com</a>
+    <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i> 443-547-2317</a>
+    <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+    <p><i class="bi bi-geo-alt-fill location-icon"></i> Raleigh, NC — Open to remote & relocation!</p>
+  </div>
+</section>
