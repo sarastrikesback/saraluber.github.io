@@ -12,182 +12,7 @@
   <title>Sara Luber | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    :root {
-      --sage: #c1d7c2;
-      --sage-gradient-start: #d4e3d5;
-      --sage-gradient-end: #a9c1a2;
-      --yellow-soft: #fff9c4;
-      --teal: #14b8a6;
-      --gray-bg: #f8fafc;
-      --white: #ffffff;
-      --black: #1f2937;
-      --pink-hover: #f48fb1;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Helvetica, Arial, sans-serif;
-    }
-
-    body {
-      background-color: var(--gray-bg);
-      color: var(--black);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end)),
-                  url('https://www.transparenttextures.com/patterns/dark-exa.png');
-      background-size: 150px 150px;
-      background-position: center;
-      background-attachment: fixed;
-      opacity: 0.9;
-      color: var(--black);
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      background-color: var(--yellow-soft);
-      color: var(--black);
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      background-color: var(--pink-hover);
-      color: var(--white);
-    }
-
-    main {
-      padding: 2rem;
-      position: relative;
-    }
-
-    section {
-      display: none;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      background-color: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    section.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h1, h2 {
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: var(--sage);
-      color: var(--black);
-    }
-
-    .contact-icons i {
-      margin-right: 0.5rem;
-      color: var(--teal);
-    }
-
-    .contact-icons a {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--black);
-      text-decoration: none;
-    }
-
-    .headshot-image {
-      width: 200px;
-      height: 150px;
-      border: 5px solid #f48fb1;
-      object-fit: cover;
-      margin-right: 1rem;
-    }
-
-    .about-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .resume-columns {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .resume-section h3 {
-      color: var(--teal);
-      margin-bottom: 0.5rem;
-    }
-
-    .resume-section ul {
-      padding-left: 1.5rem;
-    }
-
-    .resume-section ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    .personal-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .personal-gallery img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .personal-gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .location-icon {
-      margin-right: 0.5rem;
-      color: var(--teal);
-    }
-
-    .floral-background {
-      background-image: url('https://www.transparenttextures.com/patterns/soft-fabric-light.png');
-      background-size: 150px 150px;
-      background-position: center;
-      opacity: 0.9;
-    }
+    /* Include the CSS from below here */
   </style>
 </head>
 <body>
@@ -203,6 +28,7 @@
       <a href="#" onclick="showTab('portfolio'); return false;">Projects</a>
       <a href="#" onclick="showTab('contact'); return false;">Contact</a>
     </nav>
+    <button id="nav-toggle" class="nav-toggle">☰</button>
   </header>
 
   <main>
@@ -294,7 +120,18 @@
       const sections = document.querySelectorAll('main section');
       sections.forEach(section => section.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => link.classList.remove('active'));
+      const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+      activeLink.classList.add('active');
     }
+
+    // Mobile navigation toggle
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      const navbar = document.querySelector('nav');
+      navbar.classList.toggle('active');
+    });
   </script>
 </body>
 </html>
