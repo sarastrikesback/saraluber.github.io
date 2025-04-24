@@ -10,11 +10,16 @@ body {
 /* Header */
 header {
   background-color: #B0C4DE; /* Light Steel Blue */
+  background-image: 
+    linear-gradient(135deg, #B0C4DE 25%, #A9B9CC 100%), 
+    url('https://www.toptal.com/designers/subtlepatterns/patterns/geometry.png'); /* Simple texture image */
+  background-size: 100% 100%, cover; /* Ensures the texture is spread across the header */
+  background-position: center, center;
   padding: 20px;
   text-align: center;
-  position: sticky; /* Make the header sticky */
-  top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensures the header stays on top of other content */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Keep it on top of other content */
 }
 
 header h1 {
