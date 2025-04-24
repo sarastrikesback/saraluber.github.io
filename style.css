@@ -1,159 +1,137 @@
-:root {
-  --sage: #c1d7c2;
-  --sage-gradient-start: #d4e3d5;
-  --sage-gradient-end: #a9c1a2;
-  --yellow-soft: #fff9c4;
-  --teal: #14b8a6;
-  --gray-bg: #f8fafc;
-  --white: #ffffff;
-  --black: #1f2937;
-  --pink-hover: #f48fb1;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
+/* Base Styles */
 body {
-  background-color: var(--gray-bg);
-  color: var(--black);
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/floral-wallpaper.png');
+  background-color: #f7f5f2;
+  color: #333;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
-header {
-  background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end));
-  background-size: cover;
-  color: var(--black);
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #3d3d3d;
 }
 
-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
+h1 {
+  font-size: 2.5rem;
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+header p {
+  text-align: center;
+  font-weight: 600;
+  color: #6b6b6b;
+  margin-bottom: 1rem;
 }
 
 nav {
-  margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
+  background-color: #ffe4e1;
+  padding: 0.75rem 0;
+  flex-wrap: wrap;
+  font-weight: 600;
 }
 
 nav a {
-  background-color: var(--yellow-soft);
-  color: var(--black);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  color: #d6336c;
 }
 
 nav a:hover {
-  background-color: var(--pink-hover);
-  color: var(--white);
+  text-decoration: underline;
 }
 
 main {
   padding: 2rem;
 }
 
-section {
-  display: none;
-  background-color: var(--white);
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-section.active {
-  display: block;
-  transform: translateY(0);
-  opacity: 1;
-}
-
 .about-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .headshot-image {
-  width: 200px;
-  height: 150px;
-  border: 5px solid var(--pink-hover);
-  border-radius: 12px;
-  object-fit: cover;
+  max-width: 150px;
+  border-radius: 50%;
+  border: 3px dashed #ffb6b9;
 }
 
 .resume-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.resume-section h3 {
-  color: var(--teal);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .resume-section ul {
-  padding-left: 1.25rem;
+  padding-left: 1.2rem;
 }
 
 .gallery-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .gallery-wrapper div {
-  background-color: var(--sage);
+  border: 2px dotted #b0e0e6;
   padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.gallery-wrapper div:hover {
-  transform: scale(1.03);
+  background-color: #ffffffbb;
+  border-radius: 1rem;
 }
 
 .gallery-wrapper a {
   display: inline-block;
   margin-top: 0.5rem;
-  font-weight: bold;
-  color: var(--teal);
+  color: #008b8b;
+  font-weight: 600;
 }
 
-.contact-icons a {
+.contact-icons a, .contact-icons p {
   display: block;
   margin: 0.5rem 0;
-  color: var(--black);
-  text-decoration: none;
-}
-
-.contact-icons i {
-  margin-right: 0.5rem;
-  color: var(--teal);
+  color: #333;
 }
 
 footer {
+  background-color: #ffdee9;
   text-align: center;
   padding: 1rem;
-  background-color: var(--sage);
-  color: var(--black);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Accessibility and Tabs */
+section {
+  display: none;
+  animation: fadeIn 0.5s ease-in;
+}
+
+section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
