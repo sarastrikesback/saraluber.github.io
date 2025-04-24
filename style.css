@@ -1,128 +1,86 @@
-/* General Flexbox Layout for Sections */
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* General Styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fdf5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #f5b7b1; /* light pink */
   padding: 20px;
+  text-align: center;
 }
 
-h2 {
-  color: #f5b7b1;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* About Me Section */
-#about .about-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-}
-
-.headshot-image {
-  width: 150px;
-  border-radius: 50%;
-  border: 2px solid #f5b7b1;
-}
-
-#about p {
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-/* Resume Section */
-#resume .resume-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.resume-section {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #f5b7b1;
-  width: 48%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.resume-section h3 {
-  color: #f5b7b1;
-  font-size: 1.4rem;
-}
-
-.resume-section ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-.resume-section a {
-  display: inline-block;
-  color: #f5b7b1;
+header h1 {
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
+  cursor: pointer;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+}
+
+.nav-link {
+  margin: 0 15px;
   text-decoration: none;
-  border: 1px solid #f5b7b1;
-  padding: 5px 10px;
+  color: #333;
+  font-weight: 600;
+  padding: 10px;
   border-radius: 5px;
+  background-color: lightpink;
+  transition: background-color 0.3s ease;
 }
 
-.resume-section a:hover {
+.nav-link:hover {
+  background-color: #ff8da1;
+}
+
+/* Active Tab Color */
+#about-tab.active,
+#resume-tab.active,
+#portfolio-tab.active,
+#contact-tab.active {
+  background-color: lavender;
+}
+
+/* Main Section */
+main {
+  padding: 30px;
+}
+
+main h2 {
+  color: #f5b7b1;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+main section {
+  display: none;
+}
+
+main section.active {
+  display: block;
+}
+
+/* Footer */
+footer {
   background-color: #f5b7b1;
-  color: #fff;
-}
-
-/* Portfolio Section */
-#portfolio .portfolio-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.portfolio-section {
-  background-color: #ffffff;
+  text-align: center;
   padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #f5b7b1;
-  width: 30%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-section h3 {
-  color: #f5b7b1;
-  font-size: 1.3rem;
-}
-
-.portfolio-section a {
-  display: inline-block;
-  color: #f5b7b1;
+footer p {
+  color: #333;
   font-weight: 600;
-  text-decoration: none;
-  border: 1px solid #f5b7b1;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.portfolio-section a:hover {
-  background-color: #f5b7b1;
-  color: #fff;
-}
-
-/* Contact Section */
-#contact .contact-icons {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#contact a {
-  display: inline-block;
-  color: #f5b7b1;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-#contact a:hover {
-  color: #d77e8b;
+  font-size: 1rem;
 }
