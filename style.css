@@ -25,45 +25,36 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end)),
-              url('https://www.transparenttextures.com/patterns/dark-exa.png');
-  background-size: 150px 150px;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: 0.9;
+  background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end));
+  background-size: cover;
   color: var(--black);
   padding: 1rem;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
-}
-
-header h1:hover {
-  color: var(--teal);
-  text-decoration: underline;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 nav a {
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
   background-color: var(--yellow-soft);
   color: var(--black);
-  font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -71,45 +62,93 @@ nav a:hover {
   color: var(--white);
 }
 
-nav a.active {
-  border-bottom: 2px solid var(--teal);
-  color: var(--teal);
-}
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--black);
-  cursor: pointer;
-}
-
 main {
   padding: 2rem;
-  position: relative;
 }
 
 section {
   display: none;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
   background-color: var(--white);
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
   margin-bottom: 2rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 section.active {
   display: block;
-  opacity: 1;
   transform: translateY(0);
+  opacity: 1;
 }
 
-h1, h2 {
-  margin-bottom: 1rem;
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headshot-image {
+  width: 200px;
+  height: 150px;
+  border: 5px solid var(--pink-hover);
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.resume-section h3 {
+  color: var(--teal);
+}
+
+.resume-section ul {
+  padding-left: 1.25rem;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-wrapper div {
+  background-color: var(--sage);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery-wrapper div:hover {
+  transform: scale(1.03);
+}
+
+.gallery-wrapper a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--teal);
+}
+
+.contact-icons a {
+  display: block;
+  margin: 0.5rem 0;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.contact-icons i {
+  margin-right: 0.5rem;
+  color: var(--teal);
 }
 
 footer {
@@ -118,71 +157,3 @@ footer {
   background-color: var(--sage);
   color: var(--black);
 }
-
-.contact-icons i {
-  margin-right: 0.5rem;
-  color: var(--teal);
-}
-
-.contact-icons a {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--black);
-  text-decoration: none;
-}
-
-.contact-icons i:hover {
-  transform: scale(1.1);
-  color: var(--teal);
-}
-
-.headshot-image {
-  width: 250px;
-  height: 250px;
-  border: 5px solid #f48fb1;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
-
-.about-container {
-  display: flex;
-  align-items: center;
-}
-
-.resume-columns {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.resume-section h3 {
-  color: var(--teal);
-  margin-bottom: 0.5rem;
-}
-
-.resume-section ul {
-  padding-left: 1.5rem;
-}
-
-.resume-section ul li {
-  margin-bottom: 0.5rem;
-}
-
-.personal-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.personal-gallery img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.personal-gallery img:hover {
-  transform: scale(1
