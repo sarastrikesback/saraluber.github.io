@@ -127,12 +127,16 @@
     }
 
     .headshot-image {
-      width: 150px;
+      width: 200px;
       height: 150px;
-      border-radius: 50%;
+      border: 5px solid #f48fb1;
       object-fit: cover;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-right: 1rem;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
     }
 
     .resume-columns {
@@ -193,7 +197,7 @@
     <nav>
       <a href="#" onclick="showTab('about'); return false;">Home</a>
       <a href="#" onclick="showTab('resume'); return false;">Resume</a>
-      <a href="https://raw.githubusercontent.com/sarastrikesback/saraluber.github.io/main/Resume.pdf" target="_blank" rel="noopener noreferrer" title="Download Resume">
+      <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank" rel="noopener noreferrer" title="Download Resume">
         <i class="bi bi-file-earmark-arrow-down-fill"></i>
       </a>
       <a href="#" onclick="showTab('portfolio'); return false;">Projects</a>
@@ -214,7 +218,7 @@
 
     <section id="resume">
       <h2>Resume</h2>
-      <p>Here's a snapshot of my education, work experience, and technical skills. <a href="https://raw.githubusercontent.com/sarastrikesback/saraluber.github.io/main/Resume.pdf" target="_blank">Download my resume</a></p>
+      <p>Here's a snapshot of my education, work experience, and technical skills. <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank">Download my resume</a></p>
       <div class="resume-columns">
         <div class="resume-section">
           <h3>Education</h3>
@@ -243,9 +247,9 @@
         <div class="resume-section">
           <h3>Extras</h3>
           <ul>
-            <li>🎓 Graduated ... any class enrollments or anything i want to work on or highlight? </li>
-            <li>✏️ Potential blog? </li>
-            <li>📍 Currently Located in Raleigh NC but open to relocation with a preference for the Northeast</li>
+            <li>🎓 Working on certifications in data visualization and media writing</li>
+            <li>✏️ Currently drafting a Substack newsletter on climate news & policy breakdowns</li>
+            <li>📍 Planning a move to Boston in Spring 2026!</li>
           </ul>
         </div>
       </div>
@@ -255,17 +259,17 @@
       <h2>Portfolio</h2>
       <div>
         <h3>Writing Samples</h3>
-        <p>link previous writing samples and social data analyses.</p>
+        <p>Explore my articles, blog posts, and policy analyses here.</p>
         <a href="#">Writing Samples Link</a>
       </div>
       <div>
         <h3>Python Projects</h3>
-        <p>Link Github and maybe have some previews or something - not sure how interactive we can get.</p>
+        <p>Check out my Python-driven projects and visualizations.</p>
         <a href="#">Python Projects Link</a>
       </div>
       <div>
         <h3>Power BI Projects</h3>
-        <p>Link PowerBi Dashboards and such - interactive???.</p>
+        <p>Explore my dashboards and visual storytelling with Power BI.</p>
         <a href="#">Power BI Projects Link</a>
       </div>
     </section>
