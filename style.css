@@ -161,3 +161,15 @@ footer p {
   font-weight: 600;
   font-size: 1rem;
 }
+
+/* Box / Section Container Styling */
+.resume-section,
+.gallery-wrapper > div,
+.about-container,
+.contact-icons {
+  background-color: #dbe3ea; /* soft gray/steel blue */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
