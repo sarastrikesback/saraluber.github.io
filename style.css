@@ -84,3 +84,56 @@ footer p {
   font-weight: 600;
   font-size: 1rem;
 }
+/* Portfolio Section */
+#portfolio {
+  padding: 20px;
+}
+
+.portfolio-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.portfolio-section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-section:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-section h3 {
+  color: #f5b7b1;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-section p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.portfolio-section a {
+  display: inline-block;
+  color: #f5b7b1;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #f5b7b1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-section a:hover {
+  background-color: #f5b7b1;
+  color: #fff;
+}
+
