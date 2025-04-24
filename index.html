@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sara Luber's professional portfolio and resume site." />
   <!-- Favicon Setup -->
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
   <title>Sara Luber | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
@@ -37,17 +37,17 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    
-   header {
-  background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end)),
-              url('https://www.transparenttextures.com/patterns/dark-exa.png');
-  background-size: 150px 150px;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: 0.9;
-  color: var(--black);
-  padding: 1rem;
-  text-align: center;
+
+    header {
+      background: linear-gradient(135deg, var(--sage-gradient-start), var(--sage-gradient-end)),
+                  url('https://www.transparenttextures.com/patterns/dark-exa.png');
+      background-size: 150px 150px;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0.9;
+      color: var(--black);
+      padding: 1rem;
+      text-align: center;
     }
 
     header h1 {
@@ -76,7 +76,7 @@
     }
 
     nav a:hover {
-      background-color: var(--pink-hover); /* Pink hover color */
+      background-color: var(--pink-hover);
       color: var(--white);
     }
 
@@ -126,12 +126,13 @@
       text-decoration: none;
     }
 
-    .headshot-placeholder {
+    .headshot-image {
       width: 150px;
       height: 150px;
-      background-color: var(--sage);
       border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .resume-columns {
@@ -172,17 +173,16 @@
       transform: scale(1.05);
     }
 
-    /* Added for location icon and subtle floral design */
     .location-icon {
       margin-right: 0.5rem;
       color: var(--teal);
     }
 
     .floral-background {
-      background-image: url('https://www.transparenttextures.com/patterns/soft-fabric-light.png'); /* Subtle floral pattern */
+      background-image: url('https://www.transparenttextures.com/patterns/soft-fabric-light.png');
       background-size: 150px 150px;
       background-position: center;
-      opacity: 0.9; /* Increased visibility */
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -191,32 +191,30 @@
     <h1 onclick="showTab('about')">Sara Luber</h1>
     <p>Political Data Analyst | Environmental Protection Advocate</p>
     <nav>
-  <a onclick="showTab('about')">Home</a>
-  <a onclick="showTab('resume')">Resume</a>
-  <a href="SaraLuber_Resume2025.pdf" target="_blank" rel="noopener noreferrer" title="Download Resume">
-    <i class="bi bi-file-earmark-arrow-down-fill"></i>
-  </a>
-  <a onclick="showTab('portfolio')">Projects</a>
-  <a onclick="showTab('contact')">Contact</a>
-</nav>
-    
+      <a href="#" onclick="showTab('about'); return false;">Home</a>
+      <a href="#" onclick="showTab('resume'); return false;">Resume</a>
+      <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank" rel="noopener noreferrer" title="Download Resume">
+        <i class="bi bi-file-earmark-arrow-down-fill"></i>
+      </a>
+      <a href="#" onclick="showTab('portfolio'); return false;">Projects</a>
+      <a href="#" onclick="showTab('contact'); return false;">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section id="about">
-  <h2>About Me</h2>
-  <div class="about-container">
-    <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" class="headshot-image">
-    <p>
-      Hi! I'm Sara - need to add additional info here ...maybe pull from LinkedIn already drafted language?
-    </p>
-  </div>
-</section>
-
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" class="headshot-image">
+        <p>
+          Hi! I'm Sara - need to add additional info here ...maybe pull from LinkedIn already drafted language?
+        </p>
+      </div>
+    </section>
 
     <section id="resume">
       <h2>Resume</h2>
-      <p>Here's a snapshot of my education, work experience, and technical skills. <a href="SaraLuber_Resume2025.pdf" target="_blank">Download my resume</a></p>
+      <p>Here's a snapshot of my education, work experience, and technical skills. <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank">Download my resume</a></p>
       <div class="resume-columns">
         <div class="resume-section">
           <h3>Education</h3>
@@ -290,9 +288,7 @@
   <script>
     function showTab(id) {
       const sections = document.querySelectorAll('main section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
+      sections.forEach(section => section.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
   </script>
