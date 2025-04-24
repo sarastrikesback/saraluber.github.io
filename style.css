@@ -12,6 +12,9 @@ header {
   background-color: #B0C4DE; /* Light Steel Blue */
   padding: 20px;
   text-align: center;
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensures the header stays on top of other content */
 }
 
 header h1 {
