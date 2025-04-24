@@ -20,13 +20,10 @@
     <h1 onclick="showTab('about')">Sara Luber</h1>
     <p>Political Data Analyst | Environmental Protection Advocate</p>
     <nav>
-      <a href="#" onclick="showTab('about'); return false;">Home</a>
-      <a href="#" onclick="showTab('resume'); return false;">Resume</a>
-      <a href="#" onclick="showTab('portfolio'); return false;">Projects</a>
-      <a href="#" onclick="showTab('contact'); return false;">Contact</a>
-      <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank" title="Download Resume">
-        <i class="bi bi-file-earmark-arrow-down-fill"></i>
-      </a>
+      <a href="#" onclick="showTab('about'); return false;" class="nav-link" id="about-tab">Home</a>
+      <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
+      <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
+      <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
     </nav>
   </header>
 
@@ -41,7 +38,7 @@
 
     <section id="resume">
       <h2>Resume</h2>
-      <p>Here's a snapshot of my education, experience, and skills. <a href="https://github.com/yourusername/yourrepo/raw/main/resume.pdf" target="_blank">Download my resume</a></p>
+      <p>Here's a snapshot of my education, experience, and skills.</p>
       <div class="resume-columns">
         <div class="resume-section">
           <h3>Education</h3>
@@ -80,18 +77,18 @@
 
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <div class="portfolio-items">
-        <div class="portfolio-item">
+      <div class="gallery-wrapper">
+        <div>
           <h3>Writing Samples</h3>
           <p>Articles, blogs, and policy breakdowns.</p>
           <a href="#">View Writing</a>
         </div>
-        <div class="portfolio-item">
+        <div>
           <h3>Python Projects</h3>
           <p>Data visualizations and analysis in Python.</p>
           <a href="#">View Python</a>
         </div>
-        <div class="portfolio-item">
+        <div>
           <h3>Power BI Dashboards</h3>
           <p>Visual storytelling through dashboards.</p>
           <a href="#">View Dashboards</a>
@@ -116,8 +113,16 @@
 
   <script>
     function showTab(id) {
+      // Reset active tab styles
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.style.backgroundColor = 'lightpink'; // light pink for inactive tabs
+      });
       document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+
+      // Set active tab color
+      const activeTab = document.getElementById(`${id}-tab`);
+      activeTab.style.backgroundColor = 'lavender'; // lavender for active tab
     }
   </script>
 </body>
