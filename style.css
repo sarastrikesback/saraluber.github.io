@@ -1,137 +1,166 @@
-/* Base Styles */
+/* General Styles */
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background-image: url('https://www.transparenttextures.com/patterns/floral-wallpaper.png');
-  background-color: #f7f5f2;
+  padding: 0;
+  background-color: #fff3f3; /* Soft background */
   color: #333;
-  line-height: 1.6;
 }
 
-h1, h2, h3 {
+/* Header */
+header {
+  background-color: #ff7eb9;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
   font-family: 'Playfair Display', serif;
-  color: #3d3d3d;
-}
-
-h1 {
-  font-size: 2.5rem;
+  color: #fff;
+  font-size: 3rem;
   cursor: pointer;
-  text-align: center;
-  margin-top: 1rem;
+  transition: color 0.3s ease;
 }
 
-header p {
-  text-align: center;
-  font-weight: 600;
-  color: #6b6b6b;
-  margin-bottom: 1rem;
+header h1:hover {
+  color: #f0a2c5;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  background-color: #ffe4e1;
-  padding: 0.75rem 0;
-  flex-wrap: wrap;
-  font-weight: 600;
-}
-
-nav a {
+header nav a {
+  color: white;
+  margin: 0 15px;
+  font-size: 1.2rem;
   text-decoration: none;
-  color: #d6336c;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  text-decoration: underline;
+header nav a:hover {
+  background-color: #ff6f91;
 }
 
+/* Main Content */
 main {
   padding: 2rem;
-}
-
-.about-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.headshot-image {
-  max-width: 150px;
-  border-radius: 50%;
-  border: 3px dashed #ffb6b9;
-}
-
-.resume-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.resume-section ul {
-  padding-left: 1.2rem;
-}
-
-.gallery-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.gallery-wrapper div {
-  border: 2px dotted #b0e0e6;
-  padding: 1rem;
-  background-color: #ffffffbb;
-  border-radius: 1rem;
-}
-
-.gallery-wrapper a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #008b8b;
-  font-weight: 600;
-}
-
-.contact-icons a, .contact-icons p {
-  display: block;
-  margin: 0.5rem 0;
-  color: #333;
-}
-
-footer {
-  background-color: #ffdee9;
   text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-  font-size: 0.9rem;
 }
 
-/* Accessibility and Tabs */
 section {
   display: none;
-  animation: fadeIn 0.5s ease-in;
 }
 
 section.active {
   display: block;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+h2 {
+  font-size: 2.5rem;
+  color: #ff4f77;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
+h3 {
+  font-size: 1.8rem;
+  color: #ff4f77;
+}
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.headshot-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.resume-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.resume-section {
+  width: 22%;
+  padding: 1rem;
+  background-color: #ffebef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h3 {
+  color: #ff4f77;
+}
+
+/* Portfolio Section */
+.portfolio-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  background-color: #ffe1e6;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  background-color: #ff80a9;
+}
+
+.portfolio-item a {
+  color: #fff;
+  background-color: #ff4f77;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+  background-color: #ff2d5c;
+}
+
+/* Contact Section */
+.contact-icons a {
+  display: block;
+  margin: 10px 0;
+  color: #ff4f77;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #ff2d5c;
+}
+
+footer {
+  background-color: #ff7eb9;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 1.2rem;
+  margin: 0;
 }
