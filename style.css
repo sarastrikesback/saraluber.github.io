@@ -215,3 +215,38 @@ footer p {
 .certificate-links a:hover {
   text-decoration: underline;
 }
+
+.skills-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill span:first-child {
+  flex: 1;
+  font-weight: 600;
+}
+
+.bubbles {
+  display: flex;
+  gap: 5px;
+}
+
+.bubbles span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: inline-block;
+}
+
+.bubbles span.filled {
+  background-color: #ff69b4; /* hot pink to match your aesthetic */
+}
