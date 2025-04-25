@@ -7,11 +7,11 @@
   <title>Sara Luber | Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -30,95 +30,13 @@
   <main>
     <section id="about" class="active">
       <h2>About Me</h2>
-      <div class="about-container">
-        <p>Hi! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
-      </div>
+      <p>Hi! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity.</p>
     </section>
 
     <section id="resume">
       <h2>Resume</h2>
       <p>Here's a snapshot of my education, experience, and skills.</p>
-      <div class="resume-columns">
-        <div class="resume-section">
-          <h3>Education</h3>
-          <ul>
-            <li>BA in Political Science, Minor in Environmental Science — NC State University</li>
-            <li>Professional Certificates: IBM Data Analytics, IBM Data Science</li>
-          </ul>
-          <!-- Resume Link -->
-          <a href="resume.pdf" class="resume-link" target="_blank">Resume</a>
-          <!-- PDF Links for Certificates -->
-          <div class="certificate-links">
-            <a href="Luber Data Science.pdf" target="_blank">Data Science Certificate</a>
-            <a href="Luber Data Analyst.pdf" target="_blank">Data Analyst Certificate</a>
-          </div>
-        </div>
-        <div class="resume-section">
-          <h3>Experience</h3>
-          <ul>
-            <li>Executive Assistant — Environmental Protection Agency</li>
-            <li>Program Operations Admin – ORAU National Student Services Contractor</li>
-            <li>Energy Policy Research Assistant - NC Clean Energy Technology Center</li>
-            <li>WomenNC Scholar - RTI International & WomenNC</li>
-            <li>Correspondent — Technician (NC State Student Newspaper)</li>
-          </ul>
-        </div>
-        <div class="resume-section">
-          <h3>Skills</h3>
-          <div class="skills-chart">
-            <div class="skill">
-              <span>Microsoft Excel</span>
-              <div class="bubbles">
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="skill">
-              <span>Python</span>
-              <div class="bubbles">
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="skill">
-              <span>SQL</span>
-              <div class="bubbles">
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="skill">
-              <span>PowerBI</span>
-              <div class="bubbles">
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="skill">
-              <span>HTML</span>
-              <div class="bubbles">
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span class="filled"></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Add your resume details here -->
     </section>
 
     <section id="portfolio">
@@ -153,17 +71,13 @@
   </main>
 
   <footer>
-    <p style="font-size: 1rem; font-weight: 600;">Built by Sara</p>
-    <p style="font-size: 0.8rem;">Last Updated: April 2025</p>
+    <p>Built by Sara | Last Updated: April 2025</p>
   </footer>
 
   <script>
     function showTab(id) {
-      // Reset all tab sections
       document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
       document.querySelector(`#${id}`).classList.add('active');
-
-      // Reset nav link styles
       document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
       document.getElementById(`${id}-tab`).classList.add('active');
     }
