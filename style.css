@@ -1,6 +1,7 @@
 :root {
   --primary-pink: #ff80ab;
-  --soft-purple: #cdb4db;
+  --soft-pink: #f78da7;
+  --light-pink: #f8bbd0;
   --fresh-orange: #ffaf87;
   --mint-green: #c1f0dc;
   --sunny-yellow: #fff3b0;
@@ -11,7 +12,7 @@ body {
   font-family: 'Baloo 2', cursive;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, var(--primary-pink), var(--soft-purple));
+  background: linear-gradient(to right, var(--primary-pink), var(--soft-pink), var(--light-pink));
   color: #333;
 }
 
@@ -59,8 +60,15 @@ nav {
   border-bottom: 2px solid white;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 main section {
   display: none;
+  width: 100%;
   padding: 3rem 2rem;
 }
 
@@ -70,18 +78,30 @@ main section.active {
 
 #about {
   background: var(--sunny-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #resume {
   background: var(--bubbly-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #portfolio {
   background: var(--mint-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact {
-  background: var(--soft-purple);
+  background: var(--soft-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h2 {
