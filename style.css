@@ -11,7 +11,7 @@ body {
   font-family: 'Baloo 2', cursive;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, var(--primary-pink), var(--soft-purple)); /* Gradient from left to right */
+  background: linear-gradient(135deg, var(--primary-pink), var(--soft-purple));
   color: #333;
 }
 
@@ -40,10 +40,12 @@ header p {
 
 nav {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .nav-link {
-  margin: 0 1rem;
   font-weight: 600;
   font-size: 1.1rem;
   color: white;
@@ -57,15 +59,9 @@ nav {
   border-bottom: 2px solid white;
 }
 
-main {
-  display: flex;
-  flex-direction: column; /* Ensure the sections are stacked */
-}
-
 main section {
   display: none;
   padding: 3rem 2rem;
-  flex-grow: 1; /* Make each section grow within available space */
 }
 
 main section.active {
