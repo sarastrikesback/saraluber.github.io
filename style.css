@@ -6,6 +6,8 @@
   --mint-green: #c1f0dc;
   --sunny-yellow: #fff3b0;
   --bubbly-blue: #a0c4ff;
+  --bold-purple: #9b5de5;  /* New vibrant purple */
+  --deep-blue: #4a90e2;    /* New contrasting blue */
 }
 
 body {
@@ -20,7 +22,7 @@ header {
   text-align: center;
   padding: 2rem;
   background: var(--fresh-orange);
-  border-bottom: 5px dotted white;
+  border-bottom: 5px dotted var(--bold-purple); /* Adjusted for a little more pop */
   position: sticky;
   top: 0;
   z-index: 1000;
