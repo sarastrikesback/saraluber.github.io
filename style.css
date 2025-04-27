@@ -142,22 +142,26 @@ h2 {
 .job-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; /* Space between the logo and job title */
+  padding-bottom: 0.5rem; /* Optional: Adds space below the logo-title group */
 }
 
 .header-logo {
-  width: 80px; /* Small logo */
+  width: 80px; /* Adjust the size of the logo */
+  height: auto;
 }
 
 .header-text {
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Vertically centers the text */
 }
 
 .job-card h4 {
   font-family: 'Fredoka';
   font-size: 1.3rem;
   margin: 0;
+  color: #333; /* Ensure the text color is defined */
 }
 
 .job-duration {
