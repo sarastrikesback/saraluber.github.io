@@ -139,6 +139,11 @@ h2 {
   transition: all 0.3s ease;
 }
 
+.job-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle soft lift effect */
+  transform: translateY(-5px); /* Adds a slight upward movement for the lift effect */
+}
+
 .job-header {
   display: flex;
   align-items: center;
