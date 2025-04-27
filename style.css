@@ -1,20 +1,17 @@
 :root {
   --primary-pink: #ff80ab;
-  --soft-pink: #f78da7;
-  --light-pink: #f8bbd0;
+  --soft-purple: #cdb4db;
   --fresh-orange: #ffaf87;
   --mint-green: #c1f0dc;
   --sunny-yellow: #fff3b0;
   --bubbly-blue: #a0c4ff;
-  --bold-purple: #9b5de5;  /* New vibrant purple */
-  --deep-blue: #4a90e2;    /* New contrasting blue */
 }
 
 body {
   font-family: 'Baloo 2', cursive;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, var(--primary-pink), var(--soft-pink), var(--light-pink));
+  background: linear-gradient(135deg, var(--primary-pink), var(--soft-purple));
   color: #333;
 }
 
@@ -22,6 +19,7 @@ header {
   text-align: center;
   padding: 2rem;
   background: var(--fresh-orange);
+  /* Removed border-bottom (dotted line) */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -61,15 +59,8 @@ nav {
   border-bottom: 2px solid white;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 main section {
   display: none;
-  width: 100%;
   padding: 3rem 2rem;
 }
 
@@ -79,30 +70,18 @@ main section.active {
 
 #about {
   background: var(--sunny-yellow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #resume {
   background: var(--bubbly-blue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #portfolio {
   background: var(--mint-green);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #contact {
-  background: var(--soft-pink);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: var(--soft-purple);
 }
 
 h2 {
@@ -138,41 +117,10 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.job-card:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Subtle soft lift effect */
-  transform: translateY(-5px); /* Adds a slight upward movement for the lift effect */
-}
-
-.job-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* Space between the logo and job title */
-  padding-bottom: 0.5rem; /* Optional: Adds space below the logo-title group */
-}
-
-.header-logo {
-  width: 80px; /* Adjust the size of the logo */
-  height: auto;
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertically centers the text */
-}
-
 .job-card h4 {
   font-family: 'Fredoka';
   font-size: 1.3rem;
   margin: 0;
-  color: #333; /* Ensure the text color is defined */
-}
-
-.job-duration {
-  font-family: 'Fredoka';
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.25rem;
 }
 
 .job-details {
@@ -187,14 +135,16 @@ h2 {
   animation: fadeIn 0.5s ease;
 }
 
-.details-logo {
-  width: 120px; /* Slightly bigger expanded image */
-  margin-top: 1rem;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .gallery-wrapper div {
@@ -203,12 +153,13 @@ h2 {
   padding: 1.5rem;
   text-align: center;
   border: 2px dotted var(--primary-pink);
-  transition: transform 0.3s, box-shadow 0.3s; /* Adding transition for shadow as well */
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .gallery-wrapper div:hover {
-  transform: scale(1.05); /* Larger lift effect */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  transform: scale(1.05);
+  /* Removed the teal background-color change on hover */
+  background-color: white; /* You can adjust this color if needed */
 }
 
 .gallery-wrapper h3 {
