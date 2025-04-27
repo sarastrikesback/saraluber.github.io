@@ -135,6 +135,18 @@ h2 {
   margin-bottom: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center; /* Center content */
+}
+
+.job-header {
+  display: flex;
+  flex-direction: column; /* Stack vertically (image on top, title below) */
+  align-items: center;
+}
+
+.header-logo {
+  width: 80px; /* Control size of the top logo */
+  margin-bottom: 0.5rem;
 }
 
 .job-card h4 {
@@ -155,17 +167,9 @@ h2 {
   animation: fadeIn 0.5s ease;
 }
 
-.job-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.job-header img {
-  width: 50px;
-  height: auto;
-  border-radius: 0.5rem; /* optional: makes the logo edges a little rounded */
+.details-logo {
+  width: 200px; /* Bigger logo when expanded */
+  margin-top: 1rem;
 }
 
 @keyframes fadeIn {
