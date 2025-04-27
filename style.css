@@ -22,7 +22,6 @@ header {
   text-align: center;
   padding: 2rem;
   background: var(--fresh-orange);
-  border-bottom: 5px dotted var(--bold-purple); /* Adjusted for a little more pop */
   position: sticky;
   top: 0;
   z-index: 1000;
