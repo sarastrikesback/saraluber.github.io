@@ -223,3 +223,6 @@ footer {
   border-radius: 10px; /* Adjust the value for more or less roundness */
 }
 
+.white-font {
+  color: white;
+}
