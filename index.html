@@ -479,26 +479,16 @@ sustainability. </p>
 
 <!-- JavaScript for Tab Functionality -->
 <script>
-  function showTab(tab) {
+  function showTab(tabId) {
     const sections = document.querySelectorAll('main section');
-    const links = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
+    sections.forEach(section => section.classList.remove('active'));
+    navLinks.forEach(link => link.classList.remove('active'));
 
-    links.forEach(link => {
-      link.classList.remove('active');
-    });
-
-    document.getElementById(tab).classList.add('active');
-    document.getElementById(tab + '-tab').classList.add('active');
-  }
-
-  function toggleDetails(card) {
-    card.classList.toggle('active');
+    document.getElementById(tabId).classList.add('active');
+    document.getElementById(`${tabId}-tab`).classList.add('active');
   }
 </script>
-
 </body>
 </html>
