@@ -226,3 +226,14 @@ footer {
 .white-font {
   color: white;
 }
+.job-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+
+.job-card.active .job-details {
+  max-height: 500px; /* large enough to fit your expanded content */
+  opacity: 1;
+}
