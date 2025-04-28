@@ -240,11 +240,11 @@
   <h1 onclick="showTab('about')">Sara Luber</h1>
   <p>Political Data Analyst | Environmental Protection Advocate</p>
   <nav>
-    <a href="#" onclick="showTab('about'); return false;" class="nav-link active" id="about-tab">Home</a>
-    <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
-    <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
-    <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
-  </nav>
+  <a href="#" onclick="showTab('about'); return false;" class="nav-link active" id="about-tab">Home</a>
+  <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
+  <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
+  <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
+</nav>
 </header>
 
 <main>
@@ -492,3 +492,26 @@ sustainability. </p>
   </script>
 </body>
 </html>
+
+<script>function showTab(tabName) {
+  // Hide all sections
+  const sections = document.querySelectorAll('main section');
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+
+  // Remove active class from all nav links
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+
+  // Show the clicked section
+  const activeSection = document.getElementById(tabName);
+  activeSection.classList.add('active');
+
+  // Add active class to the clicked tab
+  const activeLink = document.getElementById(`${tabName}-tab`);
+  activeLink.classList.add('active');
+}
+</script>
