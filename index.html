@@ -236,26 +236,24 @@
       border: 3px solid var(--primary-pink);
     }
   </style>
-</head>
-<body>
-  <header>
-    <h1 onclick="showTab('about')">Sara Luber</h1>
-    <p>Political Data Analyst | Environmental Protection Advocate</p>
-    <nav>
-      <a href="#" onclick="showTab('about'); return false;" class="nav-link active" id="about-tab">Home</a>
-      <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
-      <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
-      <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1 onclick="showTab('about')">Sara Luber</h1>
+  <p>Political Data Analyst | Environmental Protection Advocate</p>
+  <nav>
+    <a href="#" onclick="showTab('about'); return false;" class="nav-link active" id="about-tab">Home</a>
+    <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
+    <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
+    <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section id="about" class="active">
-      <h2>About Me</h2>
-      <p>Hi! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
-      <!-- Use the path to your headshot here -->
-      <img src="Luber_Sara_Headshot.jpeg" alt="Sara's Headshot" class="placeholder-img" />
-    </section>
+<main>
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>Hi! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
+    <img src="Luber_Sara_Headshot.jpeg" alt="Sara's Headshot" class="placeholder-img" />
+  </section>
+</main>
 
    <section id="education" class="p-8 bg-white">
   <h2 class="text-4xl font-bold mb-8 text-center text-pink-600">Education</h2>
@@ -286,8 +284,10 @@
   </div>
 </section>
 
-  <h2>Relevant Experience</h2>
-  <h3>Expand for additional details!</h3>
+<!-- Relevant Experience Section (You can expand here later) -->
+<h2>Relevant Experience</h2>
+<h3>Expand for additional details!</h3>
+
           
   <div class="job-card" onclick="toggleJobDetails(this)">
     <div class="job-header">
@@ -395,7 +395,8 @@ sustainability. </p>
     </div>
   </div>    
 
- <div class="job-card" onclick="toggleJobDetails(this)">
+<section>
+  <div class="job-card" onclick="toggleJobDetails(this)">
     <div class="job-header">
       <img src="https://images.squarespace-cdn.com/content/v1/65b82b280fb61940132b5876/75c1e822-39d4-4c2b-bbfa-bd8ba2b53b6b/CI+Logo+Transparent.png" alt="Civic Influencers Logo" width="auto" height="100" />
       <h4>Civic Influencer</h4>
@@ -407,12 +408,14 @@ sustainability. </p>
       • Link to Website </p>
     </div>
   </div>
+</section>
 
-          
-          <!-- Additional job cards -->
-        </div>
-      </div>
-    </section>
+<script>
+  function toggleJobDetails(card) {
+    const details = card.querySelector('.job-details');
+    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
     
         <section id="portfolio">
       <h2>Portfolio</h2>
