@@ -19,7 +19,6 @@ header {
   text-align: center;
   padding: 2rem;
   background: var(--fresh-orange);
-  /* Removed border-bottom (dotted line) */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -97,8 +96,8 @@ h2 {
 }
 
 .resume-section {
-  flex: 1 1 250px;  /* Allows the section to grow or shrink */
-  min-width: 250px;  /* Ensures each section is at least 250px wide */
+  flex: 1 1 250px;
+  min-width: 250px;
 }
 
 .certificate-links a {
@@ -125,14 +124,18 @@ h2 {
 }
 
 .job-details {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
   margin-top: 0.5rem;
   font-size: 1rem;
   color: #444;
 }
 
 .job-card.active .job-details {
-  display: block;
+  max-height: 500px;
+  opacity: 1;
   animation: fadeIn 0.5s ease;
 }
 
@@ -159,8 +162,7 @@ h2 {
 
 .gallery-wrapper div:hover {
   transform: scale(1.05);
-  /* Removed the teal background-color change on hover */
-  background-color: white; /* You can adjust this color if needed */
+  background-color: white;
 }
 
 .gallery-wrapper h3 {
@@ -221,20 +223,9 @@ footer {
 
 .bordered-image {
   border: 5px solid #ff80ab;
-  border-radius: 10px; /* Adjust the value for more or less roundness */
+  border-radius: 10px;
 }
 
 .white-font {
   color: white;
-}
-.job-details {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.6s ease;
-  opacity: 0;
-}
-
-.job-card.active .job-details {
-  max-height: 500px; /* large enough to fit your expanded content */
-  opacity: 1;
 }
