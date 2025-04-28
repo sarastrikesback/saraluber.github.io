@@ -236,15 +236,16 @@
       border: 3px solid var(--primary-pink);
     }
   </style>
+
 <header>
   <h1 onclick="showTab('about')">Sara Luber</h1>
   <p>Political Data Analyst | Environmental Protection Advocate</p>
   <nav>
-  <a href="#" onclick="showTab('about'); return false;" class="nav-link active" id="about-tab">Home</a>
-  <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
-  <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
-  <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
-</nav>
+    <a href="#" onclick="showTab('about'); return false;" class="nav-link active" id="about-tab">Home</a>
+    <a href="#" onclick="showTab('resume'); return false;" class="nav-link" id="resume-tab">Resume</a>
+    <a href="#" onclick="showTab('portfolio'); return false;" class="nav-link" id="portfolio-tab">Projects</a>
+    <a href="#" onclick="showTab('contact'); return false;" class="nav-link" id="contact-tab">Contact</a>
+  </nav>
 </header>
 
 <main>
@@ -253,30 +254,29 @@
     <p>Hi! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
     <img src="Luber_Sara_Headshot.jpeg" alt="Sara's Headshot" class="placeholder-img" />
   </section>
-</main>
 
-   <section id="education" class="p-8 bg-white">
-  <h2 class="text-4xl font-bold mb-8 text-center text-pink-600">Education</h2>
-  <div class="grid md:grid-cols-3 gap-8">
+  <section id="education" class="p-8 bg-white">
+    <h2 class="text-4xl font-bold mb-8 text-center text-pink-600">Education</h2>
+    <div class="grid md:grid-cols-3 gap-8">
 
-    <!-- NC State Degree Card -->
-    <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
-      <h3 class="text-2xl font-bold text-pink-800 mb-4">Bachelor's Degree</h3>
-      <p class="text-pink-700 mb-2">North Carolina State University</p>
-      <p class="text-pink-700 mb-2">B.A. in Political Science</p>
-      <p class="text-pink-700">Minor in Environmental Science</p>
-    </div>
+      <!-- NC State Degree Card -->
+      <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
+        <h3 class="text-2xl font-bold text-pink-800 mb-4">Bachelor's Degree</h3>
+        <p class="text-pink-700 mb-2">North Carolina State University</p>
+        <p class="text-pink-700 mb-2">B.A. in Political Science</p>
+        <p class="text-pink-700">Minor in Environmental Science</p>
+      </div>
 
-    <!-- IBM Professional Certificates Card -->
-    <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
-      <h3 class="text-2xl font-bold text-pink-800 mb-4">Professional Certificates</h3>
-      <p class="text-pink-700 mb-2">IBM Data Analyst</p>
-      <p class="text-pink-700">IBM Data Science Professional Certificate</p>
-    </div>
+      <!-- IBM Professional Certificates Card -->
+      <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
+        <h3 class="text-2xl font-bold text-pink-800 mb-4">Professional Certificates</h3>
+        <p class="text-pink-700 mb-2">IBM Data Analyst</p>
+        <p class="text-pink-700">IBM Data Science Professional Certificate</p>
+      </div>
 
-    <!-- Other Course Certificates Card -->
-    <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
-      <h3 class="text-2xl font-bold text-pink-800 mb-4">Additional Coursework</h3>
+      <!-- Other Course Certificates Card -->
+      <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
+        <h3 class="text-2xl font-bold text-pink-800 mb-4
       <p class="text-pink-700 mb-2">Various Online Courses</p>
       <p class="text-pink-700">Certificates in Communications, Design, and Media</p>
     </div>
@@ -478,40 +478,28 @@ sustainability. </p>
     <p style="font-size: 0.8rem;">Last Updated: April 2025</p>
   </footer>
 
-  <script>
-    function showTab(id) {
-      document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
-      document.querySelector(`#${id}`).classList.add('active');
-      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-      document.getElementById(`${id}-tab`).classList.add('active');
-    }
+<!-- JavaScript for Tab Functionality -->
+<script>
+  function showTab(tab) {
+    const sections = document.querySelectorAll('main section');
+    const links = document.querySelectorAll('.nav-link');
 
-    function toggleJobDetails(card) {
-      card.classList.toggle('active');
-    }
-  </script>
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+
+    links.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    document.getElementById(tab).classList.add('active');
+    document.getElementById(tab + '-tab').classList.add('active');
+  }
+
+  function toggleDetails(card) {
+    card.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
-
-<script>function showTab(tabName) {
-  // Hide all sections
-  const sections = document.querySelectorAll('main section');
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
-
-  // Remove active class from all nav links
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-  });
-
-  // Show the clicked section
-  const activeSection = document.getElementById(tabName);
-  activeSection.classList.add('active');
-
-  // Add active class to the clicked tab
-  const activeLink = document.getElementById(`${tabName}-tab`);
-  activeLink.classList.add('active');
-}
-</script>
