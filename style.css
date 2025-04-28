@@ -97,7 +97,8 @@ h2 {
 }
 
 .resume-section {
-  flex: 1 1 250px;
+  flex: 1 1 250px;  /* Allows the section to grow or shrink */
+  min-width: 250px;  /* Ensures each section is at least 250px wide */
 }
 
 .certificate-links a {
