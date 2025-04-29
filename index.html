@@ -106,6 +106,67 @@
       background: var(--primary-pink);
       color: white;
     }
+
+    .job-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .job-card:hover {
+      transform: scale(1.05);
+    }
+
+    .job-header {
+      background: var(--primary-pink);
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .job-header img {
+      max-width: 60px;
+      height: auto;
+    }
+
+    .job-details {
+      padding: 1rem;
+      display: none;
+      flex-grow: 1;
+      background-color: var(--soft-purple);
+    }
+
+    .job-details.show {
+      display: block;
+    }
+
+    .gallery-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .gallery-wrapper div {
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+    }
+
+    .contact-icons a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+
   </style>
 </head>
 <body>
@@ -121,168 +182,19 @@
     </nav>
   </header>
 
-<section id="education" class="p-8 bg-white">
-    <h2 class="text-4xl font-bold mb-8 text-center text-pink-600">Education</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+  <main>
+    <section id="about" class="active">
+      <h2>About</h2>
+      <p>Information about Sara and her career.</p>
+    </section>
 
-      <!-- NC State Degree Card -->
-      <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
-        <h3 class="text-2xl font-bold text-pink-800 mb-4">Bachelor's Degree</h3>
-        <p class="text-pink-700 mb-2">North Carolina State University</p>
-        <p class="text-pink-700 mb-2">B.A. in Political Science</p>
-        <p class="text-pink-700">Minor in Environmental Science</p>
-      </div>
+    <section id="resume">
+      <h2>Resume</h2>
+      <h3>Education</h3>
+      <p>Details about Sara's educational background.</p>
+    </section>
 
-      <!-- IBM Professional Certificates Card -->
-      <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
-        <h3 class="text-2xl font-bold text-pink-800 mb-4">Professional Certificates</h3>
-        <p class="text-pink-700 mb-2">IBM Data Analyst</p>
-        <p class="text-pink-700">IBM Data Science Professional Certificate</p>
-      </div>
-
-      <!-- Other Course Certificates Card -->
-      <div class="bg-pink-100 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
-        <h3 class="text-2xl font-bold text-pink-800 mb-4">Various Online Courses</h3>
-        <p class="text-pink-700 mb-2">Certificates in Communications, Design, and Media</p>
-      </div>
-
-    </div>
-</section>
-
-<!-- Relevant Experience Section -->
-<h2>Relevant Experience</h2>
-<h3>Expand for additional details!</h3>
-
-<!-- Example Job Card -->
-<div class="job-card" onclick="toggleJobDetails(this)">
-  <div class="job-header">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Seal_of_the_United_States_Environmental_Protection_Agency.svg/512px-Seal_of_the_United_States_Environmental_Protection_Agency.svg.png" alt="EPA Logo" width="75" height="75" />
-    <h4>Executive Assistant — U.S. Environmental Protection Agency</h4>
-    <p class="job-duration">November 2024 - Present</p>
-  </div>
-  <div class="job-details">
-    <p>• Streamlined Office of Resource Management (ORM) operations by identifying inefficiencies, implementing innovative processes, and enhancing procedural workflows to support the Office of Research and Development's (ORD) mission. <br>
-    • Coordinated cross-functional projects, ensuring on-time delivery and quality standards through collaboration with ORM team members and other EPA departments. <br>
-    • Supported leadership decision-making by analyzing organizational data and delivering actionable recommendations to enhance operational effectiveness. <br>
-    • Efficiently managed executive-level calendars and administrative tasks, responding promptly to requests and aligning organizational priorities with strategic goals. <br><br> 
-    • Notable Skills: Executive Support, Project Coordination, Process Improvement, Microsoft 365, Interdepartmental Collaboration</p>
-  </div>
-</div>
-
-  <div class="job-card" onclick="toggleJobDetails(this)">
-    <div class="job-header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Seal_of_the_United_States_Environmental_Protection_Agency.svg/512px-Seal_of_the_United_States_Environmental_Protection_Agency.svg.png" alt="EPA Logo" width="75" height="75" />
-      <h4>Program Operations Admin — U.S. Environmental Protection Agency</h4>
-        <p class="job-duration">March 2024 - November 2024</p>
-    </div>
-    <div class="job-details">
-      <p>• Managed high-level scheduling and correspondence.<br>
-      • Coordinated events and internal comms.<br>
-      • Supported senior staff with research and planning.</p>
-    </div>
-  </div>
-
-  <div class="job-card" onclick="toggleJobDetails(this)">
-    <div class="job-header">
-      <img src="https://nccleantech.ncsu.edu/wp-content/uploads/2024/01/NCCETC-Horizontal-Logo.png" alt="NCCETC Logo" width="auto" height="50" />
-      <h4>Energy Policy Research Assistant - North Carolina Clean Energy Technology Center</h4>
-      <p class="job-duration">2023 Academic Year</p>
-    </div>
-    <div class="job-details">
-      <p>• Managed high-level scheduling and correspondence.<br>
-      • Coordinated events and internal comms.<br>
-      • Supported senior staff with research and planning.</p>
-    </div>
-  </div>
-
- <div class="job-card" onclick="toggleJobDetails(this)">
-    <div class="job-header">
-      <img src="https://raleighnc.gov/themes/custom/cityofraleigh/logo.svg" alt="Raleigh Parks and Rec Logo" width="150" height="150" />
-      <h4>Youth Conservations Corps - Raleigh Parks & Recreation </h4>
-      <p class="job-duration">Summer 2021</p>
-    </div>
-    <div class="job-details">
-      <p>• Managed high-level scheduling and correspondence.<br>
-      • Coordinated events and internal comms.<br>
-      • Supported senior staff with research and planning.</p>
-    </div>
-  </div>
-          
- <div class="job-card" onclick="toggleJobDetails(this)">
-  <div class="job-header">
-    <img class="header-logo" src="https://www.filepicker.io/api/file/yY4gvA3lTOOSaYDlDMxF" alt="WomenNC Logo" width="auto" height="150" />
-    <h4>Scholar – WomenNC & RTI International</h4>
-    <p class="job-duration">2021-2022</p>
-  </div>
-  <div class="job-details">
-    <p>• Conducted in-depth research on gender roles and sustainable consumption for a year-long project titled "The Green Feminine Stereotype
-and the Eco-Gender Gap." <br>
-    • Presented research findings at the United Nations Commission on the Status of Women (CSW) 66 and RTI International's Local to
-Global Forum. <br>
-    • Authored a comprehensive research report, integrating literature reviews, data collection, and analysis on gender and environmental
-sustainability. </p>
-    <br>
-    • Notable Skills: Research & Data Analysis, Public Speaking & Presentation, Community Engagement </p>
-    <!-- Links added here -->
-    <div class="job-links">
-      <a href="https://www.womennc.org/featured-scholars/sara-luber" target="_blank">Read more on WomenNC</a>
-      <br>
-      <a href="https://www.facebook.com/watch/?v=135282842056918" target="_blank">Watch: Scholar Spotlight Video</a>
-    </div>
-    <br>
-    <img class="details-logo" src="https://pbs.twimg.com/media/GJcen4rXIAAvR3J.jpg" alt="WomenNC Expanded Logo" width="300" height="300" />
-  </div>
-</div>
-
-  <div class="job-card" onclick="toggleJobDetails(this)">
-    <div class="job-header">
-      <img src="https://orgs.ncsu.edu/student-govt/wp-content/uploads/sites/8/2017/09/SG-Student-Senate-Seals-05.png" alt="NCSU SG Logo" width="100" height="100" />
-      <h4>NC State Student Government</h4>
-      <p class="job-duration">2019-2022</p>
-    </div>
-    <div class="job-details">
-      <p>• Chief Justice - Judicial Branch <br>
-      • Head of College of Humanities and Social Sciences - Student Senate, Legislative Branch <br>
-      • Government Relations and Oversight Chair - Student Senate, Legislative Branch</p>
-    </div>
-  </div>
-
-        <div class="job-card" onclick="toggleJobDetails(this)">
-    <div class="job-header">
-      <img src="https://static.wixstatic.com/media/7dbb17_f8d7886d6b9a47ad98ac646e7704e1fb~mv2.png/v1/fit/w_2500,h_1330,al_c/7dbb17_f8d7886d6b9a47ad98ac646e7704e1fb~mv2.png" alt="UNC ASG Logo" width="auto" height="100" />
-      <h4>Associate Vice President, Government Outreach - UNC Association of Student Governments</h4>
-      <p class="job-duration">2021 Academic Year</p>
-    </div>
-    <div class="job-details">
-      <p>• Managed high-level scheduling and correspondence.<br>
-      • Coordinated events and internal comms.<br>
-      • Supported senior staff with research and planning.</p>
-    </div>
-  </div>    
-
-<section>
-  <div class="job-card" onclick="toggleJobDetails(this)">
-    <div class="job-header">
-      <img src="https://images.squarespace-cdn.com/content/v1/65b82b280fb61940132b5876/75c1e822-39d4-4c2b-bbfa-bd8ba2b53b6b/CI+Logo+Transparent.png" alt="Civic Influencers Logo" width="auto" height="100" />
-      <h4>Civic Influencer</h4>
-      <p class="job-duration">2020-2022</p>
-    </div>
-    <div class="job-details">
-      <p>• Info <br>
-      • Info <br>
-      • Link to Website </p>
-    </div>
-  </div>
-</section>
-
-<script>
-  function toggleJobDetails(card) {
-    const details = card.querySelector('.job-details');
-    details.style.display = details.style.display === 'none' ? 'block' : 'none';
-  }
-</script>
-    
-        <section id="portfolio">
+    <section id="portfolio">
       <h2>Portfolio</h2>
       <div class="gallery-wrapper">
         <div>
@@ -294,57 +206,37 @@ sustainability. </p>
           <h3>Python Projects</h3>
           <p>Data visualizations and analysis in Python.</p>
           <a href="#">View Python</a>
-        <br>
-          <br>
-           <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-3030224.png?f=webp" alt="Python Logo" width="150" height="150" />
+          <br><br>
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-3030224.png?f=webp" alt="Python Logo" width="150" height="150" />
         </div>
         <div>
           <h3>Power BI Dashboards</h3>
           <p>Visual storytelling through dashboards.</p>
           <a href="#">View Dashboards</a>
-          <br>
-          <br>
-          <br>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/630px-New_Power_BI_Logo.svg.png" alt="PowerBI Logo" width="150" height="150" />
-        </div>
-        <div>
-          <h3>Stata</h3>
-          <p>Statistical Analysis</p>
-          <br>
-          <br>
-           <img src="https://www.svgrepo.com/show/374098/stata.svg" alt="Stata Logo" width="150" height="150" />
-        </div>
-        <div>
-          <h3>Sara Sews!</h3>
-          <p>Sewing, embroidery, and more!</p>
-          <img src="https://raw.githubusercontent.com/sarastrikesback/saraluber.github.io/main/sara%27s%20sewing%20logo.png" width="100%" class="bordered-image" />
-        </div>
-        <div>
-          <h3>Reading List</h3>
-          <p>Recent favorite books and short reviews.</p>
-          <img src="https://cdn-icons-png.flaticon.com/512/2798/2798064.png" width="90%" />
+          <br><br><br>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/630px-New_Power_BI_Logo.svg.png" alt="PowerBI Logo" width="150" height="150" />
         </div>
       </div>
     </section>
 
     <section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-icons">
-    <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i> sarafluber@gmail.com</a><br/>
-    <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i> 443-547-2317</a><br/>
-    <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a><br/>
-    <div class="white-font"><i class="bi bi-geo-alt-fill"></i> Raleigh, NC - open to relocation and remote/hybrid opportunities.</div>
-  </div>
-</section>
+      <h2>Contact</h2>
+      <div class="contact-icons">
+        <a href="mailto:sarafluber@gmail.com">Email: sarafluber@gmail.com</a>
+        <a href="tel:4435472317">Phone: 443-547-2317</a>
+        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
+        <div>Raleigh, NC - Open to relocation and remote/hybrid opportunities</div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p style="font-size: 1rem; font-weight: 600;">Built by Sara</p>
-    <p style="font-size: 0.8rem;">Last Updated: April 2025</p>
+    <p>Built by Sara</p>
+    <p>Last Updated: April 2025</p>
   </footer>
 
-<!-- JavaScript for Tab Functionality -->
-<script>
+  <script>
+    // Tab functionality
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll("main section");
 
@@ -362,6 +254,15 @@ sustainability. </p>
 
         navLinks.forEach(link => link.classList.remove("active"));
         link.classList.add("active");
+      });
+    });
+
+    // Job card functionality
+    const jobCards = document.querySelectorAll('.job-card');
+    jobCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const details = card.querySelector('.job-details');
+        details.classList.toggle('show');
       });
     });
   </script>
