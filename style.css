@@ -53,17 +53,30 @@ nav {
   transition: 0.3s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Highlight active tab based on :target */
+.nav-link[href*="#about"]:focus,
+.nav-link[href*="#resume"]:focus,
+.nav-link[href*="#portfolio"]:focus,
+.nav-link[href*="#contact"]:focus {
   border-bottom: 2px solid white;
 }
 
 main section {
   display: none;
   padding: 3rem 2rem;
+  animation: fadeIn 0.5s ease;
 }
 
-main section.active {
+main section:target {
+  display: block;
+}
+
+/* Fallback: Show #about by default */
+main section:first-of-type {
   display: block;
 }
 
@@ -133,6 +146,7 @@ h2 {
   color: #444;
 }
 
+/* Note: Job-card interactivity won't work without JS, so consider showing all by default or using checkboxes later */
 .job-card.active .job-details {
   max-height: 500px;
   opacity: 1;
