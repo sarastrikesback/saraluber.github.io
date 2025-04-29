@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sara's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka&display=swap" rel="stylesheet">
+  <!-- Add Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     :root {
       --primary-pink: #ff80ab;
@@ -71,6 +73,10 @@
       padding: 3rem 2rem;
       opacity: 0;
       transition: opacity 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     main section.active {
@@ -107,66 +113,24 @@
       color: white;
     }
 
-    .job-card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .job-card:hover {
-      transform: scale(1.05);
-    }
-
-    .job-header {
-      background: var(--primary-pink);
-      color: white;
-      padding: 1rem;
+    /* Contact Page */
+    .contact-icons a {
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 0.5rem;
+      margin: 1rem 0;
     }
 
-    .job-header img {
-      max-width: 60px;
-      height: auto;
+    .contact-icons a:hover {
+      color: var(--primary-pink);
     }
 
-    .job-details {
-      padding: 1rem;
-      display: none;
-      flex-grow: 1;
-      background-color: var(--soft-purple);
+    .contact-icons .bi {
+      font-size: 1.5rem;
     }
-
-    .job-details.show {
-      display: block;
-    }
-
-    .gallery-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .gallery-wrapper div {
-      width: 100%;
-      max-width: 250px;
-      text-align: center;
-    }
-
-    .contact-icons a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 10px 0;
-    }
-
   </style>
 </head>
 <body>
@@ -183,60 +147,46 @@
   </header>
 
   <main>
-    <section id="about" class="active">
-      <h2>About</h2>
-      <p>Information about Sara and her career.</p>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Creative professional with a passion for policy, design, and data. I aim to bridge the gap between complex concepts and accessible communication.</p>
     </section>
 
     <section id="resume">
       <h2>Resume</h2>
-      <h3>Education</h3>
-      <p>Details about Sara's educational background.</p>
+      <p>Details about my academic background, experience, and professional certifications.</p>
     </section>
 
     <section id="portfolio">
       <h2>Portfolio</h2>
       <div class="gallery-wrapper">
+        <!-- Add your portfolio content here -->
         <div>
           <h3>Writing Samples</h3>
           <p>Articles, blogs, and policy breakdowns.</p>
           <a href="Writing.html">View Writing</a>
         </div>
-        <div>
-          <h3>Python Projects</h3>
-          <p>Data visualizations and analysis in Python.</p>
-          <a href="#">View Python</a>
-          <br><br>
-          <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-3030224.png?f=webp" alt="Python Logo" width="150" height="150" />
-        </div>
-        <div>
-          <h3>Power BI Dashboards</h3>
-          <p>Visual storytelling through dashboards.</p>
-          <a href="#">View Dashboards</a>
-          <br><br><br>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/630px-New_Power_BI_Logo.svg.png" alt="PowerBI Logo" width="150" height="150" />
-        </div>
+        <!-- More portfolio items can go here -->
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="contact-icons">
-        <a href="mailto:sarafluber@gmail.com">Email: sarafluber@gmail.com</a>
-        <a href="tel:4435472317">Phone: 443-547-2317</a>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
-        <div>Raleigh, NC - Open to relocation and remote/hybrid opportunities</div>
+        <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i> sarafluber@gmail.com</a><br/>
+        <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i> 443-547-2317</a><br/>
+        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a><br/>
+        <div><i class="bi bi-geo-alt-fill"></i> Raleigh, NC - open to relocation and remote/hybrid opportunities.</div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Built by Sara</p>
-    <p>Last Updated: April 2025</p>
+    <p style="font-size: 1rem; font-weight: 600;">Built by Sara</p>
+    <p style="font-size: 0.8rem;">Last Updated: April 2025</p>
   </footer>
 
   <script>
-    // Tab functionality
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll("main section");
 
@@ -254,15 +204,6 @@
 
         navLinks.forEach(link => link.classList.remove("active"));
         link.classList.add("active");
-      });
-    });
-
-    // Job card functionality
-    const jobCards = document.querySelectorAll('.job-card');
-    jobCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const details = card.querySelector('.job-details');
-        details.classList.toggle('show');
       });
     });
   </script>
