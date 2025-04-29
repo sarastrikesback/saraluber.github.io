@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sara's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka&display=swap" rel="stylesheet">
-  <!-- Add Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     :root {
@@ -51,7 +50,7 @@
       margin-top: 1rem;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .nav-link {
@@ -59,13 +58,15 @@
       font-size: 1.1rem;
       color: white;
       text-decoration: none;
-      border-bottom: 2px solid transparent;
+      padding: 10px;
+      border-radius: 5px;
       transition: 0.3s;
     }
 
     .nav-link:hover,
     .nav-link.active {
-      border-bottom: 2px solid white;
+      background-color: #fff;
+      color: #333;
     }
 
     main section {
@@ -73,10 +74,6 @@
       padding: 3rem 2rem;
       opacity: 0;
       transition: opacity 0.5s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
     }
 
     main section.active {
@@ -106,6 +103,19 @@
       color: #333;
     }
 
+    .contact-icons a {
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 15px;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .contact-icons a:hover {
+      color: var(--primary-pink);
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -113,100 +123,9 @@
       color: white;
     }
 
-    /* Contact Page */
-    .contact-icons a {
-      font-size: 1.2rem;
-      color: #333;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .contact-icons a:hover {
-      color: var(--primary-pink);
-    }
-
-    .contact-icons .bi {
-      font-size: 1.5rem;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Sara Luber</h1>
-    <p>Creative Portfolio & Resume</p>
-    <nav>
-      <a href="#about" class="nav-link active">About</a>
-      <a href="#resume" class="nav-link">Resume</a>
-      <a href="#portfolio" class="nav-link">Portfolio</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Creative professional with a passion for policy, design, and data. I aim to bridge the gap between complex concepts and accessible communication.</p>
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Details about my academic background, experience, and professional certifications.</p>
-    </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="gallery-wrapper">
-        <!-- Add your portfolio content here -->
-        <div>
-          <h3>Writing Samples</h3>
-          <p>Articles, blogs, and policy breakdowns.</p>
-          <a href="Writing.html">View Writing</a>
-        </div>
-        <!-- More portfolio items can go here -->
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-icons">
-        <a href="mailto:sarafluber@gmail.com"><i class="bi bi-envelope-fill"></i> sarafluber@gmail.com</a><br/>
-        <a href="tel:4435472317"><i class="bi bi-telephone-fill"></i> 443-547-2317</a><br/>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a><br/>
-        <div><i class="bi bi-geo-alt-fill"></i> Raleigh, NC - open to relocation and remote/hybrid opportunities.</div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p style="font-size: 1rem; font-weight: 600;">Built by Sara</p>
-    <p style="font-size: 0.8rem;">Last Updated: April 2025</p>
-  </footer>
-
-  <script>
-    const navLinks = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll("main section");
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href").substring(1);
-
-        sections.forEach(section => {
-          section.classList.remove("active");
-          if (section.id === targetId) {
-            section.classList.add("active");
-          }
-        });
-
-        navLinks.forEach(link => link.classList.remove("active"));
-        link.classList.add("active");
-      });
-    });
-  </script>
-
-</body>
-</html>
+    .job-card {
+      background: var(--bubbly-blue);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0,
