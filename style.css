@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #E985A2, #f7b1c3);
+  background-color: #2C3E50; /* Steely grey */
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background-color: #d96b8c;
+  background-color: #34495E; /* Slightly darker grey on hover */
 }
 
 section {
@@ -62,12 +62,12 @@ section.active {
 
 section h2 {
   font-size: 36px;
-  color: #E985A2;
+  color: #E1E1E1; /* Light grey for section headers */
 }
 
 section p {
   font-size: 18px;
-  color: #555;
+  color: #BDC3C7; /* Lighter grey for text */
 }
 
 .content-box {
@@ -78,7 +78,7 @@ section p {
   gap: 20px;
   max-width: 600px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #34495E; /* Darker grey for content box */
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -109,7 +109,7 @@ section p {
 
 .resume-column {
   width: 300px;
-  background-color: #ffffff;
+  background-color: #34495E;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -117,7 +117,7 @@ section p {
 
 .resume-column h3 {
   font-size: 24px;
-  color: #E985A2;
+  color: #E1E1E1;
   margin-bottom: 15px;
 }
 
@@ -129,7 +129,7 @@ details {
 summary {
   font-weight: bold;
   cursor: pointer;
-  color: #333;
+  color: #BDC3C7; /* Lighter grey for details text */
 }
 
 .contact-info {
@@ -148,11 +148,11 @@ summary {
 
 .contact-item i {
   font-size: 24px;
-  color: #E985A2;
+  color: #E1E1E1;
 }
 
 .contact-item a {
-  color: #E985A2;
+  color: #E1E1E1;
   text-decoration: none;
   font-weight: bold;
 }
@@ -163,18 +163,18 @@ summary {
 
 .contact-item p {
   margin: 0;
-  color: #555;
+  color: #BDC3C7;
 }
 
 footer {
-  background-color: #E985A2;
+  background-color: #2C3E50;
   padding: 10px 0;
   text-align: center;
   color: white;
 }
 
 a {
-  color: #E985A2;
+  color: #E1E1E1;
   text-decoration: none;
   font-weight: bold;
 }
