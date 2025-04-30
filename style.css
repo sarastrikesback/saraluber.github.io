@@ -189,3 +189,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.about img {
+  width: 200px; /* Adjust size to a reasonable width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the image */
+  margin-bottom: 20px; /* Add some spacing below the image */
+}
