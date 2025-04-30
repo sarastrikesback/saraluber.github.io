@@ -10,6 +10,14 @@ body {
 header {
     background-color: #FF66B2;
     padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 10px;
 }
 
 header nav ul {
@@ -39,9 +47,14 @@ header nav ul li a:hover {
 }
 
 /* Sections */
-section {
+.content {
     padding: 50px 20px;
     text-align: center;
+}
+
+section {
+    display: none;
+    padding: 50px 20px;
 }
 
 section h2 {
