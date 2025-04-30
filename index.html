@@ -1,99 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sara's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara's Creative Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <h1>Sara Luber</h1>
-    <p>Creative Portfolio</p>
+    <header>
+        <h1>Sara's Creative Space</h1>
+    </header>
     <nav>
-      <a href="#" class="nav-link active" data-target="about">About</a>
-      <a href="#" class="nav-link" data-target="resume">Resume</a>
-      <a href="#" class="nav-link" data-target="portfolio">Portfolio</a>
-      <a href="#" class="nav-link" data-target="contact">Contact</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>
-
-  <main>
-    <section id="about" class="active">
-      <h2>About Me</h2>
-      <p>Hello! I'm Sara, a creative and driven individual passionate about design, communication, and hands-on hobbies like sewing and baking. Welcome to my portfolio!</p>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Sara, a creative soul passionate about a variety of hands-on hobbies like sewing, reading, and baking. I’m currently developing this website to showcase my work and share my journey with you.</p>
     </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <div class="education-grid">
-        <div class="education-card">
-          <h3>BA in Political Science</h3>
-          <p>NC State University</p>
-        </div>
-      </div>
-
-      <div class="experience-grid">
-        <div class="job-card">
-          <div class="job-header">
-            <img src="https://via.placeholder.com/60" alt="Company Logo">
-            <h4>Executive Assistant</h4>
-            <div class="job-duration">2022 - Present</div>
-          </div>
-          <div class="job-details">
-            <p>Responsibilities: Managing schedules, coordinating communications, and supporting team needs.</p>
-          </div>
-        </div>
-      </div>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>From custom sewing projects to delicious baking experiments, my projects reflect my love for creativity and craftsmanship. Check out what I’ve been working on!</p>
     </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="gallery-wrapper">
-        <div class="gallery-item">
-          <h3>Sewing Projects</h3>
-          <img src="https://via.placeholder.com/300" alt="Sewing Project">
-        </div>
-        <div class="gallery-item">
-          <h3>Photography</h3>
-          <img src="https://via.placeholder.com/300" alt="Photography Project">
-        </div>
-      </div>
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Stay tuned for posts on my latest creative endeavors and tips. I love to share my journey with others!</p>
     </section>
-
     <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-icons">
-        <a href="mailto:sara@example.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/sara" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/sara" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      </div>
+        <h2>Contact</h2>
+        <p>If you'd like to connect or collaborate, reach out to me through the form below!</p>
     </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Sara Luber. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const tabs = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        sections.forEach(section => {
-          section.classList.remove('active');
-          if (section.id === tab.dataset.target) {
-            section.classList.add('active');
-          }
-        });
-      });
-    });
-  </script>
+    <footer>
+        <p>&copy; 2025 Sara Luber. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
