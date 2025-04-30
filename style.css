@@ -157,3 +157,20 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.portfolio-section {
+  margin-bottom: 40px;
+}
+
+.portfolio-section h3 {
+  font-size: 24px;
+  color: #E985A2;
+  margin-bottom: 20px;
+  font-family: 'Baloo 2', cursive;
+}
+
+.project p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
