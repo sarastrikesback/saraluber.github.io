@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #FF66B2;
+    background-color: #E985A2;
     padding: 20px;
     text-align: center;
 }
@@ -43,7 +43,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #FF3399;
+    background-color: #d96b8c;
 }
 
 /* Sections */
@@ -60,7 +60,7 @@ section {
 section h2 {
     font-family: 'Bubblegum Sans', cursive;
     font-size: 36px;
-    color: #FF66B2;
+    color: #E985A2;
 }
 
 section p {
@@ -84,7 +84,7 @@ section p {
 
 /* Footer */
 footer {
-    background-color: #FF66B2;
+    background-color: #E985A2;
     padding: 10px 0;
     text-align: center;
     color: white;
@@ -92,7 +92,7 @@ footer {
 
 /* Links */
 a {
-    color: #FF66B2;
+    color: #E985A2;
     text-decoration: none;
     font-weight: bold;
 }
@@ -118,11 +118,11 @@ a:hover {
 
 .contact-item i {
     font-size: 24px;
-    color: #FF66B2;
+    color: #E985A2;
 }
 
 .contact-item a {
-    color: #FF66B2;
+    color: #E985A2;
     text-decoration: none;
     font-weight: bold;
 }
