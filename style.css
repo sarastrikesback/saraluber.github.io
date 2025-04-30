@@ -2,7 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #F2F5F8;
+  background-color: #2C3E50; /* Steely grey background */
   color: #333;
 }
 
@@ -14,10 +14,10 @@ header {
 }
 
 header h1 {
-  font-family: 'Baloo 2', cursive;
   font-size: 48px;
   color: white;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 header nav ul {
@@ -61,7 +61,6 @@ section.active {
 }
 
 section h2 {
-  font-family: 'Baloo 2', cursive;
   font-size: 36px;
   color: #E985A2;
 }
@@ -69,14 +68,6 @@ section h2 {
 section p {
   font-size: 18px;
   color: #555;
-}
-
-.about-headshot {
-  width: 180px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 20px;
 }
 
 .content-box {
@@ -106,6 +97,39 @@ section p {
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.resume-column {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resume-column h3 {
+  font-size: 24px;
+  color: #E985A2;
+  margin-bottom: 15px;
+}
+
+details {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
 }
 
 .contact-info {
@@ -157,21 +181,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.portfolio-section {
-  margin-bottom: 40px;
-}
-
-.portfolio-section h3 {
-  font-size: 24px;
-  color: #E985A2;
-  margin-bottom: 20px;
-  font-family: 'Baloo 2', cursive;
-}
-
-.project p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #555;
 }
