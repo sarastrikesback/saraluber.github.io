@@ -11,6 +11,9 @@ header {
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;  /* Make header stick to top */
+  top: 0;  /* Stick to the top */
+  z-index: 100;  /* Ensure it stays on top of other elements */
 }
 
 header h1 {
@@ -39,11 +42,16 @@ header nav ul li a {
   text-transform: uppercase;
   border-radius: 20px;
   padding: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
 header nav ul li a:hover {
   background-color: #D6B5D1; /* Subtle highlight color */
+}
+
+/* Underline the active link */
+header nav ul li a.active {
+  border-bottom: 3px solid #D6B5D1; /* Underline color */
 }
 
 section {
