@@ -135,3 +135,11 @@ a:hover {
     margin: 0;
     color: #555;
 }
+
+img {
+  width: 150px; /* Adjust the width to your preferred size */
+  height: 150px; /* Set the height equal to the width for a square, or adjust if you want a rectangle */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  border-radius: 15px; /* Adjust the value for roundness */
+  margin-bottom: 20px;
+}
