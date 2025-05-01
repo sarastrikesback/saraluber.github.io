@@ -12,10 +12,10 @@
         <h1>Sara Luber</h1>
         <nav>
             <ul>
-                <li><a href="#about" class="active-tab">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="active-tab" onclick="showTab('about')">About</a></li>
+                <li><a href="#" onclick="showTab('resume')">Resume</a></li>
+                <li><a href="#" onclick="showTab('portfolio')">Portfolio</a></li>
+                <li><a href="#" onclick="showTab('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -93,6 +93,28 @@
         <p>&copy; 2025 Sara Luber. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        function showTab(id) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove 'active' class from all tabs
+            const tabs = document.querySelectorAll('nav a');
+            tabs.forEach(tab => {
+                tab.classList.remove('active-tab');
+            });
+
+            // Show the clicked section
+            const activeSection = document.getElementById(id);
+            activeSection.classList.add('active');
+
+            // Set the clicked tab as active
+            const activeTab = document.querySelector(`a[href="#${id}"]`);
+            activeTab.classList.add('active-tab');
+        }
+    </script>
 </body>
 </html>
