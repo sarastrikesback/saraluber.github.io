@@ -12,7 +12,7 @@ h1, h2, h3 {
 
 a {
   text-decoration: none;
-  color: #ffd966; /* pop of color */
+  color: #ffd966;
 }
 
 a:hover {
@@ -52,7 +52,7 @@ nav li a {
 }
 
 nav li a.active-tab {
-  border-bottom: 3px solid #ffd966; /* underlined tab */
+  border-bottom: 3px solid #ffd966;
 }
 
 /* Section styles */
@@ -65,23 +65,27 @@ section.active {
   display: block;
 }
 
-/* About image */
+/* === FLEXBOX SECTION STYLES === */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* About Image */
 img.about {
   max-width: 250px;
   height: auto;
   border-radius: 20px;
   display: block;
-  margin: 2rem auto;
+  margin: 0 auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* Resume layout */
-.resume-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
 .resume-column {
   flex: 1 1 300px;
 }
@@ -93,7 +97,7 @@ details summary {
   margin-top: 1rem;
 }
 
-/* Portfolio */
+/* Portfolio section */
 .projects {
   display: flex;
   gap: 1rem;
