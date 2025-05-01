@@ -1,121 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Luber | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Sara Luber</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Sara Luber</h1>
-        <nav>
-            <ul>
-                <li><a href="javascript:void(0);" class="active-tab" onclick="showTab('about')">About</a></li>
-                <li><a href="javascript:void(0);" onclick="showTab('resume')">Resume</a></li>
-                <li><a href="javascript:void(0);" onclick="showTab('portfolio')">Portfolio</a></li>
-                <li><a href="javascript:void(0);" onclick="showTab('contact')">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about" class="active about-section">
-        <div class="about-section">
-            <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber" class="about">
-            <div>
-                <h2>About Me</h2>
-                <p>I’m Sara Luber, a passionate advocate for social justice and environmental policy, with a focus on renewable energy and climate change. My career path has led me to the intersection of politics, policy communications, and visual design, where I can express my creativity while advocating for change.</p>
-            </div>
-        </div>
-    </section>
+  <h1>Sara Luber</h1>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <div class="resume-columns">
-            <div class="resume-column">
-                <h3>Experience</h3>
-                <ul>
-                    <li>Executive Assistant at EPA</li>
-                    <li>Data Science Intern at IBM</li>
-                </ul>
-            </div>
-            <div class="resume-column">
-                <h3>Education</h3>
-                <ul>
-                    <li>B.A. in Political Science (minor: Environmental Science) - NC State University</li>
-                    <li>IBM Professional Certificates in Data Analytics & Data Science</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#" class="tab-link active-tab" data-tab="about">About</a></li>
+      <li><a href="#" class="tab-link" data-tab="resume">Resume</a></li>
+      <li><a href="#" class="tab-link" data-tab="portfolio">Portfolio</a></li>
+      <li><a href="#" class="tab-link" data-tab="contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="projects">
-            <div class="project">
-                <img src="https://via.placeholder.com/200x300" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of the project.</p>
-            </div>
-            <div class="project">
-                <img src="https://via.placeholder.com/200x300" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of the project.</p>
-            </div>
-            <div class="project">
-                <img src="https://via.placeholder.com/200x300" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Description of the project.</p>
-            </div>
-        </div>
-    </section>
+  <section id="about" class="active">
+    <h2>About Sara</h2>
+    <p>Welcome! I'm Sara, a creative and passionate person who loves blending design, writing, and data. I enjoy sewing, reading, and making things from scratch. This website is my place to share it all.</p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p>sarafluber@gmail.com</p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p>(443) 547-2317</p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-linkedin"></i>
-                <p><a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a></p>
-            </div>
-        </div>
-    </section>
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>Here you'll find my education, professional experience, and key skills. (Feel free to download a PDF copy too!)</p>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Sara Luber. All rights reserved.</p>
-    </footer>
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>This section highlights my recent projects: data dashboards, writing clips, visual designs, and more hands-on fun.</p>
+  </section>
 
-    <script>
-        // Function to show a specific section when a tab is clicked
-        function showTab(tabId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me at <a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a> or <a href="tel:4435472317">443-547-2317</a>. Let’s chat!</p>
+  </section>
 
-            // Remove the active class from all tabs
-            const tabs = document.querySelectorAll('nav a');
-            tabs.forEach(tab => {
-                tab.classList.remove('active-tab');
-            });
-
-            // Show the selected section
-            const activeSection = document.getElementById(tabId);
-            activeSection.classList.add('active');
-
-            // Highlight the clicked tab
-            const activeTab = document.querySelector(`a[onclick="showTab('${tabId}')"]`);
-            activeTab.classList.add('active-tab');
-        }
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
