@@ -22,16 +22,19 @@
   </header>
 
   <section id="about" class="active">
-    <h2>About Me</h2>
-    <p>Welcome! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
-    <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber" class="about">
+    <div class="flex-container">
+      <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber" class="about">
+      <div>
+        <h2>About Me</h2>
+        <p>Welcome! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
+      </div>
+    </div>
   </section>
 
   <section id="resume">
-    <h2>Resume</h2>
-    <div class="resume-columns">
+    <div class="flex-container">
       <div class="resume-column">
-        <h3>Education</h3>
+        <h2>Education</h2>
         <details>
           <summary>Degree</summary>
           <p>B.A. in Political Science (minor: Environmental Science) - NC State University</p>
@@ -46,7 +49,7 @@
         </details>
       </div>
       <div class="resume-column">
-        <h3>Relevant Experience</h3>
+        <h2>Relevant Experience</h2>
         <details>
           <summary>Executive Assistant @ EPA</summary>
           <p><strong>Company:</strong> Environmental Protection Agency<br><strong>Details:</strong> Coordinated operations and communications for federal agency.</p>
@@ -60,41 +63,45 @@
   </section>
 
   <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="content-box">
-      <div class="projects">
-        <div class="project">
-          <a href="https://www.figma.com/proto/Ezbsq3Km0DRkhtQSn2cDYl/Sara-Designs" target="_blank">
-            <img src="https://via.placeholder.com/200" alt="Figma Project">
-          </a>
-        </div>
-        <div class="project">
-          <img src="https://via.placeholder.com/200" alt="Project 2">
+    <div class="flex-container">
+      <div>
+        <h2>Portfolio</h2>
+        <div class="projects">
+          <div class="project">
+            <a href="https://www.figma.com/proto/Ezbsq3Km0DRkhtQSn2cDYl/Sara-Designs" target="_blank">
+              <img src="https://via.placeholder.com/200" alt="Figma Project">
+            </a>
+          </div>
+          <div class="project">
+            <img src="https://via.placeholder.com/200" alt="Project 2">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <div class="content-box">
-      <p>Let's connect! You can reach me through the following:</p>
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="bi bi-envelope-fill"></i>
-          <a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-phone-fill"></i>
-          <p>443-547-2317</p>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-linkedin"></i>
-          <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-geo-alt-fill"></i>
-          <p>Raleigh, NC (Open to relocation)</p>
+    <div class="flex-container">
+      <div>
+        <h2>Contact</h2>
+        <p>Let's connect! You can reach me through the following:</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-phone-fill"></i>
+            <p>443-547-2317</p>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-linkedin"></i>
+            <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p>Raleigh, NC (Open to relocation)</p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,9 +116,12 @@
       const tabs = document.querySelectorAll('section');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+
+      // Toggle active tab underline
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => link.classList.remove('active-tab'));
+      event.target.classList.add('active-tab');
     }
   </script>
 </body>
 </html>
-
-<script src="script.js"></script>
