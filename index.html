@@ -13,7 +13,7 @@
     <h1>Sara Luber</h1>
     <nav>
       <ul>
-        <li><a href="#" onclick="showTab('about')">About Me</a></li>
+        <li><a href="#" onclick="showTab('about')" class="active">About Me</a></li>
         <li><a href="#" onclick="showTab('resume')">Resume</a></li>
         <li><a href="#" onclick="showTab('portfolio')">Portfolio</a></li>
         <li><a href="#" onclick="showTab('contact')">Contact</a></li>
@@ -64,24 +64,20 @@
     <div class="projects">
       <div class="project">
         <a href="https://www.figma.com/proto/Ezbsq3Km0DRkhtQSn2cDYl/Sara-Designs" target="_blank">
-          <img src="https://via.placeholder.com/250x350" alt="Figma Project">
+          <img src="https://via.placeholder.com/200x300" alt="Figma Project">
         </a>
-        <p>UI/UX Mockup – Figma</p>
       </div>
       <div class="project">
-        <img src="https://via.placeholder.com/250x350" alt="Project 2">
-        <p>Data Visualization – Python</p>
+        <img src="https://via.placeholder.com/200x300" alt="Project 2">
       </div>
       <div class="project">
-        <img src="https://via.placeholder.com/250x350" alt="Project 3">
-        <p>Infographic – Canva</p>
+        <img src="https://via.placeholder.com/200x300" alt="Project 3">
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Let's connect! You can reach me through the following:</p>
     <div class="contact-info">
       <div class="contact-item">
         <i class="bi bi-envelope-fill"></i>
@@ -109,11 +105,14 @@
   <script>
     function showTab(id) {
       const tabs = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeLink = Array.from(navLinks).find(link => link.getAttribute('onclick').includes(id));
+      if (activeLink) activeLink.classList.add('active');
     }
   </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
