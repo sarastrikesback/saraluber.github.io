@@ -1,24 +1,21 @@
-<script>
-    // Function to show a specific section when a tab is clicked
-    function showTab(tabId) {
-        // Hide all sections
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
+const tabs = document.querySelectorAll('.tab-link');
+const sections = document.querySelectorAll('section');
 
-        // Remove the active class from all tabs
-        const tabs = document.querySelectorAll('nav a');
-        tabs.forEach(tab => {
-            tab.classList.remove('active-tab');
-        });
+tabs.forEach(tab => {
+  tab.addEventListener('click', (e) => {
+    e.preventDefault();
+    const tabId = tab.getAttribute('data-tab');
 
-        // Show the selected section
-        const activeSection = document.getElementById(tabId);
-        activeSection.classList.add('active');
+    // Hide all sections
+    sections.forEach(section => section.classList.remove('active'));
 
-        // Highlight the clicked tab
-        const activeTab = document.querySelector(`a[onclick="showTab('${tabId}')"]`);
-        activeTab.classList.add('active-tab');
-    }
-</script>
+    // Remove active class from all tabs
+    tabs.forEach(t => t.classList.remove('active-tab'));
+
+    // Show the clicked section
+    document.getElementById(tabId).classList.add('active');
+
+    // Highlight the clicked tab
+    tab.classList.add('active-tab');
+  });
+});
