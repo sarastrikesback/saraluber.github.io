@@ -1,12 +1,24 @@
-function showTab(id) {
-  const tabs = document.querySelectorAll('section');
-  const links = document.querySelectorAll('nav a');
+<script>
+    // Function to show a specific section when a tab is clicked
+    function showTab(tabId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
 
-  tabs.forEach(tab => tab.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+        // Remove the active class from all tabs
+        const tabs = document.querySelectorAll('nav a');
+        tabs.forEach(tab => {
+            tab.classList.remove('active-tab');
+        });
 
-  links.forEach(link => link.classList.remove('active-tab'));
-  const activeLink = Array.from(links).find(link => link.getAttribute('onclick').includes(id));
-  if (activeLink) activeLink.classList.add('active-tab');
-}
+        // Show the selected section
+        const activeSection = document.getElementById(tabId);
+        activeSection.classList.add('active');
 
+        // Highlight the clicked tab
+        const activeTab = document.querySelector(`a[onclick="showTab('${tabId}')"]`);
+        activeTab.classList.add('active-tab');
+    }
+</script>
