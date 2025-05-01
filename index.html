@@ -1,119 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sara Luber | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Luber | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Sara Luber</h1>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="showTab('about')" class="active">About Me</a></li>
-        <li><a href="#" onclick="showTab('resume')">Resume</a></li>
-        <li><a href="#" onclick="showTab('portfolio')">Portfolio</a></li>
-        <li><a href="#" onclick="showTab('contact')">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1>Sara Luber</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" class="active-tab">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="about" class="active">
-    <h2>About Me</h2>
-    <p>Welcome! I'm Sara — I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.</p>
-    <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber" class="about">
-  </section>
+    <section id="about" class="active about-section">
+        <div class="about-section">
+            <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber" class="about">
+            <div>
+                <h2>About Me</h2>
+                <p>I’m Sara Luber, a passionate advocate for social justice and environmental policy, with a focus on renewable energy and climate change. My career path has led me to the intersection of politics, policy communications, and visual design, where I can express my creativity while advocating for change.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <div class="resume-columns">
-      <div class="resume-column">
-        <h3>Education</h3>
-        <details>
-          <summary>Degree</summary>
-          <p>B.A. in Political Science (minor: Environmental Science) - NC State University</p>
-        </details>
-        <details>
-          <summary>Professional Certifications</summary>
-          <p>IBM Professional Certificates in Data Analytics & Data Science</p>
-        </details>
-        <details>
-          <summary>Course Certificates</summary>
-          <p>Various data and design related certifications</p>
-        </details>
-      </div>
-      <div class="resume-column">
-        <h3>Relevant Experience</h3>
-        <details>
-          <summary>Executive Assistant @ EPA</summary>
-          <p><strong>Company:</strong> Environmental Protection Agency<br><strong>Details:</strong> Coordinated operations and communications for federal agency.</p>
-        </details>
-        <details>
-          <summary>Data Science Intern @ IBM</summary>
-          <p><strong>Company:</strong> IBM<br><strong>Details:</strong> Completed projects using Python and SQL. Created dashboards and reports.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+    <section id="resume">
+        <h2>Resume</h2>
+        <div class="resume-columns">
+            <div class="resume-column">
+                <h3>Experience</h3>
+                <ul>
+                    <li>Executive Assistant at EPA</li>
+                    <li>Data Science Intern at IBM</li>
+                </ul>
+            </div>
+            <div class="resume-column">
+                <h3>Education</h3>
+                <ul>
+                    <li>B.A. in Political Science (minor: Environmental Science) - NC State University</li>
+                    <li>IBM Professional Certificates in Data Analytics & Data Science</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="projects">
-      <div class="project">
-        <a href="https://www.figma.com/proto/Ezbsq3Km0DRkhtQSn2cDYl/Sara-Designs" target="_blank">
-          <img src="https://via.placeholder.com/200x300" alt="Figma Project">
-        </a>
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/200x300" alt="Project 2">
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/200x300" alt="Project 3">
-      </div>
-    </div>
-  </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://via.placeholder.com/200x300" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of the project.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/200x300" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of the project.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/200x300" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of the project.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <h2>Let's connect! You can reach me through any of the following:</h2>
-      <div class="contact-item">
-        <i class="bi bi-envelope-fill"></i>
-        <a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <i class="bi bi-phone-fill"></i>
-        <p>443-547-2317</p>
-      </div>
-      <div class="contact-item">
-        <i class="bi bi-linkedin"></i>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
-      </div>
-      <div class="contact-item">
-        <i class="bi bi-geo-alt-fill"></i>
-        <p>Raleigh, NC (Open to relocation)</p>
-      </div>
-    </div>
-  </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>sarafluber@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>(443) 547-2317</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-linkedin"></i>
+                <p><a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Sara Luber</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Sara Luber. All rights reserved.</p>
+    </footer>
 
-  <script>
-    function showTab(id) {
-      const tabs = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('nav a');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-
-      navLinks.forEach(link => link.classList.remove('active'));
-      const activeLink = Array.from(navLinks).find(link => link.getAttribute('onclick').includes(id));
-      if (activeLink) activeLink.classList.add('active');
-    }
-  </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
