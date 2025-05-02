@@ -217,3 +217,39 @@ footer {
   color: #ff8c00; /* dark orange for location */
 }
 
+/* Contact icons hover animation */
+.contact-item i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-item i:hover {
+  transform: scale(1.2);
+}
+
+/* Individual icon colors */
+.contact-item i.bi-envelope {
+  color: #ff69b4; /* pink */
+}
+
+.contact-item i.bi-phone {
+  color: #3cb371; /* medium green */
+}
+
+.contact-item i.bi-linkedin {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.contact-item i.bi-geo-alt-fill {
+  color: #ff8c00; /* orange for location */
+}
+
+/* All contact text black */
+.contact-info p, .contact-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
