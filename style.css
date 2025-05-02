@@ -253,3 +253,23 @@ footer {
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+details {
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+details[open] summary {
+  color: #ff69b4; /* hot pink when open */
+}
