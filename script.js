@@ -12,10 +12,10 @@ tabs.forEach(tab => {
     // Remove active class from all tabs
     tabs.forEach(t => t.classList.remove('active-tab'));
 
-    // Show the clicked section
+    // Show clicked section
     document.getElementById(tabId).classList.add('active');
 
-    // Highlight the clicked tab
+    // Highlight clicked tab
     tab.classList.add('active-tab');
   });
 });
