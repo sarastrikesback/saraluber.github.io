@@ -188,3 +188,28 @@ footer {
   color: #333333;
   margin-top: 2rem;
 }
+
+/* Ensure all contact text is black */
+.contact-info p, .contact-info a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* Optional: underline links on hover */
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Specific icon colors */
+.contact-item i.bi-envelope {
+  color: #ff69b4; /* pink for email */
+}
+
+.contact-item i.bi-phone {
+  color: #3cb371; /* medium sea green for phone */
+}
+
+.contact-item i.bi-linkedin {
+  color: #0a66c2; /* LinkedIn blue */
+}
