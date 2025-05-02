@@ -12,40 +12,8 @@ body {
   line-height: 1.6;
 }
 
-/* Apply custom font for headers */
-@font-face {
-  font-family: 'GoodDogFont';
-  src: url('https://raw.githubusercontent.com/sarastrikesback/saraluber.github.io/main/gooddog.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Header */
 h1, h2, h3 {
-  font-family: 'GoodDogFont', sans-serif; /* Use GoodDogFont for headers */
   font-weight: 600;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #333333;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333333;
-}
-
-h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #333333;
 }
 
 a {
@@ -57,7 +25,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header Section */
+/* Header */
 header {
   background-color: #e0e0e0;
   padding: 1rem 2rem;
@@ -257,4 +225,70 @@ footer {
 
 .contact-item i:hover {
   transform: scale(1.2);
+}
+
+/* Individual icon colors */
+.contact-item i.bi-envelope {
+  color: #ff69b4; /* pink */
+}
+
+.contact-item i.bi-phone {
+  color: #3cb371; /* medium green */
+}
+
+.contact-item i.bi-linkedin {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.contact-item i.bi-geo-alt-fill {
+  color: #ff8c00; /* orange for location */
+}
+
+/* All contact text black */
+.contact-info p, .contact-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+details {
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+details[open] summary {
+  color: #ff69b4; /* hot pink when open */
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.date-range {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.notable-skills {
+  margin-top: 1rem;
 }
