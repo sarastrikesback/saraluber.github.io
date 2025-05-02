@@ -189,7 +189,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Ensure all contact text is black */
 .contact-info p, .contact-info a {
   color: #000000;
   text-decoration: none;
@@ -213,3 +212,8 @@ footer {
 .contact-item i.bi-linkedin {
   color: #0a66c2; /* LinkedIn blue */
 }
+
+.contact-item i.bi-geo-alt-fill {
+  color: #ff8c00; /* dark orange for location */
+}
+
