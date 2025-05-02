@@ -273,3 +273,22 @@ summary {
 details[open] summary {
   color: #ff69b4; /* hot pink when open */
 }
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.date-range {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+.notable-skills {
+  margin-top: 1rem;
+}
