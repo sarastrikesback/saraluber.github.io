@@ -5,13 +5,6 @@
   padding: 0;
 }
 
-@font-face {
-  font-family: 'GoodDog';
-  src: url('gooddog.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f2f2f2;
@@ -21,7 +14,7 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
-  font-family: 'GoodDog', cursive;
+  /* Removed: font-family: 'GoodDog', cursive; */
 }
 
 a {
@@ -210,19 +203,19 @@ footer {
 
 /* Specific icon colors */
 .contact-item i.bi-envelope {
-  color: #ff69b4; /* pink for email */
+  color: #ff69b4;
 }
 
 .contact-item i.bi-phone {
-  color: #3cb371; /* medium sea green for phone */
+  color: #3cb371;
 }
 
 .contact-item i.bi-linkedin {
-  color: #0a66c2; /* LinkedIn blue */
+  color: #0a66c2;
 }
 
-.contact-item i.bi-geo-alt-fill {
-  color: #ff8c00; /* dark orange for location */
+contact-item i.bi-geo-alt-fill {
+  color: #ff8c00;
 }
 
 /* Contact icons hover animation */
@@ -233,23 +226,6 @@ footer {
 
 .contact-item i:hover {
   transform: scale(1.2);
-}
-
-/* Individual icon colors */
-.contact-item i.bi-envelope {
-  color: #ff69b4; /* pink */
-}
-
-.contact-item i.bi-phone {
-  color: #3cb371; /* medium green */
-}
-
-.contact-item i.bi-linkedin {
-  color: #0077b5; /* LinkedIn blue */
-}
-
-.contact-item i.bi-geo-alt-fill {
-  color: #ff8c00; /* orange for location */
 }
 
 /* All contact text black */
@@ -279,7 +255,7 @@ summary {
 }
 
 details[open] summary {
-  color: #ff69b4; /* hot pink when open */
+  color: #ff69b4;
 }
 
 summary {
