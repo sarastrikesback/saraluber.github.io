@@ -15,7 +15,11 @@ body {
 /* Apply custom font for headers */
 @font-face {
   font-family: 'GoodDogFont';
-  src: url('https://github.com/yourusername/yourrepo/raw/main/path/to/gooddog.otf') format('opentype');
+  src: url('https://raw.githubusercontent.com/sarastrikesback/saraluber.github.io/main/gooddog.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
   font-weight: normal;
   font-style: normal;
 }
