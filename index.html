@@ -1,95 +1,207 @@
-<section id="resume">
-  <h2>Resume</h2>
-  <div class="resume-columns">
-    
-    <!-- Education Column -->
-    <div class="resume-column">
-      <h3>Education</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sara Luber</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
 
-      <div class="degree">
-        <details>
-          <summary>North Carolina State University, B.A. Political Science</summary>
-          <p>Graduated May 2023, Minor in Environmental Science. Relevant coursework included Environmental Policy, Research Methods, and Political Journalism.</p>
-        </details>
+  <header>
+    <h1>Sara Luber</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="tab-link active-tab" data-tab="about">About</a></li>
+        <li><a href="#" class="tab-link" data-tab="resume">Resume</a></li>
+        <li><a href="#" class="tab-link" data-tab="portfolio">Portfolio</a></li>
+        <li><a href="#" class="tab-link" data-tab="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <div class="about-section">
+        <img class="about" src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot">
+        <div>
+          <h2>Hi, I’m Sara!</h2>
+          <p>I’m a creative, hands-on communicator with a love for design, books, and policy.</p>
+          <p>I'm looking for a role that lets me blend administrative organization with creative energy and bold, editorial storytelling. My dream is to work in political media or publishing, crafting messaging and content that makes big ideas more accessible.</p>
+          <p>I currently work as an Executive Assistant at the EPA. Outside of work, you can find me with a good book, hands deep in a sewing project, or planning my next road trip.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <div class="resume-columns">
+      
+        <!-- Education Column -->
+        <div class="resume-column">
+          <h3>Education</h3>
+
+          <div class="degree">
+            <details>
+              <summary>North Carolina State University, B.A. Political Science</summary>
+              <p>Graduated May 2023, Minor in Environmental Science. Relevant coursework included Environmental Policy, Research Methods, and Political Journalism.</p>
+            </details>
+            
+            <!-- Diploma Link Nested Under Degree -->
+            <details>
+              <summary>View Diploma</summary>
+              <p>📄 <a href="DIPLOMA.pdf" target="_blank">View Diploma (PDF)</a></p>
+            </details>
+          </div>
+
+          <div class="certificate">
+            <!-- Professional Certificates Nested Under Education -->
+            <details>
+              <summary>IBM Professional Certificate – Data Science</summary>
+              <p>Earned 2024. Covered Python, SQL, data visualization, machine learning fundamentals, and real-world capstone projects.</p>
+              <p>📄 <a href="Luber%20Data%20Science.pdf" target="_blank">View Certificate (PDF)</a></p>
+            </details>
+
+            <details>
+              <summary>IBM Professional Certificate – Data Analytics</summary>
+              <p>Completed 2024. Focused on Excel, dashboard creation, and data storytelling. Completed multiple hands-on labs.</p>
+              <p>📄 <a href="Luber%20Data%20Analyst.pdf" target="_blank">View Certificate (PDF)</a></p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Experience Column -->
+        <div class="resume-column">
+          <h3>Relevant Experience</h3>
+
+          <details>
+            <summary>
+              Executive Assistant – U.S. Environmental Protection Agency
+              <span class="date-range">November 2024–Present</span>
+            </summary>
+            <p>
+              At the Office of Resource Management (ORM), I streamlined operations by identifying inefficiencies, implementing innovative processes, and enhancing workflows to better support the Office of Research and Development’s (ORD) mission. I coordinated cross-functional projects, collaborating with team members and other EPA departments to ensure timely, high-quality delivery. By analyzing organizational data, I provided leadership with actionable recommendations that improved operational effectiveness. Additionally, I efficiently managed executive-level calendars and administrative tasks, aligning daily operations with broader strategic priorities.
+            </p>
+            <p class="notable-skills">
+              <strong>Notable Skills:</strong> Executive Support, Project Coordination, Process Improvement, Microsoft 365, Interdepartmental Collaboration
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Program Operations Admin – U.S. Environmental Protection Agency
+              <span class="date-range">March 2024 – November 2024 (Contract)</span>
+            </summary>
+            <p>
+              At the EPA’s Scientific Computation and Data Curation Division (SCDCD), I contributed to operational efficiency and sustainability by leveraging data and technology. I created advanced data visualizations in Power BI to support budget and software management decisions and assisted in developing a Postgres and Qlik-based database to streamline data processes. Using advanced Excel skills, I delivered data-driven solutions that enhanced resource management. Additionally, I managed key administrative tasks such as preparing presentations, coordinating software renewals, and organizing Teams channels to support the division’s goals and ensure seamless operations.
+            </p>
+            <p class="notable-skills">
+              <strong>Notable Skills:</strong> Microsoft Excel, PowerBI, Qlik, SQL, SharePoint, Microsoft PowerPoint, Database Management
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Energy Policy Research Assistant – NC Clean Energy Technology Center
+              <span class="date-range">2022 Academic Year (Internship)</span>
+            </summary>
+            <p>
+              I conducted in-depth analyses of clean energy incentive programs focused on renewable energy, electric vehicles, and energy-efficient building upgrades. My work involved evaluating state policies and legislative frameworks that impact clean energy adoption and maintaining the accuracy of the Database of State Incentives for Renewables & Efficiency (DSIRE). I also developed research reports and presentations to support clean energy initiatives and effectively communicate findings to key stakeholders.
+            </p>
+            <p class="notable-skills">
+              <strong>Notable Skills:</strong> Policy Analysis, Program Evaluation, Database Management
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Youth Conservation Corps – City of Raleigh Parks and Recreation
+              <span class="date-range">Summer of 2021 (Internship)</span>
+            </summary>
+            <p>
+              Worked with the Conservation Corps of North Carolina as part of the Youth Conservation Crew to support environmental stewardship and public land maintenance across Raleigh. Gained hands-on experience in natural resource management through invasive species removal, trail maintenance, and stream cleanup projects. Collaborated with urban foresters, stormwater specialists, and park staff, while also mentoring youth participants and facilitating educational opportunities in bird ecology, community science, and sustainable practices. Contributed to environmental art initiatives and promoted conservation awareness through creative and service-based projects.
+            </p>
+            <p class="notable-skills">
+              <strong>Notable Skills:</strong> Invasive Species Management, Environmental Fieldwork, Hands-On Conservation, GIS
+            </p>
+          </details>
+        </div> <!-- End of Resume Column -->
+      </section>
+
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
         
-        <!-- Diploma Link Nested Under Degree -->
-        <details>
-          <summary>View Diploma</summary>
-          <p>📄 <a href="DIPLOMA.pdf" target="_blank">View Diploma (PDF)</a></p>
-        </details>
-      </div>
+          <div class="project">
+            <h3>Python</h3>
+            <details>
+              <summary><strong>Climate Justice Dashboard</strong></summary>
+              <p>An interactive dashboard built in Python using Plotly and Dash to visualize climate burdens in underserved communities across the U.S.</p>
+            </details>
+          </div>
 
-      <div class="certificate">
-        <!-- Professional Certificates Nested Under Education -->
-        <details>
-          <summary>IBM Professional Certificate – Data Science</summary>
-          <p>Earned 2024. Covered Python, SQL, data visualization, machine learning fundamentals, and real-world capstone projects.</p>
-          <p>📄 <a href="Luber%20Data%20Science.pdf" target="_blank">View Certificate (PDF)</a></p>
-        </details>
+          <div class="project">
+           <h3>PowerBI</h3>
+            <details>
+              <summary><strong>Publishing Portfolio Website</strong></summary>
+              <p>This personal website (you're looking at it!) highlights creative projects, resume, and more. Built with HTML, CSS, and JavaScript for a fun, editorial-inspired design.</p>
+            </details>
+          </div>
 
-        <details>
-          <summary>IBM Professional Certificate – Data Analytics</summary>
-          <p>Completed 2024. Focused on Excel, dashboard creation, and data storytelling. Completed multiple hands-on labs.</p>
-          <p>📄 <a href="Luber%20Data%20Analyst.pdf" target="_blank">View Certificate (PDF)</a></p>
-        </details>
-      </div>
-    </div>
-    
-    <!-- Experience Column -->
-    <div class="resume-column">
-      <h3>Relevant Experience</h3>
+          <div class="project">
+            <h3>Stata</h3>
+            <details>
+              <summary><strong>Policy Communications Brief</strong></summary>
+              <p>Created a multimedia policy brief on renewable energy access in low-income communities, combining research, design, and storytelling.</p>
+            </details>
+          </div>
 
-      <details>
-        <summary>
-          Executive Assistant – U.S. Environmental Protection Agency
-          <span class="date-range">November 2024–Present</span>
-        </summary>
-        <p>
-          At the Office of Resource Management (ORM), I streamlined operations by identifying inefficiencies, implementing innovative processes, and enhancing workflows to better support the Office of Research and Development’s (ORD) mission. I coordinated cross-functional projects, collaborating with team members and other EPA departments to ensure timely, high-quality delivery. By analyzing organizational data, I provided leadership with actionable recommendations that improved operational effectiveness. Additionally, I efficiently managed executive-level calendars and administrative tasks, aligning daily operations with broader strategic priorities.
-        </p>
-        <p class="notable-skills">
-          <strong>Notable Skills:</strong> Executive Support, Project Coordination, Process Improvement, Microsoft 365, Interdepartmental Collaboration
-        </p>
-      </details>
+           <div class="project">
+            <h3>Writing Samples</h3>
+            <details>
+              <summary><strong>Policy Communications Brief</strong></summary>
+              <p>Created a multimedia policy brief on renewable energy access in low-income communities, combining research, design, and storytelling.</p>
+            </details>
+          </div>
 
-      <details>
-        <summary>
-          Program Operations Admin – U.S. Environmental Protection Agency
-          <span class="date-range">March 2024 – November 2024 (Contract)</span>
-        </summary>
-        <p>
-          At the EPA’s Scientific Computation and Data Curation Division (SCDCD), I contributed to operational efficiency and sustainability by leveraging data and technology. I created advanced data visualizations in Power BI to support budget and software management decisions and assisted in developing a Postgres and Qlik-based database to streamline data processes. Using advanced Excel skills, I delivered data-driven solutions that enhanced resource management. Additionally, I managed key administrative tasks such as preparing presentations, coordinating software renewals, and organizing Teams channels to support the division’s goals and ensure seamless operations.
-        </p>
-        <p class="notable-skills">
-          <strong>Notable Skills:</strong> Microsoft Excel, PowerBI, Qlik, SQL, SharePoint, Microsoft PowerPoint, Database Management
-        </p>
-      </details>
+           <div class="project">
+            <h3>Misc. Projects</h3>
+            <details>
+              <summary><strong>Sara Sews, This website (HTML, CSS, JavaScript), etc.</strong></summary>
+              <p>Created a multimedia policy brief on renewable energy access in low-income communities, combining research, design, and storytelling.</p>
+            </details>
+          </div>
+          
+        </div>
+      </section>
 
-      <details>
-        <summary>
-          Energy Policy Research Assistant – NC Clean Energy Technology Center
-          <span class="date-range">2022 Academic Year (Internship)</span>
-        </summary>
-        <p>
-          I conducted in-depth analyses of clean energy incentive programs focused on renewable energy, electric vehicles, and energy-efficient building upgrades. My work involved evaluating state policies and legislative frameworks that impact clean energy adoption and maintaining the accuracy of the Database of State Incentives for Renewables & Efficiency (DSIRE). I also developed research reports and presentations to support clean energy initiatives and effectively communicate findings to key stakeholders.
-        </p>
-        <p class="notable-skills">
-          <strong>Notable Skills:</strong> Policy Analysis, Program Evaluation, Database Management
-        </p>
-      </details>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="bi bi-envelope"></i>
+            <p><a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-phone"></i>
+            <p><a href="tel:4435472317">(443) 547-2317</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-linkedin"></i>
+            <p><a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p>Raleigh, NC (open to relocation)</p>
+          </div>
+        </div>
+      </section>
 
-      <details>
-        <summary>
-          Youth Conservation Corps – City of Raleigh Parks and Recreation
-          <span class="date-range">Summer of 2021 (Internship)</span>
-        </summary>
-        <p>
-          Worked with the Conservation Corps of North Carolina as part of the Youth Conservation Crew to support environmental stewardship and public land maintenance across Raleigh. Gained hands-on experience in natural resource management through invasive species removal, trail maintenance, and stream cleanup projects. Collaborated with urban foresters, stormwater specialists, and park staff, while also mentoring youth participants and facilitating educational opportunities in bird ecology, community science, and sustainable practices. Contributed to environmental art initiatives and promoted conservation awareness through creative and service-based projects.
-        </p>
-        <p class="notable-skills">
-          <strong>Notable Skills:</strong> Invasive Species Management, Environmental Fieldwork, Hands-On Conservation, GIS
-        </p>
-      </details>
-    </div> <!-- End of Resume Column -->
-  </div>
-</section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
