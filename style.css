@@ -82,26 +82,26 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-/* Changed header tabs to pink font */
+/* Changed header tabs to #f082a7 */
 nav ul li a:nth-child(1) {
-  color: #ff69b4; /* Pink */
+  color: #f082a7; /* Pink */
 }
 
 nav ul li a:nth-child(2) {
-  color: #ff69b4; /* Pink */
+  color: #f082a7; /* Pink */
 }
 
 nav ul li a:nth-child(3) {
-  color: #ff69b4; /* Pink */
+  color: #f082a7; /* Pink */
 }
 
 nav ul li a:nth-child(4) {
-  color: #ff69b4; /* Pink */
+  color: #f082a7; /* Pink */
 }
 
 nav ul li a:hover,
 nav ul li a.active-tab {
-  background-color: #ff69b4;
+  background-color: #f082a7;
   color: #1f1f1f;
   font-weight: bold;
 }
@@ -266,10 +266,10 @@ footer {
   text-decoration: underline;
 }
 
-/* Specific contact tab hover color for muted pink */
+/* Specific contact tab hover color for #f082a7 */
 nav ul li a.contact-tab:hover,
 nav ul li a.contact-tab.active-tab {
-  background-color: #f0a3c1; /* Muted pink for selected contact tab */
+  background-color: #f082a7; /* Updated to #f082a7 for contact tab */
 }
 
 details {
