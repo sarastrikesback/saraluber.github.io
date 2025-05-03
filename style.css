@@ -36,7 +36,7 @@ h1, h2, h3 {
 }
 
 a {
-  color: #ff69b4;
+  color: #ff69b4; /* Pink font for links */
   text-decoration: none;
 }
 
@@ -82,20 +82,21 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
+/* Changed header tabs to pink font */
 nav ul li a:nth-child(1) {
-  color: #d2691e;
+  color: #ff69b4; /* Pink */
 }
 
 nav ul li a:nth-child(2) {
-  color: #6a5acd;
+  color: #ff69b4; /* Pink */
 }
 
 nav ul li a:nth-child(3) {
-  color: #8fbc8f;
+  color: #ff69b4; /* Pink */
 }
 
 nav ul li a:nth-child(4) {
-  color: #d3a15c;
+  color: #ff69b4; /* Pink */
 }
 
 nav ul li a:hover,
@@ -150,8 +151,9 @@ section.active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Tweaked Experience and Resume to have black text */
 .resume-column h3 {
-  color: #fff; /* Adjusted text color for contrast */
+  color: #000000; /* Black for "Experience" and "Resume" */
   margin-bottom: 1rem;
 }
 
@@ -262,6 +264,12 @@ footer {
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+/* Specific contact tab hover color for muted pink */
+nav ul li a.contact-tab:hover,
+nav ul li a.contact-tab.active-tab {
+  background-color: #f0a3c1; /* Muted pink for selected contact tab */
 }
 
 details {
