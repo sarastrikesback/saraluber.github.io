@@ -32,7 +32,7 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
-  color: #f082a7; /* Added this line to make h2 and h3 pink */
+  color: #f082a7; /* Pink color for header text */
 }
 
 a {
@@ -80,28 +80,11 @@ nav ul li a {
   border-radius: 1rem;
   background-color: #ffffff; /* White-ish background */
   transition: background-color 0.3s ease;
-  color: #f082a7; /* Pink font for unselected tabs */
+  color: #f082a7; /* Pink font for header tabs */
   border: 2px solid #bbb; /* Default grey border for unselected tabs */
 }
 
-/* Changed header tabs to #f082a7 */
-nav ul li a:nth-child(1) {
-  color: #f082a7; /* Pink */
-}
-
-nav ul li a:nth-child(2) {
-  color: #f082a7; /* Pink */
-}
-
-nav ul li a:nth-child(3) {
-  color: #f082a7; /* Pink */
-}
-
-nav ul li a:nth-child(4) {
-  color: #f082a7; /* Pink */
-}
-
-/* Add grey border on hover and active tab */
+/* Header tabs keep pink font */
 nav ul li a:hover,
 nav ul li a.active-tab {
   background-color: #f082a7;
@@ -155,9 +138,9 @@ section.active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Tweaked Experience and Resume to have black text */
+/* Tweaked Experience and Resume to have blackish text */
 .resume-column h3 {
-  color: #000000; /* Black for "Experience" and "Resume" */
+  color: #333333; /* Blackish for section headers like Experience and Resume */
   margin-bottom: 1rem;
 }
 
