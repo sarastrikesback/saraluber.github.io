@@ -310,3 +310,10 @@ header {
 section h2, section h3 {
   color: #333333; /* Greyish/Black color for headers inside the tabs */
 }
+
+/* Pink Border for Expandable Details Boxes */
+details {
+  border: 2px solid #f082a7; /* Soft pink border */
+  padding: 1rem; /* Optional: adjust padding to keep content inside */
+  border-radius: 1rem; /* Optional: rounded corners for a softer look */
+}
