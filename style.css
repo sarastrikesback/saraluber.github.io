@@ -82,6 +82,7 @@ nav ul li a {
   background-color: #ffffff; /* White-ish background */
   transition: background-color 0.3s ease;
   color: #f082a7; /* Pink font for unselected tabs */
+  border: 2px solid transparent; /* Default border */
 }
 
 /* Changed header tabs to #f082a7 */
@@ -101,11 +102,13 @@ nav ul li a:nth-child(4) {
   color: #f082a7; /* Pink */
 }
 
+/* Add grey border on hover and active tab */
 nav ul li a:hover,
 nav ul li a.active-tab {
   background-color: #f082a7;
   color: #1f1f1f;
   font-weight: bold;
+  border: 2px solid #bbb; /* Grey border on hover and active tab */
 }
 
 /* Sections */
@@ -274,6 +277,7 @@ nav ul li a.contact-tab.active-tab {
   background-color: #f082a7; /* Updated to #f082a7 for contact tab */
 }
 
+/* Additional styles for contact tab bubble */
 details {
   margin-bottom: 1rem;
   background-color: #ffffff;
