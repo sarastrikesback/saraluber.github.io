@@ -310,10 +310,3 @@ header {
 section h2, section h3 {
   color: #333333; /* Greyish/Black color for headers inside the tabs */
 }
-
-/* About Me Section - Headshot Border */
-.about-section img.about {
-  border: 2px solid #f082a7; /* Soft pink border */
-  padding: 5px; /* Optional: add some padding between the image and border */
-  border-radius: 1.5rem; /* Optional: for rounded corners */
-}
