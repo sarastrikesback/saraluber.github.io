@@ -79,8 +79,9 @@ nav ul li a {
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  background-color: #ccc;
+  background-color: #ffffff; /* White-ish background */
   transition: background-color 0.3s ease;
+  color: #f082a7; /* Pink font for unselected tabs */
 }
 
 /* Changed header tabs to #f082a7 */
