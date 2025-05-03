@@ -10,12 +10,17 @@
   margin: 0 auto;
   max-width: 300px;
   height: auto;
-  padding: 0; /* remove padding */
+  padding: 0;
 }
 
 .subtitle {
-  margin-top: 5px; /* reduce space between image and subtitle */
+  margin-top: 5px;
   text-align: center;
+}
+
+header {
+  padding: 0;
+  margin: 0;
 }
 
 body {
