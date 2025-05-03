@@ -32,7 +32,6 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
-  /* Removed: font-family: 'GoodDog', cursive; */
   color: #f082a7; /* Added this line to make h2 and h3 pink */
 }
 
@@ -82,7 +81,7 @@ nav ul li a {
   background-color: #ffffff; /* White-ish background */
   transition: background-color 0.3s ease;
   color: #f082a7; /* Pink font for unselected tabs */
-  border: 2px solid transparent; /* Default border */
+  border: 2px solid #bbb; /* Default grey border for unselected tabs */
 }
 
 /* Changed header tabs to #f082a7 */
