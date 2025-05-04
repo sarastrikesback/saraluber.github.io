@@ -234,7 +234,8 @@
     </div>
   </div>
 </section>
-  </main>
+
+</main>
 
 <footer>
   <div class="footer-content">
@@ -250,6 +251,14 @@
   const tabs = document.querySelectorAll('.tab-link');
   const sections = document.querySelectorAll('.tab-section');
   
+  // Initially hide all sections
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+
+  // Set the first tab as active by default (change as needed)
+  document.getElementById('about').classList.add('active'); // Change 'about' to the section you want visible by default
+
   tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
       e.preventDefault();
