@@ -192,49 +192,48 @@
 </div>
     </section>
 
-   <section id="contact" class="tab-section">
-    <h2>Contact</h2>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Let's connect! You can reach me through any of the following:</h3>
-        <div class="contact-item">
-          <i class="bi bi-envelope"></i>
-          <p><a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-phone"></i>
-          <p><a href="tel:4435472317">(443) 547-2317</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-linkedin"></i>
-          <p><a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="bi bi-geo-alt-fill"></i>
-          <p>Raleigh, NC (open to relocation)</p>
-        </div>
+  <section id="contact" class="tab-section">
+  <h2>Contact</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Let's connect! You can reach me through any of the following:</h3>
+      <div class="contact-item">
+        <i class="bi bi-envelope" alt="Email Icon"></i>
+        <p><a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a></p>
       </div>
-
-      <div class="contact-form">
-        <h3>Send Me a Message</h3>
-        <form action="https://formspree.io/f/xeogaypb" method="POST" id="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          
-          <button type="submit">Send Message</button>
-        </form>
-
-        <p class="success-message" style="display:none; color: green; font-weight: bold;">Your message has been sent! Thank you for reaching out.</p>
+      <div class="contact-item">
+        <i class="bi bi-phone" alt="Phone Icon"></i>
+        <p><a href="tel:4435472317">(443) 547-2317</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-linkedin" alt="LinkedIn Icon"></i>
+        <p><a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a></p>
+      </div>
+      <div class="contact-item">
+        <i class="bi bi-geo-alt-fill" alt="Location Icon"></i>
+        <p>Raleigh, NC (open to relocation)</p>
       </div>
     </div>
-  </section>
-</main>
+
+    <div class="contact-form">
+      <h3>Send Me a Message</h3>
+      <form action="https://formspree.io/f/xeogaypb" method="POST" id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p class="success-message" style="display:none; color: green; font-weight: bold;">Your message has been sent! Thank you for reaching out.</p>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-content">
@@ -245,30 +244,30 @@
 <script src="script.js"></script>
 <script>
   // JavaScript to handle tab switching and form submission
-
+  
   // Tab navigation logic
   const tabs = document.querySelectorAll('.tab-link');
   const sections = document.querySelectorAll('.tab-section');
-
+  
   tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
       e.preventDefault();
       const targetTab = e.target.getAttribute('data-tab');
-
+  
       // Hide all sections and remove active class
       sections.forEach(section => {
         section.classList.remove('active');
       });
-
+  
       // Show the selected section
       document.getElementById(targetTab).classList.add('active');
     });
   });
-
+  
   // Form submission logic
   const form = document.getElementById('contact-form');
   const successMessage = document.querySelector('.success-message');
-
+  
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     fetch(form.action, {
