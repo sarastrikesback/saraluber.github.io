@@ -4,6 +4,7 @@
 const tabs = document.querySelectorAll('.tab-link');
 const sections = document.querySelectorAll('.tab-section');
 
+// Function to handle tab switching
 tabs.forEach(tab => {
   tab.addEventListener('click', (e) => {
     e.preventDefault();
@@ -15,10 +16,7 @@ tabs.forEach(tab => {
     });
 
     // Show the selected section
-    const activeSection = document.getElementById(targetTab);
-    if (activeSection) {
-      activeSection.classList.add('active');
-    }
+    document.getElementById(targetTab).classList.add('active');
   });
 });
 
@@ -27,17 +25,15 @@ const form = document.getElementById('contact-form');
 const successMessage = document.querySelector('.success-message');
 
 form.addEventListener('submit', function(event) {
-  event.preventDefault();  // Prevent the default form submission
-
-  // Create FormData object and send via fetch API
+  event.preventDefault();
   fetch(form.action, {
     method: 'POST',
     body: new FormData(form),
   })
   .then(response => {
     if (response.ok) {
-      form.reset();  // Reset form fields after successful submission
-      successMessage.style.display = 'block';  // Show success message
+      form.reset();
+      successMessage.style.display = 'block';
     } else {
       alert('There was an error sending your message. Please try again.');
     }
