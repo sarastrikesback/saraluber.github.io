@@ -1,21 +1,18 @@
-// JavaScript to handle tab switching and form submission
-
 // Tab navigation logic
 const tabs = document.querySelectorAll('.tab-link');
 const sections = document.querySelectorAll('.tab-section');
 
-// Function to handle tab switching
 tabs.forEach(tab => {
   tab.addEventListener('click', (e) => {
     e.preventDefault();
     const targetTab = e.target.getAttribute('data-tab');
 
-    // Hide all sections and remove active class
+    // Hide all sections
     sections.forEach(section => {
       section.classList.remove('active');
     });
 
-    // Show the selected section
+    // Show selected section
     document.getElementById(targetTab).classList.add('active');
   });
 });
