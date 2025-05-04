@@ -305,3 +305,11 @@ summary {
   font-size: 1.1rem;
   color: #333333;
 }
+
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
