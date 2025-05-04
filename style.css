@@ -331,3 +331,13 @@ section h2,
 section h3 {
   color: #333333;
 }
+
+/* Hide all sections by default */
+.tab-section {
+  display: none;
+}
+
+/* Only show the active section */
+.tab-section.active {
+  display: block;
+}
