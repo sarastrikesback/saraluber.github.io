@@ -27,9 +27,9 @@ a:hover {
 }
 
 /* Header */
-header {
+header, footer {
   background-color: #f0f8ff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10' %3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10'%3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: auto;
   padding: 2rem 1rem 1rem 1rem;
@@ -286,7 +286,6 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #f0f8ff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10'%3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
   color: #333333;
   margin-top: 2rem;
 }
@@ -304,40 +303,5 @@ details {
 summary {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-right: 2rem;
-  cursor: pointer;
-}
-
-details[open] summary {
-  color: #ff69b4;
-}
-
-.date-range {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: normal;
-  color: #555;
-  margin-top: 0.25rem;
-}
-
-.notable-skills {
-  margin-top: 1rem;
-}
-
-section h2,
-section h3 {
   color: #333333;
-}
-
-/* Hide all sections by default */
-.tab-section {
-  display: none;
-}
-
-/* Only show the active section */
-.tab-section.active {
-  display: block;
 }
