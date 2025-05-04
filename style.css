@@ -5,24 +5,6 @@
   padding: 0;
 }
 
-.header-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-  height: auto;
-  padding: 0;
-}
-
-.subtitle {
-  margin-top: 15px; /* was 5px */
-  text-align: center;
-}
-
-header {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f2f2f2;
@@ -32,11 +14,11 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
-  color: #f082a7; /* Pink color for header text */
+  color: #f082a7;
 }
 
 a {
-  color: #ff69b4; /* Pink font for links */
+  color: #ff69b4;
   text-decoration: none;
 }
 
@@ -46,26 +28,38 @@ a:hover {
 
 /* Header */
 header {
-  background-color: #f0f8ff; /* Light blue background */
-  padding: 1rem 2rem;
+  background-color: #f0f8ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10' %3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: auto;
+  padding: 2rem 1rem 1rem 1rem;
   text-align: center;
   border-bottom: 2px solid #bbb;
 }
 
+.header-image {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 300px;
+  height: auto;
+  padding: 0;
+}
+
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #333333;
 }
 
 .subtitle {
   font-size: 1.5rem;
   color: #777;
-  margin-top: -0.5rem;
+  margin-top: -0.25rem;
   margin-bottom: 1rem;
   font-weight: 400;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
@@ -78,19 +72,23 @@ nav ul li a {
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  background-color: #ffffff; /* White-ish background */
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
-  color: #f082a7; /* Pink font for header tabs */
-  border: 2px solid #bbb; /* Default grey border for unselected tabs */
+  color: #f082a7;
+  border: 2px solid #bbb;
 }
 
-/* Header tabs keep pink font */
 nav ul li a:hover,
 nav ul li a.active-tab {
   background-color: #f082a7;
   color: #1f1f1f;
   font-weight: bold;
-  border: 2px solid #bbb; /* Grey border on hover and active tab */
+  border: 2px solid #bbb;
+}
+
+nav ul li a.contact-tab:hover,
+nav ul li a.contact-tab.active-tab {
+  background-color: #f082a7;
 }
 
 /* Sections */
@@ -110,7 +108,7 @@ section.active {
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
-  background-color: #f0f8ff; /* Light blue */
+  background-color: #f0f8ff;
   border-radius: 1.5rem;
 }
 
@@ -132,15 +130,14 @@ section.active {
 .resume-column {
   flex: 1;
   min-width: 250px;
-  background-color: #f0f8ff; /* Light blue */
+  background-color: #f0f8ff;
   padding: 1rem;
   border-radius: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Tweaked Experience and Resume to have blackish text */
 .resume-column h3 {
-  color: #333333; /* Blackish for section headers like Experience and Resume */
+  color: #333333;
   margin-bottom: 1rem;
 }
 
@@ -154,7 +151,7 @@ section.active {
 }
 
 .project {
-  background-color: #f0f8ff; /* Light blue */
+  background-color: #f0f8ff;
   padding: 1rem;
   border-radius: 1.5rem;
   width: 250px;
@@ -207,6 +204,39 @@ section.active {
 
 .contact-item i {
   margin-right: 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-item i:hover {
+  transform: scale(1.2);
+}
+
+.contact-item i.bi-envelope {
+  color: #ff69b4;
+}
+
+.contact-item i.bi-phone {
+  color: #3cb371;
+}
+
+.contact-item i.bi-linkedin {
+  color: #0a66c2;
+}
+
+.contact-item i.bi-geo-alt-fill {
+  color: #ff8c00;
+}
+
+.contact-info p,
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .contact-form {
@@ -255,66 +285,13 @@ section.active {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #e0e0e0;
+  background-color: #f0f8ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10'%3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
   color: #333333;
   margin-top: 2rem;
 }
 
-.contact-info p, .contact-info a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-/* Optional: underline links on hover */
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Specific icon colors */
-.contact-item i.bi-envelope {
-  color: #ff69b4;
-}
-
-.contact-item i.bi-phone {
-  color: #3cb371;
-}
-
-.contact-item i.bi-linkedin {
-  color: #0a66c2;
-}
-
-.contact-item i.bi-geo-alt-fill {
-  color: #ff8c00;
-}
-
-/* Contact icons hover animation */
-.contact-item i {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.contact-item i:hover {
-  transform: scale(1.2);
-}
-
-/* All contact text black */
-.contact-info p, .contact-info a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Specific contact tab hover color for #f082a7 */
-nav ul li a.contact-tab:hover,
-nav ul li a.contact-tab.active-tab {
-  background-color: #f082a7; /* Updated to #f082a7 for contact tab */
-}
-
-/* Additional styles for contact tab bubble */
+/* Summary and Details */
 details {
   margin-bottom: 1rem;
   background-color: #ffffff;
@@ -329,17 +306,13 @@ summary {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
 }
 
 details[open] summary {
   color: #ff69b4;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  padding-right: 2rem;
 }
 
 .date-range {
@@ -354,18 +327,7 @@ summary {
   margin-top: 1rem;
 }
 
-header {
-  background-color: #f0f8ff; /* Light blue background */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10' %3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: auto;
+section h2,
+section h3 {
+  color: #333333;
 }
-
-/* Section Headers inside the tabs */
-section h2, section h3 {
-  color: #333333; /* Greyish/Black color for headers inside the tabs */
-}
-
-footer {
-  background-color: #f0f8ff;   /* same light blue */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10'%3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
