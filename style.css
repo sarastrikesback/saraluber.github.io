@@ -312,33 +312,18 @@ section h2, section h3 {
 }
 
 footer {
-  background: linear-gradient(to bottom, #f5a9b8, #ff4081); /* Matching gradient */
-  color: white;
+  background-color: #f0f8ff;   /* same light blue */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='10'%3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: auto;
+  padding: 1rem 2rem;
   text-align: center;
-  padding: 20px 0;
-  position: relative;
-}
-
-footer .footer-content {
-  position: relative;
-  z-index: 1;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: url('wave.svg') no-repeat center center; /* Add your wave SVG or create a wave here */
-  background-size: cover;
-  z-index: 0;
+  border-top: 2px solid #bbb;  /* match header’s bottom border */
 }
 
 footer p {
+  color: #333333;               /* same footer text color as header text */
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
   font-weight: 600;
   margin: 0;
 }
