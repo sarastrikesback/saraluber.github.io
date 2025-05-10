@@ -402,3 +402,16 @@ summary {
 .contact-info-box a:hover {
   text-decoration: underline;
 }
+
+.resume-button {
+  background-color: #ff6ec7;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+.resume-button:hover {
+  background-color: #e855b0;
+}
