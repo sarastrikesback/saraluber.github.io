@@ -248,8 +248,21 @@ section.active {
   text-decoration: underline;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+}
+
 .contact-form label {
   margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   font-weight: 600;
 }
 
@@ -260,6 +273,13 @@ section.active {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f082a7;
+  box-shadow: 0 0 0 2px rgba(240, 130, 167, 0.2);
 }
 
 .contact-form button {
