@@ -157,17 +157,20 @@ section.active {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  align-items: flex-start;
   margin-top: 1.5rem;
+  padding: 0 1rem; /* optional: add padding to prevent edge crowding */
 }
 
 .project {
   background-color: #f0f8ff;
   padding: 1rem;
   border-radius: 1.5rem;
-  width: 250px;
+  flex: 1 1 300px; /* allows the boxes to grow/shrink */
+  max-width: 500px; /* optional cap */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* aligns text/bullets to the left */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
@@ -180,6 +183,16 @@ section.active {
 
 .project:hover {
   transform: translateY(-5px);
+}
+
+.project ul {
+  padding-left: 1.5rem; /* adds indent */
+  margin-top: 0.5rem;
+}
+
+.project li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 /* Contact Section */
