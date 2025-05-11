@@ -163,22 +163,24 @@ section.active {
 }
 
 .project {
+  width: 280px; /* or any consistent value you prefer */
+  min-height: 400px; /* ensures equal height too */
   background-color: #f0f8ff;
   padding: 1rem;
   border-radius: 1.5rem;
-  flex: 1 1 300px; /* allows the boxes to grow/shrink */
-  max-width: 500px; /* optional cap */
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* aligns text/bullets to the left */
+  align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .project img {
   width: 100%;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  height: auto;
+  max-height: 180px; /* optional: to avoid huge images */
+  object-fit: cover;
 }
 
 .project:hover {
