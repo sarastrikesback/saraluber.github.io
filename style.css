@@ -339,7 +339,7 @@ summary {
 .contact-info, .contact-form {
   flex: 1 1 300px;
   padding: 1rem;
-  background-color: #f8f8f8;
+  background-color: #f0f8ff;
   border-radius: 12px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
@@ -364,7 +364,7 @@ summary {
 }
 
 .contact-form button {
-  background-color: #ff69b4;
+  background-color: #f0f8ff;
   color: white;
   padding: 0.75rem;
   border: none;
@@ -391,7 +391,7 @@ summary {
   padding: 1rem;
   border: 2px solid #ccc;
   border-radius: 15px;
-  background-color: #f9f9f9;
+  background-color: #f0f8ff;
 }
 
 .contact-info-box a {
