@@ -24,7 +24,7 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
-  color: #333333; /* Changed from #f082a7 (pink) to black */
+  color: #333333;
 }
 
 a {
@@ -58,7 +58,7 @@ header, footer {
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #333333; /* Changed from #f082a7 (pink) to black */
+  color: #333333;
 }
 
 .subtitle {
@@ -147,7 +147,7 @@ section.active {
 }
 
 .resume-column h3 {
-  color: #333333; /* Changed from pink to black */
+  color: #333333;
   margin-bottom: 1rem;
 }
 
@@ -159,28 +159,25 @@ section.active {
   justify-content: center;
   align-items: flex-start;
   margin-top: 1.5rem;
-  padding: 0 1rem; /* optional: add padding to prevent edge crowding */
+  padding: 0 1rem;
 }
 
 .project {
-  width: 280px; /* or any consistent value you prefer */
-  min-height: 400px; /* ensures equal height too */
-  background-color: #f0f8ff;
+  background-color: white;
   padding: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  text-align: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project img {
-  width: 100%;
-  height: auto;
-  max-height: 180px; /* optional: to avoid huge images */
-  object-fit: cover;
+  max-height: 150px;
+  object-fit: contain;
 }
 
 .project:hover {
@@ -188,7 +185,7 @@ section.active {
 }
 
 .project ul {
-  padding-left: 1.5rem; /* adds indent */
+  padding-left: 1.5rem;
   margin-top: 0.5rem;
 }
 
@@ -211,140 +208,6 @@ section.active {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  gap: 40px;
-}
-
-.contact-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-info h3 {
-  margin-bottom: 20px;
-}
-
-.contact-item {
-  margin-bottom: 15px;
-}
-
-.contact-item i {
-  margin-right: 10px;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.contact-item i:hover {
-  transform: scale(1.2);
-}
-
-.contact-item i.bi-envelope {
-  color: #ff69b4;
-}
-
-.contact-item i.bi-phone {
-  color: #3cb371;
-}
-
-.contact-item i.bi-linkedin {
-  color: #0a66c2;
-}
-
-.contact-item i.bi-geo-alt-fill {
-  color: #ff8c00;
-}
-
-.contact-info p,
-.contact-info a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #f082a7; /* Set to pink */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #e0559c;
-}
-
-.success-message {
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f0f8ff;
-  color: #333333;
-  margin-top: 2rem;
-}
-
-/* Summary and Details */
-details {
-  margin-bottom: 1rem;
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-summary {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #333333;
-}
-
-.tab-section {
-  display: none;
-}
-
-.tab-section.active {
-  display: block;
-}
-
-.contact-container {
-  display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
@@ -359,9 +222,30 @@ summary {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
-.contact-form form {
-  display: flex;
-  flex-direction: column;
+.contact-item i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-item i:hover {
+  transform: scale(1.2);
+}
+
+.contact-item i.bi-envelope { color: #ff69b4; }
+.contact-item i.bi-phone { color: #3cb371; }
+.contact-item i.bi-linkedin { color: #0a66c2; }
+.contact-item i.bi-geo-alt-fill { color: #ff8c00; }
+
+.contact-info p,
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .contact-form label {
@@ -393,29 +277,29 @@ summary {
   background-color: #e0559c;
 }
 
-.contact-container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap; /* allows responsiveness on smaller screens */
-  margin-top: 1rem;
-}
-
-.contact-info-box,
-.contact-form-box {
-  flex: 1 1 300px;
+/* Footer */
+footer {
+  text-align: center;
   padding: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 15px;
   background-color: #f0f8ff;
+  color: #333333;
+  margin-top: 2rem;
 }
 
-.contact-info-box a {
-  color: #0066cc;
-  text-decoration: none;
+/* Summary and Details */
+details {
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.contact-info-box a:hover {
-  text-decoration: underline;
+summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333333;
 }
 
 .resume-button {
@@ -427,51 +311,14 @@ summary {
   display: inline-block;
   font-weight: bold;
 }
+
 .resume-button:hover {
   background-color: #f082a7;
 }
 
 @media (max-width: 768px) {
-  .project-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
   .project {
-    width: 90%; /* flexible width for mobile */
-    min-height: auto; /* let it grow with content */
-    padding: 1rem;
+    width: 90vw;
+    height: 400px;
   }
-
-  .project img {
-    max-height: 200px;
-    object-fit: contain;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    text-align: center;
-  }
-
-  .tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tab-button {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
 }
