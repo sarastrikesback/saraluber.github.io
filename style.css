@@ -404,7 +404,7 @@ summary {
 }
 
 .resume-button {
-  background-color: #f0f8ff;
+  background-color: #f082a7;
   color: black;
   padding: 0.6rem 1rem;
   border-radius: 20px;
@@ -413,5 +413,5 @@ summary {
   font-weight: bold;
 }
 .resume-button:hover {
-  background-color: #f0f8ff;
+  background-color: #f082a7;
 }
