@@ -25,13 +25,6 @@
   background-color: #f1f2ef;
   border-radius: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: flex; /* use flexbox */
-}
-.tab-section:not(.active) {
-  display: none; /* hide inactive tabs */
-}
-.tab-section.active {
-  display: flex;
 }
 
 body {
@@ -58,16 +51,29 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header */
 header, footer {
-  background-color: #008F95; /* teal */
-  padding: 2rem 1rem 1rem 1rem;
+  background-color: #e24e42; /* bold red */
+  padding: 2rem 1rem;
   text-align: center;
-  border-bottom: 2px solid #E1884F; /* warm orange */
-  color: #F1F2EF;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='15' viewBox='0 0 1000 60'%3E%3Cg fill='none' stroke='%23F1F2EF' stroke-width='10'%3E%3Cpath d='M-500 37c0 0 125-15 250-15S0 37 0 37s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 22c0 0 125-15 250-15S0 22 0 22s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3Cpath d='M-500 52c0 0 125-15 250-15S0 52 0 52s125 15 250 15s250-15 250-15s125-15 250-15s250 15 250 15s125 15 250 15s250-15 250-15'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: auto;
+  border: none;
+  box-shadow: none;
+}
+
+/* Remove any SVG or background images from header/footer */
+header::before,
+footer::before,
+header::after,
+footer::after {
+  content: none !important;
+}
+
+/* Bold chunky text */
+header h1, header h2, footer p {
+  color: white;
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .header-image {
@@ -373,8 +379,6 @@ section.active {
   font-weight: 600;
   margin-top: 0.5rem;
 }
-
-
 
 /* Footer */
 footer {
