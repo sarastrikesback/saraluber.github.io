@@ -328,3 +328,43 @@ a:focus, button:focus, summary:focus {
   outline: 3px solid #E9B000;
   outline-offset: 2px;
 }
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-info,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 300px;
+  background-color: #008F95;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 143, 149, 0.3);
+  color: #F1F2EF;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item a {
+  color: #E9B000;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.success-message {
+  color: #E9B000;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
