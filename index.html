@@ -172,4 +172,123 @@
       <div class="project" data-skill="stata">
         <h3>Stata</h3>
         <img class="project-image" src="https://via.placeholder.com/120x80?text=Stata+Project" alt="Stata Project Image" />
-        <h4>Who Supports Climate Change
+        <h4>Who Supports Climate Change Policy?</h4>
+        <p>
+          Analyzing Public Opinion by Demographics and Political Ideology. Goal: To investigate which demographic and political factors influence support for federal climate change policies — such as carbon taxes,
+          green jobs programs, or environmental regulation. Data sources include Pew Research Center, General Social Survey (GSS), ANES, and Yale Climate Opinion Maps.
+        </p>
+      </div>
+
+      <div class="project" data-skill="writing">
+        <h3>Writing Samples</h3>
+        <h4>The Technician</h4>
+        <p>
+          NC State Student Newspaper. I contributed political opinion articles to The Technician during my time at NC State. Here are a few selected pieces:
+        </p>
+        <ul>
+          <li>Terrance Ruth: The Next Raleigh Mayor?</li>
+          <li>Sen. Burr: Congrats on Doing the Bare Minimum</li>
+          <li>Remove the Lame Duck, Prevent Riots</li>
+        </ul>
+      </div>
+
+      <div class="project" data-skill="misc">
+        <h3>Misc. Projects</h3>
+        <ul>
+          <li>My First Website (HTML, CSS, JavaScript) - Built from scratch, showcasing skills and creativity. Source code available on GitHub.</li>
+          <li>Sara Sews! - Quilted, embroidered, and sewn creations showcased at local craft fairs in the NC Triangle.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Show All</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="powerbi">PowerBI</button>
+      <button class="filter-btn" data-filter="stata">Stata</button>
+      <button class="filter-btn" data-filter="writing">Writing</button>
+      <button class="filter-btn" data-filter="misc">Misc</button>
+    </div>
+  </section>
+
+ <section id="contact" class="tab-section">
+  <h2>Contact</h2>
+  <form id="contact-form" action="#" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+    <p class="success-message" style="display:none; color: green; margin-top: 0.5rem;">
+      Thank you! Your message has been sent.
+    </p>
+    <p class="error-message" style="display:none; color: red; margin-top: 0.5rem;">
+      There was an error sending your message. Please try again.
+    </p>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>Built by Sara</p>
+  </div>
+</footer>
+
+<script>
+  // Tab functionality
+  const tabs = document.querySelectorAll('.tab-link');
+  const sections = document.querySelectorAll('.tab-section');
+
+  function activateTab(tabId) {
+    sections.forEach(sec => sec.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+    document.getElementById(tabId).classList.add('active');
+    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active-tab');
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+      const targetTab = tab.getAttribute('data-tab');
+      activateTab(targetTab);
+    });
+  });
+
+  // Portfolio filter buttons
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      projects.forEach(project => {
+        if (filter === 'all' || project.getAttribute('data-skill') === filter) {
+          project.style.display = 'flex';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Contact form submission (mock)
+  const form = document.getElementById('contact-form');
+  const successMessage = document.querySelector('.success-message');
+
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Simulate successful submission
+      form.reset();
+      successMessage.style.display = 'block';
+      setTimeout(() => (successMessage.style.display = 'none'), 5000);
+    });
+  }
+</script>
+
+</body>
+</html>
