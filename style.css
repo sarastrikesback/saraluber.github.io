@@ -295,3 +295,36 @@ footer {
     width: 90vw;
   }
 }
+
+/* Keep details/summary styles outside the media query */
+.resume-column details {
+  background-color: #E9B000;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px rgba(233, 176, 0, 0.5);
+  color: #008F95;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.resume-column summary {
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.resume-column summary::marker {
+  display: none;
+}
+
+.resume-column details[open] {
+  background-color: #F1F2EF;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+a:focus, button:focus, summary:focus {
+  outline: 3px solid #E9B000;
+  outline-offset: 2px;
+}
