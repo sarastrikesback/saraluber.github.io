@@ -243,24 +243,18 @@
   </div>
 </section>
 
- <section id="contact" class="tab-section">
+<section id="contact" class="tab-section">
   <h2>Contact</h2>
- <form id="contact-form" action="https://formspree.io/f/xeogaypb" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-
-<input type="text" name="_gotcha" style="display:none" />
-   
-   <button type="submit">Send</button>
-   
-    <p class="success-message" style="display:none; color: green; margin-top: 0.5rem;">
-      Thank you! Your message has been sent.
-    </p>
-    <p class="error-message" style="display:none; color: red; margin-top: 0.5rem;">
-      There was an error sending your message. Please try again.
-    </p>
-  </form>
+  <div class="contact-container">
+    <form id="contact-form" action="https://formspree.io/f/xeogaypb" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+      <p class="success-message" style="display:none;">Thank you! Your message has been sent.</p>
+      <p class="error-message" style="display:none;">There was an error sending your message. Please try again.</p>
+    </form>
+  </div>
 </section>
 
 <footer>
