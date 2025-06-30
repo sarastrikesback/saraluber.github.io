@@ -260,12 +260,6 @@ section.active {
   background-color: #EB6380;
 }
 
-/* Messages */
-.success-message {
-  color: #008F95;
-  font-weight: 600;
-}
-
 .error-message {
   color: #E24E42;
   font-weight: 600;
@@ -328,12 +322,6 @@ a:focus, button:focus, summary:focus {
   outline: 3px solid #E9B000;
   outline-offset: 2px;
 }
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
 
 .contact-info,
 .contact-form {
@@ -367,4 +355,18 @@ a:focus, button:focus, summary:focus {
   font-weight: bold;
   margin-top: 1rem;
 }
+
+summary {
+  outline: none;
+}
+
+summary:focus {
+  outline: 3px solid #E9B000;
+  outline-offset: 4px;
+}
+
+details > *:not(summary) {
+  margin-top: 0.75rem;
+}
+
 
