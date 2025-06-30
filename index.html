@@ -245,11 +245,15 @@
 
  <section id="contact" class="tab-section">
   <h2>Contact</h2>
-  <form id="contact-form" action="#" method="POST">
+ <form id="contact-form" action="https://formspree.io/f/xeogaypb" method="POST">
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
+
+<input type="text" name="_gotcha" style="display:none" />
+   
+   <button type="submit">Send</button>
+   
     <p class="success-message" style="display:none; color: green; margin-top: 0.5rem;">
       Thank you! Your message has been sent.
     </p>
@@ -266,73 +270,49 @@
 </footer>
 
 <script>
-  // Tab functionality
-  const tabs = document.querySelectorAll('.tab-link');
-  const sections = document.querySelectorAll('.tab-section');
+  document.addEventListener('DOMContentLoaded', function () {
+    // Tab functionality
+    const tabs = document.querySelectorAll('.tab-link');
+    const sections = document.querySelectorAll('.tab-section');
 
-  function activateTab(tabId) {
-    sections.forEach(sec => sec.classList.remove('active'));
-    tabs.forEach(tab => tab.classList.remove('active-tab'));
+    function activateTab(tabId) {
+      sections.forEach(sec => sec.classList.remove('active'));
+      tabs.forEach(tab => tab.classList.remove('active-tab'));
 
-    document.getElementById(tabId).classList.add('active');
-    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active-tab');
-  }
+      document.getElementById(tabId).classList.add('active');
+      document.querySelector(`[data-tab="${tabId}"]`).classList.add('active-tab');
+    }
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', e => {
-      e.preventDefault();
-      const targetTab = tab.getAttribute('data-tab');
-      activateTab(targetTab);
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        const targetTab = tab.getAttribute('data-tab');
+        activateTab(targetTab);
+      });
     });
-  });
 
-  // Portfolio filter buttons
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projects = document.querySelectorAll('.project');
+    // Portfolio filter buttons
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projects = document.querySelectorAll('.project');
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      const filter = btn.getAttribute('data-filter');
+        const filter = btn.getAttribute('data-filter');
 
-      projects.forEach(project => {
-        if (filter === 'all' || project.getAttribute('data-skill') === filter) {
-          project.style.display = 'flex';
-        } else {
-          project.style.display = 'none';
-        }
+        projects.forEach(project => {
+          if (filter === 'all' || project.getAttribute('data-skill') === filter) {
+            project.style.display = 'flex';
+          } else {
+            project.style.display = 'none';
+          }
+        });
       });
     });
   });
+</script>
 
-  <section id="contact" class="tab-section">
-  <h2>Contact</h2>
-
-  <div class="contact-container">
-    <div class="contact-info">
-      <div class="contact-item"><strong>Email:</strong> <a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a></div>
-      <div class="contact-item"><strong>Phone:</strong> 443-547-2317</div>
-      <div class="contact-item"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">Sara Luber</a></div>
-    </div>
-
-    <form id="contact-form" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Send</button>
-
-      <p class="success-message" style="display: none;">Thanks for reaching out!</p>
-    </form>
-  </div>
-</section>
-
-</body>
+  </body>
 </html>
