@@ -451,3 +451,7 @@ details > *:not(summary) {
   border-radius: 2rem;
   margin: 2rem auto;
 }
+
+.tab-section h2 {
+  color: #008F95;
+}
