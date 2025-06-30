@@ -307,20 +307,32 @@
     });
   });
 
-  // Contact form submission (mock)
-  const form = document.getElementById('contact-form');
-  const successMessage = document.querySelector('.success-message');
+  <section id="contact" class="tab-section">
+  <h2>Contact</h2>
 
-  if (form) {
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      // Simulate successful submission
-      form.reset();
-      successMessage.style.display = 'block';
-      setTimeout(() => (successMessage.style.display = 'none'), 5000);
-    });
-  }
-</script>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item"><strong>Email:</strong> <a href="mailto:sarafluber@gmail.com">sarafluber@gmail.com</a></div>
+      <div class="contact-item"><strong>Phone:</strong> 443-547-2317</div>
+      <div class="contact-item"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">Sara Luber</a></div>
+    </div>
+
+    <form id="contact-form" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+
+      <p class="success-message" style="display: none;">Thanks for reaching out!</p>
+    </form>
+  </div>
+</section>
 
 </body>
 </html>
