@@ -43,14 +43,13 @@ header, footer {
 }
 
 header h1, header h2, footer p {
-  color: #F1F2EF;
+  color: #008F95;
   font-weight: 900;
   font-size: 2.5rem;
   margin: 0;
   text-transform: uppercase;
 }
 
-/* Remove wavy decorations */
 header::before, header::after, footer::before, footer::after {
   content: none !important;
 }
