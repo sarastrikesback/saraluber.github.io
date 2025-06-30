@@ -343,6 +343,20 @@ section.active {
   background-color: #EB6380;
 }
 
+.success-message {
+  color: #008f95; /* your teal-ish bold color */
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.error-message {
+  color: #e24e42; /* your bold red */
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+
+
 /* Footer */
 footer {
   text-align: center;
