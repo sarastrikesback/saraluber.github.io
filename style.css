@@ -197,7 +197,7 @@ section.active {
 
 /* Contact */
 #contact.tab-section {
-  background-color: #E1884F;
+  background-color: #F1F2EF;
   color: #F1F2EF;
   padding: 2rem;
 }
@@ -239,15 +239,13 @@ section.active {
 .contact-form input,
 .contact-form textarea {
   padding: 0.5rem;
-  background-color: #F1F2EF;
-  color: #333;
-  border: 1px solid #F1F2EF;
+  background-color: #E9B000;
   border-radius: 8px;
 }
 
 .contact-form button {
   background-color: #E24E42;
-  color: #F1F2EF;
+  color: #E9B000;
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
