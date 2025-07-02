@@ -499,6 +499,6 @@ details > *:not(summary) {
 }
 
 .contact-row a:hover {
-  color: #E9B000; /* yellow on hover */
+  color: #008F95;
   text-decoration: underline;
 }
