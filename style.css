@@ -453,3 +453,20 @@ details > *:not(summary) {
 .tab-section h2 {
   color: #008F95;
 }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #F1F2EF;
+  font-size: 1.75rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #E9B000;
+}
