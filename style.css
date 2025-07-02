@@ -489,16 +489,16 @@ details > *:not(summary) {
 
 .contact-row i {
   font-size: 1.5rem;
-  color: #F1F2EF;
+  color: #008F95; /* teal-blue */
 }
 
 .contact-row a {
-  color: #F1F2EF;
+  color: #F1F2EF; /* white text */
   font-weight: 600;
   text-decoration: none;
 }
 
 .contact-row a:hover {
-  color: #E9B000;
+  color: #E9B000; /* yellow on hover */
   text-decoration: underline;
 }
