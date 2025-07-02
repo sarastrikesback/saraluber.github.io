@@ -476,6 +476,6 @@ details > *:not(summary) {
 }
 
 .contact-info-box a:hover {
-  color: #E9B000; /* Optional: gold hover if you want */
+  color: #008F95; /*hover */
 }
 
