@@ -470,3 +470,12 @@ details > *:not(summary) {
 .footer-links a:hover {
   color: #E9B000;
 }
+
+.contact-info-box a {
+  color: #F1F2EF; /* White text */
+}
+
+.contact-info-box a:hover {
+  color: #E9B000; /* Optional: gold hover if you want */
+}
+
