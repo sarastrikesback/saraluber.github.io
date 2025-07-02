@@ -502,3 +502,10 @@ details > *:not(summary) {
   color: #008F95;
   text-decoration: underline;
 }
+
+.form-intro {
+  font-size: 1.1rem;
+  color: #008F95;
+  font-weight: 700; /* This makes it bold */
+  margin-bottom: 0.5rem;
+}
