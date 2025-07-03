@@ -510,3 +510,24 @@ details > *:not(summary) {
   font-weight: 700; /* bold */
   margin-bottom: 0.5rem;
 }
+
+.project {
+  /* existing styles... */
+  overflow: hidden; /* prevents content from spilling out */
+}
+
+.project details {
+  overflow-wrap: break-word;  /* wraps long words */
+  word-break: break-word;     /* breaks words if needed */
+  max-height: 100%;
+}
+
+.project details > *:not(summary) {
+  margin-top: 0.75rem;
+  padding-right: 0.5rem; /* keeps text from hitting edge */
+}
+
+.project {
+  max-width: 300px;
+  word-wrap: break-word;
+}
