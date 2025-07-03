@@ -526,8 +526,3 @@ details > *:not(summary) {
   margin-top: 0.75rem;
   padding-right: 0.5rem; /* keeps text from hitting edge */
 }
-
-.project {
-  max-width: 300px;
-  word-wrap: break-word;
-}
