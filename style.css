@@ -565,3 +565,7 @@ details > *:not(summary) {
   padding-left: 0;
   margin-left: 0;
 }
+
+.projects h3 {
+  color: #E9B000; /* yellow */
+}
