@@ -166,7 +166,6 @@ section.active {
   background-color: #EB6380;
   padding: 1rem;
   width: 300px;
-  min-height: 400px; /* Start height, can grow */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -174,14 +173,17 @@ section.active {
   box-shadow: 4px 4px 12px rgba(235, 99, 128, 0.5);
   color: #F1F2EF;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: visible; /* Allow growth */
+  overflow: hidden;
   word-wrap: break-word;
+  height: auto;             /* ✨ allow natural height */
 }
 
 .project details {
-  overflow: visible;
+  overflow-wrap: break-word;
   word-break: break-word;
-  margin-top: 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .project:hover {
@@ -191,6 +193,15 @@ section.active {
 
 .project details[open] {
   animation: expand 0.3s ease-in-out;
+}
+
+.project details[open] {
+  max-height: 500px; /* Or a large number to fit content */
+  overflow: visible;
+}
+
+details summary {
+  cursor: pointer;
 }
 
 @keyframes expand {
