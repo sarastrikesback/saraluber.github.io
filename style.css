@@ -355,11 +355,12 @@ a:focus, button:focus, summary:focus {
 
 summary {
   outline: none;
+  border: none;
 }
 
 summary:focus {
-  outline: 3px solid #E9B000;
-  outline-offset: 4px;
+  outline: none;
+  box-shadow: none;
 }
 
 details > *:not(summary) {
