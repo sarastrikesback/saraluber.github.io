@@ -559,3 +559,9 @@ details > *:not(summary) {
   margin-top: 0.75rem;
   padding-right: 0.5rem; /* keeps text from hitting edge */
 }
+
+.project details ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
