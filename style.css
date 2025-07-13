@@ -586,3 +586,34 @@ details > *:not(summary) {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project summary {
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #F1F2EF;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 0;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.project summary:hover {
+  color: #E9B000; /* highlight on hover */
+}
+
+.project summary {
+  background-color: #E9B000;
+  color: #E24E42;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
