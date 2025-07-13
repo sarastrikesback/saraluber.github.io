@@ -179,11 +179,23 @@ section.active {
 }
 
 .project details {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  max-height: 3rem; /* enough to show summary */
+  opacity: 1;
+}
+
+.project details > *:not(summary) {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.project details[open] > *:not(summary) {
+  max-height: 800px; /* large enough to reveal full content */
+  opacity: 1;
+  overflow: visible;
 }
 
 .project:hover {
