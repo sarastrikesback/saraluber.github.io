@@ -582,13 +582,32 @@ details > *:not(summary) {
 }
 
 .project details {
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
+  transition: max-height 0.4s ease;
+  max-height: 3rem;
+  opacity: 1;
+  overflow: hidden;
 }
 
-.project details[open] {
+/* Hide everything *inside* details except summary */
+.project details > *:not(summary) {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Show content when open */
+.project details[open] > *:not(summary) {
   max-height: 800px;
   opacity: 1;
+  overflow: visible;
+}
+
+.project summary {
+  display: block;
+  opacity: 1 !important;
+  z-index: 2;
+  position: relative;
 }
 
 .resume-column:hover,
