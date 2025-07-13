@@ -599,11 +599,16 @@ details > *:not(summary) {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project {
+  background-color: #EB6380; /* pink box */
+  /* other styles */
+}
+
 .project summary {
   display: block;
   font-size: 1rem;
   font-weight: 700;
-  background-color: #E9B000;   /* yellow background */
+  background-color: #E9B000;   /* yellow button */
   color: #008F95;              /* teal text */
   padding: 0.5rem 1rem;
   margin-top: 1rem;
@@ -614,7 +619,7 @@ details > *:not(summary) {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .project summary:hover {
-  background-color: #008F95;  /* teal background on hover */
+  background-color: #008F95;  /* teal on hover */
   color: #F1F2EF;             /* light text on hover */
 }
 
