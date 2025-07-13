@@ -623,7 +623,9 @@ details > *:not(summary) {
   color: #F1F2EF;             /* light text on hover */
 }
 
+/* Option 2: Keep hover behavior but avoid pink-on-pink */
 .project:hover summary {
-  background-color: #EB6380;
-  color: #F1F2EF;
+  background-color: #E9B000;  /* keep yellow */
+  color: #008F95;             /* keep teal */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
