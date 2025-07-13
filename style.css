@@ -552,7 +552,6 @@ details > *:not(summary) {
 .project details {
   overflow-wrap: break-word;  /* wraps long words */
   word-break: break-word;     /* breaks words if needed */
-  max-height: 100%;
 }
 
 .project details > *:not(summary) {
@@ -568,4 +567,22 @@ details > *:not(summary) {
 
 .projects h3 {
   color: #E9B000; /* yellow */
+}
+
+.project details {
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.project details[open] {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.resume-column:hover,
+.contact-info-box:hover,
+#contact-form:hover {
+  transform: translateY(-8px);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
