@@ -404,8 +404,8 @@ summary {
 }
 
 summary:focus {
-  outline: none;
-  box-shadow: none;
+  outline: 3px dashed #E9B000;
+  outline-offset: 4px;
 }
 
 details > *:not(summary) {
@@ -615,6 +615,11 @@ details > *:not(summary) {
 }
 
 .project summary:hover {
+  background-color: #EB6380;
+  color: #F1F2EF;
+}
+
+.project:hover summary {
   background-color: #EB6380;
   color: #F1F2EF;
 }
