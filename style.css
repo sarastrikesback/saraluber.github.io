@@ -154,35 +154,20 @@ section.active {
 }
 
 /* Portfolio */
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
 .project {
   background-color: #EB6380;
-  padding: 1rem;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   border-radius: 1.5rem;
+  padding: 1rem;
+  overflow: visible; /* allows summary to display properly */
+  position: relative;
   box-shadow: 4px 4px 12px rgba(235, 99, 128, 0.5);
-  color: #F1F2EF;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  word-wrap: break-word;
-  height: auto;             /* ✨ allow natural height */
 }
 
 .project details {
+  max-height: 5rem;
   overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  max-height: 3rem; /* enough to show summary */
-  opacity: 1;
+  transition: max-height 0.4s ease;
 }
 
 .project details > *:not(summary) {
@@ -192,25 +177,30 @@ section.active {
   transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
+.project details[open] {
+  max-height: 800px;
+  overflow: visible;
+}
+
 .project details[open] > *:not(summary) {
-  max-height: 800px; /* large enough to reveal full content */
+  max-height: 800px;
   opacity: 1;
-  overflow: visible;
 }
 
-.project:hover {
-  transform: translateY(-8px);
-  box-shadow: 6px 6px 20px rgba(226, 78, 66, 0.8);
+.project summary {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: #E9B000;
+  color: #008F95;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
 }
 
-.project details[open] {
-  animation: expand 0.3s ease-in-out;
-}
-
-.project details[open] {
-  max-height: 500px; /* Or a large number to fit content */
-  overflow: visible;
-}
 
 details summary {
   cursor: pointer;
