@@ -288,7 +288,7 @@ details summary {
 }
 
 contact-form button:hover {
-  background-color: #EB6380;
+  background-color: #D17089;
 }
 
 .error-message {
@@ -479,7 +479,7 @@ details > *:not(summary) {
 }
 
 #contact {
-  background-color: #EB6380;
+  background-color: #D17089;
   padding: 3rem 1rem;
   border-radius: 2rem;
   margin: 2rem auto;
@@ -608,7 +608,7 @@ details > *:not(summary) {
 }
 
 .project {
-  background-color: #EB6380; /* pink box */
+  background-color: #D17089; /* pink box */
   /* other styles */
 }
 
