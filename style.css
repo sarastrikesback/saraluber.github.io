@@ -662,3 +662,20 @@ details > *:not(summary) {
   max-width: 420px;
   box-sizing: border-box;
 }
+
+.projects .project {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 420px;
+  box-sizing: border-box;
+
+  height: auto;         /* allow card to expand naturally */
+  overflow: visible;    /* don’t clip the button */
+  padding-bottom: 2rem; /* extra space so button never overflows */
+}
+
+.projects .project button {
+  position: relative;   /* keep it inside the flow */
+  z-index: 1;           /* always on top of background */
+  display: inline-block;
+}
