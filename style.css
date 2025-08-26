@@ -642,21 +642,23 @@ details > *:not(summary) {
     outline: none !important;
 }
 
-.portfolio-container {
+/* === Portfolio Container Fix === */
+.projects {
   display: flex;
-  flex-wrap: wrap;       /* allows wrapping, avoids overlap */
-  gap: 1.5rem;           /* space between boxes */
-  justify-content: center; /* keeps it centered */
-  align-items: stretch;  /* makes all boxes same height per row */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;     /* not absolute */
+  height: auto;           /* let content set the height */
+  overflow: visible;      /* allow expanded details to push down */
+  clear: both;            /* stop floating elements above from colliding */
 }
 
-.project-box {
-  flex: 1 1 300px;       /* grow, shrink, min width 300px */
-  max-width: 400px;      /* prevents giant boxes */
-  background: #F1F2EF;   /* light background so text is visible */
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Ensure project cards don’t use absolute positioning */
+.projects .project {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 420px;
   box-sizing: border-box;
 }
-
