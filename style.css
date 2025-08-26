@@ -637,3 +637,7 @@ details > *:not(summary) {
   color: #008F95;             /* keep teal */
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
+*:focus {
+    outline: none !important;
+}
