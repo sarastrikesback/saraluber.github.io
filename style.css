@@ -373,7 +373,7 @@ a:focus, button:focus, summary:focus {
 }
 
 .contact-item a {
-  color: #EFCE7B;
+  color: #008F95;
   text-decoration: none;
 }
 
@@ -429,7 +429,7 @@ details > *:not(summary) {
   flex: 1.5;
   min-width: 300px;
   max-width: 450px;
-  background-color: #EFCE7B;
+  background-color: #008F95;
   border-radius: 1.5rem;
   padding: 2rem;
   font-family: 'Poppins', sans-serif;
@@ -445,7 +445,7 @@ details > *:not(summary) {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #EFCE7B;
+  background-color: #008F95;
   padding: 2rem;
   border-radius: 1.5rem;
   font-family: 'Poppins', sans-serif;
@@ -464,7 +464,7 @@ details > *:not(summary) {
 }
 
 #contact-form button {
-  background-color: #6777B6;
+  background-color: #EFCE7B;
   color: white;
   border: none;
   padding: 0.75rem 1rem;
@@ -475,11 +475,11 @@ details > *:not(summary) {
 }
 
 #contact-form button:hover {
-  background-color: #C43D33;
+  background-color: #D17089;
 }
 
 #contact {
-  background-color: #D17089;
+  background-color: #008F95;
   padding: 3rem 1rem;
   border-radius: 2rem;
   margin: 2rem auto;
