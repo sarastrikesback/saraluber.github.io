@@ -238,10 +238,10 @@
       <div class="carousel">
         <div class="carousel-images">
           <img src="sara's sewing logo.png" alt="Sara's Sewing Logo">
-          <img src="Pickleball Bag.JPG" alt="Sewing Project 1">
-          <img src="School Tote Bag.JPG" alt="Sewing Project 2">
-          <img src="Laptop Sleeve.JPG" alt="Sewing Project 3">
-          <img src="Boxed Pouch.JPG" alt="Sewing Project 4">
+          <img src="Pickleball Bag 2.JPG" alt="Sewing Project 1">
+          <img src="School Tote Bag 2.JPG" alt="Sewing Project 2">
+          <img src="Laptop Sleeve 2.JPG" alt="Sewing Project 3">
+          <img src="Boxed Pouch 2.JPG" alt="Sewing Project 4">
         </div>
         <!-- Navigation buttons -->
         <button class="carousel-btn prev">&#10094;</button>
@@ -259,24 +259,23 @@
 /* Carousel styles */
 .carousel {
   position: relative;
-  width: 100%;
-  max-width: 400px;   /* or whatever size you want */
-  margin: auto;
+  max-width: 200px; /* matches your old image size */
+  margin: 0 auto 1rem auto;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .carousel-images img {
-  max-width: 100%;
-  height: auto;        /* keeps natural aspect ratio */
-  object-fit: contain; /* no squishing, shows whole image */
+  width: 200px;   /* fixed width for consistency */
+  border-radius: 8px;
   flex-shrink: 0;
 }
+  
 .carousel-btn {
   position: absolute;
   top: 50%;
