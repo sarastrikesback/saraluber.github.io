@@ -234,9 +234,17 @@
   <summary>See More</summary>
   <ul>
     <li style="list-style: none; text-align: center;">
-      <img src="sara's sewing logo.png" 
-           alt="Sara's Sewing Logo" 
-           style="max-width: 200px; margin: 0 auto 1rem auto; display: block; border-radius: 8px;">
+      <!-- Carousel container -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="placeholder1.jpg" alt="Sewing Project 1">
+          <img src="placeholder2.jpg" alt="Sewing Project 2">
+          <img src="placeholder3.jpg" alt="Sewing Project 3">
+        </div>
+        <!-- Navigation buttons -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
     </li>
     <li>
       Quilted, embroidered, and sewn creations showcased at local craft fairs in the NC Triangle.
@@ -244,6 +252,74 @@
   </ul>
 </details>
 </div>
+
+<style>
+/* Carousel styles */
+.carousel {
+  position: relative;
+  max-width: 200px; /* matches your old image size */
+  margin: 0 auto 1rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-images img {
+  width: 200px;   /* fixed width for consistency */
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.carousel-btn.prev { left: 5px; }
+.carousel-btn.next { right: 5px; }
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
+
+<script>
+const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+  const images = carousel.querySelector('.carousel-images');
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  const totalImages = images.children.length;
+  let index = 0;
+
+  function showImage(i) {
+    images.style.transform = `translateX(${-i * 200}px)`; // 200px = image width
+  }
+
+  prevBtn.addEventListener('click', () => {
+    index = (index > 0) ? index - 1 : totalImages - 1;
+    showImage(index);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index < totalImages - 1) ? index + 1 : 0;
+    showImage(index);
+  });
+});
+</script>
 
   </div>
 </section>
