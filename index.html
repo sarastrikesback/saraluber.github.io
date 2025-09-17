@@ -259,23 +259,24 @@
 /* Carousel styles */
 .carousel {
   position: relative;
-  max-width: 200px; /* matches your old image size */
-  margin: 0 auto 1rem auto;
+  width: 100%;
+  max-width: 400px;   /* or whatever size you want */
+  margin: auto;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .carousel-images {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-images img {
-  width: 200px;   /* fixed width for consistency */
-  border-radius: 8px;
+  max-width: 100%;
+  height: auto;        /* keeps natural aspect ratio */
+  object-fit: contain; /* no squishing, shows whole image */
   flex-shrink: 0;
 }
-
 .carousel-btn {
   position: absolute;
   top: 50%;
