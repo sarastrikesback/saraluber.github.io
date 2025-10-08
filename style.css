@@ -262,6 +262,7 @@ details summary {
   text-decoration: underline;
 }
 
+/* fixed selectors for contact form group */
 .contact-form label,
 .contact-form input,
 .contact-form textarea,
@@ -287,7 +288,7 @@ details summary {
   cursor: pointer;
 }
 
-contact-form button:hover {
+.contact-form button:hover {
   background-color: #D17089;
 }
 
@@ -354,6 +355,7 @@ a:focus, button:focus, summary:focus {
   outline-offset: 2px;
 }
 
+/* fixed selectors */
 .contact-info,
 .contact-form {
   display: flex;
@@ -372,12 +374,12 @@ a:focus, button:focus, summary:focus {
   flex-direction: column;
 }
 
-.contact-item a {
+.contact-info a {
   color: #008F95;
   text-decoration: none;
 }
 
-.contact-item a:hover {
+.contact-info a:hover {
   text-decoration: underline;
 }
 
@@ -639,7 +641,7 @@ details > *:not(summary) {
 }
 
 *:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 /* === Portfolio Container Fix === */
@@ -661,14 +663,6 @@ details > *:not(summary) {
   flex: 1 1 300px;
   max-width: 420px;
   box-sizing: border-box;
-}
-
-.projects .project {
-  position: relative;
-  flex: 1 1 300px;
-  max-width: 420px;
-  box-sizing: border-box;
-
   height: auto;         /* allow card to expand naturally */
   overflow: visible;    /* don’t clip the button */
   padding-bottom: 2rem; /* extra space so button never overflows */
