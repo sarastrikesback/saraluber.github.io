@@ -1,675 +1,391 @@
-/* General Reset and Font */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ======================================================================
+   style.css — soft-sand + paper texture design
+   Replace your existing style.css with this file.
+   ====================================================================== */
+
+/* -------------------------
+   Variables (colors & sizes)
+   ------------------------- */
+:root{
+  --soft-sand: #f7f2eb;      /* page base under texture */
+  --paper-texture: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  --navy: #294261;           /* stronger accent */
+  --sage: #008f95;           /* teal/sage accent */
+  --warm-yellow: #efce7b;    /* button/cta */
+  --rose: #d17089;           /* card background accent */
+  --muted-text: #333333;
+  --muted-light: #f1f2ef;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --card-max-width: 420px;
+  --container-max: 1100px;
+  --gap: 1.5rem;
 }
 
-/* Base Styles */
+/* ======================
+   Reset & base settings
+   ====================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #6777B6; /* solid everywhere */
-  color: #F1F2EF;
+  background-color: var(--soft-sand);
+  background-image: var(--paper-texture);
+  background-repeat: repeat;
+  color: var(--muted-light);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
-h1, h2, h3 {
-  font-weight: 800;
-  color: #F1F2EF;
-  letter-spacing: 0.05em;
-}
+/* -----------------
+   Typography
+   ----------------- */
+h1, h2, h3, h4 { color: var(--navy); font-weight: 800; letter-spacing: 0.02em; }
+h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+p, li, a, summary { color: var(--muted-text); }
 
-/* Links */
-a {
-  color: #EFCE7B;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
+/* -----------------
+   Links
+   ----------------- */
+a { color: var(--warm-yellow); text-decoration: none; font-weight: 600; transition: color .2s ease; }
+a:hover { color: var(--navy); text-decoration: underline; }
 
-a:hover {
-  color: #F1F2EF;
-  text-decoration: underline;
-}
-
-/* Header & Footer */
+/* ======================
+   Header & Navigation
+   ====================== */
 header, footer {
-  background-color: #6777B6;
-  text-align: center;
+  background-color: rgba(247,242,235,0.95); /* keep paper visible */
+  background-image: var(--paper-texture);
   padding: 2rem 1rem;
-  box-shadow: none;
-  border: none;
+  text-align: center;
+  border-bottom: 1px solid rgba(41,66,97,0.06);
 }
 
-header h1, header h2, footer p {
-  color: #F1F2EF;
-  font-weight: 900;
-  font-size: 2.5rem;
-  margin: 0;
-  text-transform: uppercase;
-}
+.header-image { max-width: 360px; display: block; margin: 0 auto 0.5rem; }
+.subtitle { color: var(--navy); margin-top: 0.5rem; font-weight: 600; }
 
-header::before, header::after, footer::before, footer::after {
-  content: none !important;
-}
-
-/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
+  gap: 1rem;
   justify-content: center;
+  margin-top: 1rem;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 1rem 0;
 }
 
 nav ul li a {
-  font-size: 1.1rem;
-  padding: 0.5rem 1.25rem;
-  border-radius: 1rem;
-  background-color: #F1F2EF;
-  color: #6777B6;
-  border: 2px solid #6777B6;
+  background-color: var(--muted-light);
+  color: var(--navy);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid var(--navy);
+  box-shadow: 0 2px 8px rgba(41,66,97,0.06);
   font-weight: 600;
-  box-shadow: 0 0 5px #6777B6;
-  transition: all 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active-tab {
-  background-color: #6777B6;
-  color: #F1F2EF;
-  border-color: #EFCE7B;
-  box-shadow: 0 0 10px #EFCE7B;
+nav ul li a.active-tab,
+nav ul li a:hover {
+  background-color: var(--navy);
+  color: var(--soft-sand);
+  border-color: var(--warm-yellow);
+  box-shadow: 0 4px 14px rgba(14,32,60,0.08);
 }
 
-/* Tabs & Sections */
+/* ======================
+   Page container & tabs
+   ====================== */
+main {
+  max-width: var(--container-max);
+  margin: 1.75rem auto;
+  padding: 0 1rem;
+}
+
+/* tab container card style */
 .tab-section {
-  display: none;
+  display: none; /* toggled by JS */
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 2rem auto;
+  gap: var(--gap);
+  background-color: rgba(255,255,255,0.98);
+  color: var(--muted-text);
   padding: 2rem;
-  background-color: #F1F2EF;
-  color: #333;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(14,32,60,0.06);
+  margin-bottom: 1.5rem;
 }
 
-.tab-section.active {
-  display: flex;
-}
+.tab-section.active { display: flex; }
 
-section {
-  display: none;
-}
+/* Use a consistent max width for inner content */
+.tab-section > * { max-width: var(--container-max); margin: 0 auto; }
 
-section.active {
-  display: block;
-}
-
-/* About Section */
+/* ======================
+   About Section
+   ====================== */
 .about-section {
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  background-color: #F1F2EF;
-  color: #333;
-  border-radius: 1.5rem;
-  padding: 2rem;
+  flex-wrap: wrap;
+  background: transparent;
+  padding: 0;
 }
 
-.about-section img.about {
-  max-width: 300px;
-  border-radius: 2rem;
-  border: 4px solid #6777B6;
-  box-shadow: 0 0 15px #6777B6;
-}
+.about { max-width: 300px; border-radius: 16px; border: 4px solid var(--navy); box-shadow: 0 8px 20px rgba(41,66,97,0.06); }
+.about-text { max-width: 640px; color: var(--muted-text); }
 
-/* Resume Layout */
+/* ======================
+   Resume columns
+   ====================== */
 .resume-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.25rem;
   justify-content: center;
 }
 
 .resume-column {
-  flex: 1;
+  flex: 1 1 300px;
   min-width: 250px;
-  background-color: #EFCE7B;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  color: #008F95;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(239, 206, 123, 0.5);
+  background-color: var(--warm-yellow);
+  color: var(--navy);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 18px rgba(41,66,97,0.06);
 }
 
-.resume-column h3 {
-  color: #6777B6;
-  margin-bottom: 1rem;
-}
-
-/* Portfolio */
-.project {
-  background-color: #D17089;
-  border-radius: 1.5rem;
-  padding: 1rem;
-  overflow: visible; /* allows summary to display properly */
-  position: relative;
-  box-shadow: 4px 4px 12px rgba(235, 99, 128, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project details {
-  max-height: 5rem;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.project details > *:not(summary) {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-}
-
-.project details[open] {
-  max-height: 800px;
-  overflow: visible;
-}
-
-.project details[open] > *:not(summary) {
-  max-height: 800px;
-  opacity: 1;
-}
-
-.project summary {
-  display: block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  background-color: #EFCE7B;
-  color: #008F95;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  z-index: 2;
-  position: relative;
-}
-
+/* Remove dotted outline caused by browser default on <summary> markers */
 details summary {
-  cursor: pointer;
-}
-
-@keyframes expand {
-  from { opacity: 0; transform: scaleY(0.95); }
-  to   { opacity: 1; transform: scaleY(1); }
-}
-
-.project details > *:not(summary) {
-  margin-top: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.project-image {
-  max-width: 40%;
-  margin: 0 auto 1rem auto;
-  border-radius: 10px;
-  border: 2px solid #F1F2EF;
-  box-shadow: 0 0 10px #F1F2EF;
-}
-
-/* Filter above portfolio */
-#portfolio-filter {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Contact */
-#contact.tab-section {
-  background-color: #F1F2EF;
-  color: #F1F2EF;
-  padding: 2rem;
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.contact-info, .contact-form {
-  flex: 1 1 300px;
-  background-color: #008F95;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,143,149,0.3);
-}
-
-.contact-item i {
-  margin-right: 10px;
-  font-size: 1.5rem;
-  color: #F1F2EF;
-}
-
-.contact-info a:hover {
-  color: #F1F2EF;
-  text-decoration: underline;
-}
-
-/* fixed selectors for contact form group */
-.contact-form label,
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.5rem;
-  background-color: #F1F2EF;
-  border-radius: 8px;
-}
-
-.contact-form button {
-  background-color: #6777B6;
-  color: #F1F2EF;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #D17089;
-}
-
-.error-message {
-  color: #6777B6;
-  font-weight: 600;
-}
-
-/* Footer */
-footer {
-  background-color: #6777B6;
-  color: #F1F2EF;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .resume-columns {
-    flex-direction: column;
-  }
-  .contact-container {
-    flex-direction: column;
-  }
-  .project {
-    width: 90vw;
-  }
-}
-
-/* Keep details/summary styles outside the media query */
-.resume-column details {
-  background-color: #EFCE7B;
-  padding: 1rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 15px rgba(239, 206, 123, 0.5);
-  color: #008F95;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.resume-column summary {
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 700;
   list-style: none;
-}
-
-.resume-column summary::marker {
-  display: none;
-}
-
-.resume-column details[open] {
-  background-color: #F1F2EF;
-  color: #333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-a:focus, button:focus, summary:focus {
-  outline: 3px solid #EFCE7B;
-  outline-offset: 2px;
-}
-
-/* fixed selectors */
-.contact-info,
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex: 1 1 300px;
-  background-color: #008F95;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 143, 149, 0.3);
-  color: #F1F2EF;
-}
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-info a {
-  color: #008F95;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.success-message {
-  color: #EFCE7B;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-summary {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
   outline: none;
-  border: none;
-}
-
-summary:focus {
-  outline: 3px dashed #EFCE7B;
-  outline-offset: 4px;
-}
-
-details > *:not(summary) {
-  margin-top: 0.75rem;
-}
-
-/* Contact Section Flexbox Layout */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Left Column (Info) */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem 3rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.contact-info-box {
-  flex: 1.5;
-  min-width: 300px;
-  max-width: 450px;
-  background-color: #008F95;
-  border-radius: 1.5rem;
-  padding: 2rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  color: #333;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#contact-form {
-  flex: 3;
-  min-width: 350px;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: #008F95;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Inputs & Button */
-#contact-form input,
-#contact-form textarea {
-  border: none;
-  border-radius: 1rem;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  background-color: #ffffff;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
-}
-
-#contact-form button {
-  background-color: #EFCE7B;
-  color: white;
-  border: none;
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#contact-form button:hover {
-  background-color: #D17089;
-}
-
-#contact {
-  background-color: #F1F2EF;
-  padding: 3rem 1rem;
-  border-radius: 2rem;
-  margin: 2rem auto;
-}
-
-.tab-section h2 {
-  color: #008F95;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-.footer-links a {
-  color: #F1F2EF;
-  font-size: 1.75rem;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #EFCE7B;
-}
-
-.contact-info-box a {
-  color: #F1F2EF; /* White text */
-}
-
-.contact-info-box a:hover {
-  color: #008F95; /*hover */
-}
-
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  color: #F1F2EF;
-}
-
-.contact-row i {
-  font-size: 1.5rem;
-  color: #008F95; /* teal-blue */
-}
-
-.contact-row a {
-  color: #F1F2EF; /* white text */
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.contact-row a:hover {
-  color: #008F95;
-  text-decoration: underline;
-}
-
-.form-intro {
-  font-size: 1.1rem;
-  color: #F1F2EF;
-  font-weight: 700; /* bold */
-  margin-bottom: 0.5rem;
-}
-
-.project {
-  /* existing styles... */
-  overflow: hidden; /* prevents content from spilling out */
-}
-
-.project details {
-  overflow-wrap: break-word;  /* wraps long words */
-  word-break: break-word;     /* breaks words if needed */
-}
-
-.project details > *:not(summary) {
-  margin-top: 0.75rem;
-  padding-right: 0.5rem; /* keeps text from hitting edge */
-}
-
-.project details ul {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.projects h3 {
-  color: #EFCE7B; /* yellow */
-}
-
-.project details {
-  transition: max-height 0.4s ease;
-  max-height: 3rem;
-  opacity: 1;
-  overflow: hidden;
-}
-
-/* Hide everything *inside* details except summary */
-.project details > *:not(summary) {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-}
-
-/* Show content when open */
-.project details[open] > *:not(summary) {
-  max-height: 800px;
-  opacity: 1;
-  overflow: visible;
-}
-
-.project summary {
   display: block;
-  opacity: 1 !important;
-  z-index: 2;
-  position: relative;
 }
 
-.resume-column:hover,
-.contact-info-box:hover,
-#contact-form:hover {
-  transform: translateY(-8px);
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Remove default triangle marker in some browsers */
+details summary::-webkit-details-marker { display: none; }
 
-.project {
-  background-color: #D17089; /* pink box */
-  /* other styles */
-}
-
-.project summary {
-  display: block;
-  font-size: 1rem;
+/* more polished summary appearance */
+.resume-column summary {
   font-weight: 700;
-  background-color: #EFCE7B;   /* yellow button */
-  color: #008F95;              /* teal text */
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  border-radius: 1rem;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.project summary:hover {
-  background-color: #008F95;  /* teal on hover */
-  color: #F1F2EF;             /* light text on hover */
+  font-size: 1rem;
+  padding: 0.25rem 0;
 }
 
-/* Option 2: Keep hover behavior but avoid pink-on-pink */
-.project:hover summary {
-  background-color: #EFCE7B;  /* keep yellow */
-  color: #008F95;             /* keep teal */
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-*:focus {
-  outline: none !important;
-}
-
-/* === Portfolio Container Fix === */
+/* ======================
+   Portfolio layout (flex, no overlap)
+   ====================== */
 .projects {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.25rem;
   justify-content: center;
   align-items: flex-start;
-  position: relative;     /* not absolute */
-  height: auto;           /* let content set the height */
-  overflow: visible;      /* allow expanded details to push down */
-  clear: both;            /* stop floating elements above from colliding */
+  margin-top: 0.5rem;
 }
 
-/* Ensure project cards don’t use absolute positioning */
-.projects .project {
-  position: relative;
+/* card */
+.project {
+  background-color: var(--rose);
+  color: var(--muted-light);
+  border-radius: var(--radius-md);
+  padding: 1rem;
   flex: 1 1 300px;
-  max-width: 420px;
-  box-sizing: border-box;
-  height: auto;         /* allow card to expand naturally */
-  overflow: visible;    /* don’t clip the button */
-  padding-bottom: 2rem; /* extra space so button never overflows */
+  max-width: var(--card-max-width);
+  box-shadow: 0 10px 24px rgba(14,32,60,0.06);
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
 }
 
-.projects .project button {
-  position: relative;   /* keep it inside the flow */
-  z-index: 1;           /* always on top of background */
+/* details collapse/expand: keep summary visible & accessible */
+.project details {
+  width: 100%;
+  transition: all .35s ease;
+  overflow: hidden;
+}
+
+/* Keep everything inside details hidden except summary until opened */
+.project details > *:not(summary) {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height .4s ease, opacity .35s ease, transform .35s ease;
+  overflow: hidden;
+}
+
+/* When open, reveal content */
+.project details[open] > *:not(summary) {
+  max-height: 1200px;
+  opacity: 1;
+  transform: translateY(0);
+  overflow: visible;
+}
+
+/* summary styled as a clear CTA */
+.project summary {
   display: inline-block;
+  background: var(--warm-yellow);
+  color: var(--sage);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-top: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 10px rgba(14,32,60,0.06);
+  position: relative;
+  z-index: 3;
+}
+
+/* hover states */
+.project summary:hover {
+  background: var(--sage);
+  color: var(--muted-light);
+}
+
+/* ensure summary never gets clipped */
+.project { padding-bottom: 2rem; }
+
+/* project image/galleries */
+.project-image { max-width: 100%; border-radius: 8px; }
+
+/* ======================
+   Sewing carousel (keeps flexible height)
+   ====================== */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0.75rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.6);
+  padding: 0.25rem;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.45s ease;
+  align-items: stretch; /* let images determine height */
+}
+
+.carousel-images img {
+  display: block;
+  width: 100%;
+  height: auto;           /* allow different aspect ratios */
+  object-fit: contain;
+  flex: 0 0 100%;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  padding: 6px 9px;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  z-index: 5;
+}
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+/* ======================
+   Contact layout & form
+   ====================== */
+#contact { background: transparent; padding: 0; }
+
+.contact-container {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.contact-info-box {
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 420px;
+  background-color: var(--sage);
+  color: var(--muted-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 10px 24px rgba(14,32,60,0.05);
+}
+
+#contact-form {
+  flex: 1 1 420px;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: var(--sage);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  color: var(--muted-light);
+  box-shadow: 0 10px 24px rgba(14,32,60,0.05);
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.03);
+  background: rgba(255,255,255,0.98);
+  color: var(--muted-text);
+}
+
+#contact-form button {
+  background: var(--warm-yellow);
+  color: var(--navy);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* ======================
+   Footer
+   ====================== */
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(41,66,97,0.04);
+}
+.footer-links { display:flex; gap:1rem; justify-content:center; margin-bottom:0.5rem; }
+.footer-links a { color: var(--muted-light); font-size: 1.5rem; }
+
+/* ======================
+   Accessibility & focus
+   ====================== */
+:focus { outline: 3px solid rgba(239,206,123,0.5); outline-offset: 3px; }
+
+/* ======================
+   Responsiveness
+   ====================== */
+@media (max-width: 900px) {
+  .about-section { flex-direction: column; text-align:center; }
+  .projects .project { flex: 1 1 90%; max-width: 90%; }
+  .resume-columns { flex-direction: column; }
+  .contact-container { flex-direction: column; }
+}
+
+@media (max-width: 420px) {
+  nav ul { gap: .5rem; }
+  .header-image { max-width: 260px; }
 }
