@@ -1,8 +1,8 @@
 /* Shared stylesheet for all pages */
 /* Palette B — Sand & Deep Sea:
    sand: ##f7f1e6
-   warm-gold: #C2B280
-   deep-green: #3A5A40
+   warm-gold: #e8e1d5
+   deep-green: #e8e1d5
    navy: #1E3D59
    muted-olive: #6B705C
 */
@@ -10,8 +10,8 @@
 /* Subtle paper texture from transparenttextures.com */
 :root{
   --sand: ##f7f1e6;
-  --gold: #C2B280;
-  --green: #3A5A40;
+  --gold: #e8e1d5;
+  --green: #e8e1d5;
   --navy: #1E3D59;
   --muted: #6B705C;
   --light: #F8F6F2;
