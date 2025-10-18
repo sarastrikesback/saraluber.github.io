@@ -4,16 +4,16 @@
   --surface: #ffffff;
   --surface-alt: #f2f6ff;
   --surface-muted: #e7ecff;
-  --border: rgba(51, 65, 255, 0.12);
-  --primary: #5f3df7;
-  --primary-dark: #4324c9;
-  --primary-rgb: 95, 61, 247;
-  --secondary: #ff6f91;
-  --secondary-rgb: 255, 111, 145;
-  --accent: #ffd166;
-  --accent-rgb: 255, 209, 102;
-  --accent-alt: #2dd4bf;
-  --accent-alt-rgb: 45, 212, 191;
+  --border: rgba(var(--primary-rgb), 0.12);
+  --primary: #1f8ac0;
+  --primary-dark: #166a96;
+  --primary-rgb: 31, 138, 192;
+  --secondary: #2bb673;
+  --secondary-rgb: 43, 182, 115;
+  --accent: #64d6ff;
+  --accent-rgb: 100, 214, 255;
+  --accent-alt: #1ec6a1;
+  --accent-alt-rgb: 30, 198, 161;
   --ink: #141427;
   --muted: #4b4e6b;
   --radius-lg: 32px;
@@ -434,10 +434,11 @@ input[type="submit"] {
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
-  border: 2px solid transparent;
+  border: 0;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-clip: padding-box;
 }
 
 .button.primary,
@@ -460,7 +461,7 @@ input[type="submit"]:focus-visible {
 
 .button.secondary {
   background: rgba(var(--accent-rgb), 0.16);
-  border-color: rgba(var(--secondary-rgb), 0.4);
+  border: 1px solid rgba(var(--secondary-rgb), 0.4);
   color: var(--secondary);
 }
 
@@ -811,10 +812,40 @@ input[type="submit"]:focus-visible {
   font-weight: 600;
   color: var(--secondary);
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
 }
 
-.project-card summary::marker {
-  color: var(--secondary);
+.project-card summary:focus-visible {
+  outline: 3px solid rgba(var(--accent-alt-rgb), 0.6);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.project-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-card summary::after {
+  content: '\25BC';
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  color: currentColor;
+}
+
+.project-card details[open] summary::after {
+  transform: rotate(-180deg);
+}
+
+.project-card details[open] {
+  background: var(--surface-alt);
+  border-color: rgba(var(--secondary-rgb), 0.3);
+}
+
+.project-card details p {
+  margin-top: 0.75rem;
 }
 
 /* CTA panel */
