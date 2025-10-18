@@ -9,11 +9,12 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
+    <div class="container header-inner">
       <div class="brand">
+        <span class="brand-mark" aria-hidden="true">SL</span>
         <div>
-          <div class="site-title">Sara Luber</div>
-          <div class="subtitle">Environmental Communicator</div>
+          <p class="site-title">Sara Luber</p>
+          <p class="subtitle">Environmental Communicator</p>
         </div>
       </div>
       <nav class="nav">
@@ -25,31 +26,105 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="page-hero">
-      <h1 style="margin-bottom:.5rem;">Hi — I’m Sara Luber</h1>
-      <p style="margin-bottom:.6rem;">I’m a hands-on communicator focused on making climate and environmental information accessible to diverse audiences. I combine administrative precision, data tools (Power BI, Python), and storytelling to support equitable climate solutions.</p>
-      <p style="font-size:.95rem; color:var(--muted);">Currently at the U.S. EPA in the Office of Resource Management — supporting science through administrative systems, automation (Power Automate), and process improvements.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Environmental communicator &amp; systems partner</span>
+          <h1>Bring clarity to environmental programs and the people they serve</h1>
+          <p class="hero-lede">I help public-sector and mission-driven teams translate complex environmental work into plain language, build processes that keep operations humming, and tell data-rich stories that inspire action.</p>
+          <ul class="hero-points">
+            <li>Plain-language briefs, stakeholder updates, and accessible visuals</li>
+            <li>Collaborative workflows that organize messy teams and deadlines</li>
+            <li>Data storytelling that illuminates impact and unlocks resources</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button primary" href="portfolio.html">Browse recent projects</a>
+            <a class="button secondary" href="Luber_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber smiling in front of greenery" />
+          <figcaption>Based in Raleigh, NC • Open to relocating and partnering with environmentally focused teams nationwide</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="tab-section">
-      <h2>Quick Links</h2>
-      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-        <a href="about.html" class="nav" style="padding:.5rem 1rem; display:inline-block;">About</a>
-        <a href="portfolio.html" class="nav" style="padding:.5rem 1rem; display:inline-block;">Portfolio</a>
-        <a href="contact.html" class="nav" style="padding:.5rem 1rem; display:inline-block;">Contact</a>
+    <section class="section focus-areas">
+      <div class="container">
+        <div class="section-header">
+          <h2>How I help environmentally focused teams deliver with confidence</h2>
+          <p>Whether we’re shaping policy communications or untangling an internal workflow, I bring structure, empathy, and design thinking to every collaboration.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Environmental communications</h3>
+            <p>Translate dense science and policy into meaningful narratives that resonate with stakeholders and communities.</p>
+            <ul>
+              <li>Plain-language writing &amp; editorial strategy</li>
+              <li>Accessible infographics &amp; visualization</li>
+              <li>Stakeholder engagement toolkits</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Operational excellence</h3>
+            <p>Build simple, resilient systems that keep environmental initiatives organized and collaborative teams aligned.</p>
+            <ul>
+              <li>Process mapping &amp; documentation</li>
+              <li>Low-code automation (Power Automate)</li>
+              <li>Knowledge management &amp; training</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Data storytelling</h3>
+            <p>Pair analytics with narrative to highlight outcomes, surface insights, and drive better environmental decisions.</p>
+            <ul>
+              <li>Impact dashboards (Power BI, Tableau)</li>
+              <li>Python analysis &amp; data wrangling</li>
+              <li>Outcome-focused reporting</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel">
+          <h2>Let’s co-create communications that support environmental action.</h2>
+          <p>From stakeholder toolkits to automation that gives your team time back, I’m ready to help your mission-driven work connect with the right audiences.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Start a conversation</a>
+            <a class="button secondary" href="about.html">Get to know me</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="footer-inner">
       <div class="footer-links">
-        <a href="mailto:sarafluber@gmail.com">Email</a>
-        <a href="tel:4435472317">Call</a>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
+        <a class="icon-link" href="mailto:sarafluber@gmail.com">
+          <span class="sr-only">Email</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z" />
+          </svg>
+        </a>
+        <a class="icon-link" href="tel:4435472317">
+          <span class="sr-only">Call</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z" />
+          </svg>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
+          <span class="sr-only">LinkedIn</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z" />
+          </svg>
+        </a>
       </div>
-      <div style="text-align:center; color:var(--muted);">&copy; Built by Sara</div>
+      <p class="footer-note">&copy; Built by Sara Luber</p>
     </div>
   </footer>
 </body>
