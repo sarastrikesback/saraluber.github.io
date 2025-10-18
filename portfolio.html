@@ -61,40 +61,6 @@
           </details>
         </div>
 
-        <div class="project" data-skill="misc">
-          <h3>Misc. Projects</h3>
-          <h4>My First Website (HTML, CSS, JS)</h4>
-          <details>
-            <summary>See More</summary>
-            <ul>
-              <li>Built from scratch; source available on GitHub.</li>
-            </ul>
-          </details>
-
-          <h4>Sara's Sewing!</h4>
-          <details>
-            <summary>See More</summary>
-            <div style="text-align:center;">
-              <!-- Carousel -->
-              <div class="carousel">
-                <div class="carousel-images">
-                  <img src="saras_sewing_trimmed_transparent.png" alt="Sara's Sewing Logo">
-                  <img src="Pickleball Pouch 2.JPG" alt="Pouch">
-                  <img src="School Tote Bag 2.JPG" alt="Tote">
-                  <img src="Laptop Sleeve 2.JPG" alt="Laptop Sleeve">
-                </div>
-                <button class="carousel-btn prev" aria-label="previous">‹</button>
-                <button class="carousel-btn next" aria-label="next">›</button>
-              </div>
-
-              <p style="margin-top:.75rem;">Quilted, embroidered, and sewn creations showcased at local craft fairs in the NC Triangle.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-links">
@@ -106,37 +72,6 @@
     </div>
   </footer>
 
-  <script>
-    // carousel behavior (single carousel on the page)
-    (function(){
-      const carousel = document.querySelector('.carousel');
-      if(!carousel) return;
-      const images = carousel.querySelector('.carousel-images');
-      const prev = carousel.querySelector('.carousel-btn.prev');
-      const next = carousel.querySelector('.carousel-btn.next');
-      const total = images.children.length;
-      let idx = 0;
-
-      function show(i){
-        const w = carousel.clientWidth; // responsive width
-        images.style.transform = `translateX(${-i * w}px)`;
-      }
-
-      // resize handler to keep slides aligned
-      window.addEventListener('resize', () => show(idx));
-
-      prev.addEventListener('click', () => {
-        idx = (idx > 0) ? idx - 1 : total - 1;
-        show(idx);
-      });
-      next.addEventListener('click', () => {
-        idx = (idx + 1) % total;
-        show(idx);
-      });
-
-      // initial
-      show(0);
-    })();
   </script>
 </body>
 </html>
