@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!errorMessage && form) {
     errorMessage = document.createElement('p');
     errorMessage.className = 'error-message';
-    errorMessage.style.color = 'red';
     errorMessage.style.display = 'none';
     errorMessage.textContent = 'There was an error sending your message. Please try again.';
     form.appendChild(errorMessage);
