@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">EPA Logo Placeholder</title>
+  <desc id="desc">Simple illustration representing the United States Environmental Protection Agency logo.</desc>
+  <defs>
+    <linearGradient id="leaf" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e6f95" />
+      <stop offset="100%" stop-color="#5fbac4" />
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" fill="#f2f8fa" rx="32" />
+  <circle cx="120" cy="120" r="88" fill="none" stroke="#285c7a" stroke-width="12" stroke-dasharray="6 18" />
+  <circle cx="120" cy="120" r="64" fill="#ffffff" stroke="#285c7a" stroke-width="8" />
+  <path fill="url(#leaf)" d="M120 80c-22 22-44 36-44 60 0 24 19 40 44 40s44-16 44-40c0-24-22-38-44-60z" />
+  <circle cx="120" cy="98" r="14" fill="#2e6f95" />
+  <text x="120" y="210" text-anchor="middle" font-size="28" font-family="'Poppins', Arial, sans-serif" fill="#285c7a" font-weight="700">EPA</text>
+</svg>
