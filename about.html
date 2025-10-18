@@ -9,11 +9,12 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
+    <div class="container header-inner">
       <div class="brand">
+        <span class="brand-mark" aria-hidden="true">SL</span>
         <div>
-          <div class="site-title">Sara Luber</div>
-          <div class="subtitle">Environmental Communicator</div>
+          <p class="site-title">Sara Luber</p>
+          <p class="subtitle">Environmental Communicator</p>
         </div>
       </div>
       <nav class="nav">
@@ -25,57 +26,75 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="tab-section about-section">
-      <img class="about" src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot">
-      <div class="about-text">
+  <main>
+    <div class="container">
+      <section class="page-section">
         <h2>Hi, I’m Sara!</h2>
-        <p>I’m a creative, hands-on communicator passionate about environmental communications and justice. I deeply believe in addressing climate inequity and environmental injustice by disseminating clear, accessible information to the public. My goal is to foster understanding of how environmental and climate change impacts different communities — especially those underserved and disproportionately affected — and to advocate for equitable, science-based solutions.</p>
+        <div class="about-layout">
+          <figure class="about-media">
+            <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber smiling in front of greenery">
+            <figcaption>Environmental communicator, process designer, and lifelong learner.</figcaption>
+          </figure>
+          <div class="about-copy">
+            <p>I’m a creative, hands-on communicator passionate about environmental communications and justice. I deeply believe in addressing environmental inequity and environmental injustice by sharing clear, accessible information with the public.</p>
+            <p>Currently, I serve as an Assistant to the Office Director in the <a href="https://www.epa.gov/aboutepa/about-office-resource-management-orm" target="_blank" rel="noopener">Office of Resource Management (ORM)</a> at the U.S. Environmental Protection Agency. My work focuses on automation, process improvement, and cross-functional coordination to support the Agency’s scientific mission.</p>
+            <p>Outside of work, you’ll find me baking, sewing, reading, and building projects that combine creativity with practical impact. These hobbies keep me grounded in community and always experimenting with new ways to communicate ideas.</p>
+            <ul class="about-pillars">
+              <li>Environmental justice requires trustworthy, accessible storytelling.</li>
+              <li>Operations and communications are strongest when they are inclusive by design.</li>
+              <li>Curiosity and care are the best tools for navigating complex environmental work.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <p>Currently, I work at the U.S. Environmental Protection Agency as an Assistant to the Office Director in the <a href="https://www.epa.gov/aboutepa/about-office-resource-management-orm" target="_blank" rel="noopener">Office of Resource Management (ORM)</a>, where I focus on automation, process improvement, and cross-functional coordination to support the Agency’s scientific mission.</p>
-
-        <p>Outside of work, I enjoy baking, sewing, and reading — and I’m always building projects that combine creativity with practical impact.</p>
-      </div>
-    </section>
-
-    <section class="tab-section">
-      <h2>Resume highlights</h2>
-      <div class="resume-columns">
-        <div class="resume-column">
-          <details>
+      <section class="page-section">
+        <h2>Resume highlights</h2>
+        <p>Selected education and certifications that shape how I bridge environmental policy, communications, and data.</p>
+        <div class="resume-grid">
+          <details class="resume-card">
             <summary>North Carolina State University — B.A. Political Science (May 2023)</summary>
-            <p>Concentration: American Politics; Minor: Environmental Science. Courses in public policy, research methods, and environmental studies.</p>
+            <p>Concentration: American Politics; Minor: Environmental Science. Coursework in public policy, research methods, and environmental studies.</p>
             <a href="Luber_Resume.pdf" target="_blank" rel="noopener noreferrer">📄 View Resume (PDF)</a>
           </details>
-        </div>
-
-        <div class="resume-column">
-          <details>
+          <details class="resume-card">
             <summary>IBM Professional Certificate — Data Science (2024)</summary>
-            <p>Python, SQL, data visualization, machine learning fundamentals — capstone project included.</p>
+            <p>Python, SQL, data visualization, and machine learning fundamentals with a capstone project applying these tools.</p>
             <a href="Luber Data Science.pdf" target="_blank" rel="noopener noreferrer">📄 View Certificate (PDF)</a>
           </details>
-        </div>
-
-        <div class="resume-column">
-          <details>
+          <details class="resume-card">
             <summary>IBM Professional Certificate — Data Analytics (2024)</summary>
-            <p>Excel, Python, SQL, dashboards and analytics projects.</p>
+            <p>Excel, Python, SQL, dashboards, and analytics projects focused on telling stories with complex datasets.</p>
             <a href="Luber Data Analyst.pdf" target="_blank" rel="noopener noreferrer">📄 View Certificate (PDF)</a>
           </details>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="footer-inner">
       <div class="footer-links">
-        <a href="mailto:sarafluber@gmail.com">Email</a>
-        <a href="tel:4435472317">Call</a>
-        <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank">LinkedIn</a>
+        <a class="icon-link" href="mailto:sarafluber@gmail.com">
+          <span class="sr-only">Email</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z" />
+          </svg>
+        </a>
+        <a class="icon-link" href="tel:4435472317">
+          <span class="sr-only">Call</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z" />
+          </svg>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
+          <span class="sr-only">LinkedIn</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z" />
+          </svg>
+        </a>
       </div>
-      <div style="text-align:center; color:var(--muted);">&copy; Built by Sara</div>
+      <p class="footer-note">&copy; Built by Sara Luber</p>
     </div>
   </footer>
 </body>
