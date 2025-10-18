@@ -1,21 +1,23 @@
 /* Global design tokens */
 :root {
-  --background: #fcf6ed;
-  --surface: #ffffff;
-  --surface-alt: #f7efe3;
-  --surface-muted: #efe3d3;
+  --background: #f6efe4;
+  --surface: #fffdf8;
+  --surface-alt: #f2e5d4;
+  --surface-muted: #e7d6c4;
   --border: rgba(var(--primary-rgb), 0.12);
-  --primary: #2a9d8f;
-  --primary-dark: #1f6f66;
-  --primary-rgb: 42, 157, 143;
-  --secondary: #3dccc7;
-  --secondary-rgb: 61, 204, 199;
-  --accent: #f4a261;
-  --accent-rgb: 244, 162, 97;
-  --accent-alt: #e76f51;
-  --accent-alt-rgb: 231, 111, 81;
-  --ink: #2c2a28;
-  --muted: #605750;
+  --primary: #344966;
+  --primary-dark: #1f2f45;
+  --primary-rgb: 52, 73, 102;
+  --secondary: #7a8450;
+  --secondary-rgb: 122, 132, 80;
+  --accent: #b86b42;
+  --accent-rgb: 184, 107, 66;
+  --accent-alt: #d8905b;
+  --accent-alt-rgb: 216, 144, 91;
+  --error: #b0523b;
+  --error-rgb: 176, 82, 59;
+  --ink: #2d2621;
+  --muted: #5a4f46;
   --radius-lg: 32px;
   --radius-md: 20px;
   --radius-sm: 14px;
@@ -168,7 +170,7 @@ strong {
   height: 60px;
   border-radius: 20px;
   background: var(--gradient-primary);
-  color: #fdf8ff;
+  color: #fff9f1;
   font-weight: 800;
   letter-spacing: 0.06em;
   font-size: 1.1rem;
@@ -977,7 +979,7 @@ textarea {
 }
 
 .error-message {
-  color: #e24b4b;
+  color: var(--error);
 }
 
 /* Footer */
