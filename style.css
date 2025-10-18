@@ -1,9 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Sara Luber</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">SL</span>
+        <div>
+          <p class="site-title">Sara Luber</p>
+          <p class="subtitle">Environmental Communicator</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="background.html">Background</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="page-section">
+        <h2>Selected work</h2>
+        <p>Examples of how I combine communications, operations, and analytics to make environmental work more accessible.</p>
+        <div class="project-grid">
+          <div class="project-card" data-skill="python">
+            <h3>Python</h3>
+            <h4>Analyzing air quality trends and policy impact</h4>
+            <p><em>Evaluating the effectiveness of environmental regulations on pollution reduction.</em></p>
+            <details>
+              <summary>Learn more</summary>
+              <p>Used Python to clean historical air-quality datasets, run statistical tests, and visualize trends that show how regulations influence pollution and public health outcomes.</p>
+            </details>
+          </div>
+
+          <div class="project-card" data-skill="powerbi">
+            <h3>Power BI</h3>
+            <h4>Environmental justice &amp; environmental burden</h4>
+            <p><em>Visualizing environmental risk, resource access, and federal investment.</em></p>
+            <details>
+              <summary>Learn more</summary>
+              <p>Built a Power BI dashboard combining EPA EJSCREEN and Justice40 datasets to highlight disparities, surface community stories, and guide equitable resource allocation.</p>
+            </details>
+          </div>
+
+          <div class="project-card" data-skill="stata">
+            <h3>Stata</h3>
+            <h4>Who supports environmental policy?</h4>
+            <p><em>Opinion analysis by demographics and political ideology.</em></p>
+            <details>
+              <summary>Learn more</summary>
+              <p>Analyzed survey data (GSS, ANES, Pew) to identify demographic and ideological predictors of environmental policy support and craft targeted outreach recommendations.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a class="icon-link" href="mailto:sarafluber@gmail.com">
+          <span class="sr-only">Email</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z" />
+          </svg>
+        </a>
+        <a class="icon-link" href="tel:4435472317">
+          <span class="sr-only">Call</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z" />
+          </svg>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
+          <span class="sr-only">LinkedIn</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z" />
+          </svg>
+        </a>
+      </div>
+      <p class="footer-note">&copy; Built by Sara Luber</p>
+    </div>
+  </footer>
+</body>
+</html>
+script.js
++0
+-1
+
+style.css
++921
+-268
+
 /* Global styles */
 :root {
-  --canvas: #f6f2eb;
+  --canvas: #fbf8f3;
   --surface: #ffffff;
-  --surface-soft: #f0e8de;
-  --surface-tint: #e4dacf;
+  --surface-soft: #f4eee6;
+  --surface-tint: #e9dfd3;
   --primary: #1f5865;
   --primary-dark: #153b43;
   --secondary: #3a9d90;
@@ -35,9 +139,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--ink);
-  background: radial-gradient(120% 120% at 80% 0%, rgba(63, 137, 129, 0.12), transparent),
-              linear-gradient(180deg, rgba(239, 145, 93, 0.08), transparent 40%),
-              var(--canvas);
+  background: var(--canvas);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -430,6 +532,12 @@ main {
   margin-bottom: clamp(2.3rem, 5vw, 3.5rem);
 }
 
+.page-section h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
 .page-section h2 {
   font-size: clamp(1.8rem, 4vw, 2.3rem);
   margin-bottom: 1.1rem;
@@ -441,60 +549,100 @@ main {
 }
 
 /* About */
-.about-layout {
+.about-overview {
   display: grid;
-  gap: clamp(1.8rem, 4vw, 2.6rem);
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.2rem, 3vw, 1.8rem);
 }
 
-.about-media {
-  display: grid;
-  gap: 0.75rem;
-  justify-items: center;
+.about-overview h1 {
+  font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+  color: var(--primary-dark);
+  line-height: 1.1;
 }
 
-.about-media img {
-  width: min(260px, 100%);
+.about-lead {
+  font-size: 1.08rem;
+  color: var(--ink);
+  max-width: 65ch;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.about-highlight {
+  background: var(--surface-soft);
   border-radius: var(--radius-md);
-  object-fit: cover;
-  border: 4px solid rgba(31, 88, 101, 0.1);
-  box-shadow: var(--shadow-sm);
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.6rem;
+  border: 1px solid rgba(21, 59, 67, 0.08);
 }
 
-.about-media figcaption {
-  font-size: 0.9rem;
+.about-highlight h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.about-highlight p,
+.about-highlight ul {
   color: var(--muted);
 }
 
-.about-copy {
+.about-highlight ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.approach-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.approach-card {
+  display: grid;
+  gap: 0.7rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(21, 59, 67, 0.06);
+}
+
+.approach-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.approach-card p {
+  color: var(--ink);
+}
+
+.approach-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.experience-list {
   display: grid;
   gap: 1rem;
 }
 
-.about-pillars {
-  display: grid;
-  gap: 0.6rem;
-  margin-top: 0.5rem;
+.experience-item h3 {
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.experience-item p {
   color: var(--muted);
-  list-style: none;
-}
-
-.about-pillars li {
-  position: relative;
-  padding-left: 1.4rem;
-}
-
-.about-pillars li::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--secondary);
-  position: absolute;
-  left: 0;
-  top: 0.45rem;
-  box-shadow: 0 0 0 4px rgba(58, 157, 144, 0.18);
 }
 
 .resume-grid {
@@ -546,6 +694,74 @@ main {
   font-weight: 600;
   color: var(--primary);
   text-decoration: none;
+}
+
+/* Background */
+.background-hero {
+  display: grid;
+  gap: clamp(1.4rem, 4vw, 2rem);
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.background-story {
+  display: grid;
+  gap: 1rem;
+}
+
+.background-story p {
+  color: var(--ink);
+}
+
+.background-media {
+  justify-self: center;
+  text-align: center;
+}
+
+.background-media img {
+  width: min(260px, 100%);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 4px solid rgba(31, 88, 101, 0.08);
+}
+
+.background-media figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.interest-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.interest-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(21, 59, 67, 0.06);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.interest-card h3 {
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.interest-card p,
+.interest-card ul {
+  color: var(--muted);
+}
+
+.interest-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
 }
 
 /* Portfolio */
