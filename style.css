@@ -759,6 +759,14 @@ input[type="submit"]:focus-visible {
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
+.card-badge {
+  width: clamp(68px, 18vw, 96px);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 24px rgba(66, 40, 32, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.4rem;
+}
+
 .role-item:hover,
 .role-item:focus-within,
 .credential-item:hover,
