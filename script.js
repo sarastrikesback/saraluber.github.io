@@ -1,4 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+
+  if (navToggle && nav) {
+    const mobileQuery = window.matchMedia("(max-width: 980px)");
+
+    const syncNavState = () => {
+      const shouldHide = mobileQuery.matches && !nav.classList.contains("is-open");
+      nav.setAttribute("aria-hidden", shouldHide ? "true" : "false");
+      if (!mobileQuery.matches) {
+        navToggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("is-open");
+      }
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      nav.setAttribute("aria-hidden", String(!isOpen));
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (nav.classList.contains("is-open")) {
+          nav.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+          nav.setAttribute("aria-hidden", "true");
+        }
+      });
+    });
+
+    mobileQuery.addEventListener("change", syncNavState);
+    syncNavState();
+  }
+
   const tabs = document.querySelectorAll(".tab-link");
   const sections = document.querySelectorAll(".tab-section");
 
