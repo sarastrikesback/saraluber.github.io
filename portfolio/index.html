@@ -2,25 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio — Sara Luber</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
+      <div class="header-shell">
+        <a class="brand" href="/">
           <span class="brand-mark" aria-hidden="true">SL</span>
-          <div>
-            <p class="site-title">Sara Luber</p>
-            <p class="subtitle">Environmental Communicator</p>
-          </div>
-        </div>
-        <nav class="nav">
+          <span class="brand-text">
+            <span class="site-title">Sara Luber</span>
+            <span class="subtitle">Environmental Communicator</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <path
+              fill="currentColor"
+              d="M4 6.75h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Z"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="nav">
           <a href="/">Home</a>
           <a href="/about/">About</a>
           <a href="/portfolio/" class="active">Portfolio</a>
@@ -30,337 +39,207 @@
     </header>
 
     <main>
-      <div class="container">
-        <section class="page-hero portfolio-hero">
-          <div class="page-hero__content">
+      <section class="page-hero">
+        <div class="container page-hero__grid">
+          <div class="page-hero__content" data-animate="fade-up">
             <span class="eyebrow">Portfolio</span>
-            <h1>Experience, Education, &amp; Examples</h1>
+            <h1>Experience, education, and project examples</h1>
             <p>
-              A look at the roles, academic training, and featured projects that
-              shape my approach to environmental storytelling and operations
-              design.
+              A look at the roles, academic training, and featured projects that shape my approach to environmental storytelling and operations design.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="/contact/">Connect with me</a>
-              <a
-                class="button secondary"
-                href="../Luber_Resume.pdf"
-                target="_blank"
-                rel="noopener"
-                >Download resume</a
-              >
+              <a class="button secondary" href="../Luber_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+            </div>
+            <div class="metric-cards">
+              <div class="metric-card">
+                <strong>Federal impact</strong>
+                <span>Operational leadership across the U.S. Environmental Protection Agency.</span>
+              </div>
+              <div class="metric-card">
+                <strong>Clean energy</strong>
+                <span>Policy research for the NC Clean Energy Technology Center.</span>
+              </div>
+              <div class="metric-card">
+                <strong>Community care</strong>
+                <span>Hands-on stewardship with Raleigh Parks and local partners.</span>
+              </div>
             </div>
           </div>
-        </section>
+          <figure class="page-hero__media" data-animate="fade-up">
+            <img src="../Sara_Luber_trimmed.png" alt="Sara presenting collaborative project work" />
+            <figcaption>Tools of choice: Power BI, SQL, Python, and low-code automation</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        <section class="page-section experience-section">
-          <div class="experience-intro">
-            <div class="section-header">
-              <span class="eyebrow">Work experience</span>
-              <h2>
-                Partnering with teams across public agencies and nonprofits
-              </h2>
-              <p>
-                Each role blends communications, systems thinking, and data
-                storytelling to keep environmental programs moving.
-              </p>
-            </div>
+      <section class="experience-section">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <span class="eyebrow">Work experience</span>
+            <h2>Partnering with teams across public agencies and nonprofits</h2>
+            <p>
+              Each role blends communications, systems thinking, and data storytelling to keep environmental programs moving.
+            </p>
           </div>
-          <div class="experience-columns">
+          <div class="experience-columns" data-animate="fade-up">
             <article class="experience-group">
               <h3>Recent roles</h3>
               <div class="role-list">
                 <div class="role-item">
                   <img
-                    class="card-badge"
                     src="https://1000logos.net/wp-content/uploads/2025/01/EPA-Emblem.png"
                     alt="United States Environmental Protection Agency seal"
                   />
                   <h4>Assistant to the Office Director</h4>
                   <p class="role-meta">
-                    U.S. Environmental Protection Agency
-                    <br />
-                    Office of Research and Development - Office of Resource
-                    Management
+                    U.S. Environmental Protection Agency<br />
+                    Office of Research and Development — Office of Resource Management
                   </p>
                   <p>
-                    Served as a key advisor to the Office Director during a
-                    major administrative transition and reduction in federal
-                    staff, taking on responsibilities typically held by the
-                    Senior Advisor, Communications Lead, Chief of Staff, and
-                    Program Operations Director. Delivered high-impact
-                    briefings, memos, and presentations to large audiences,
-                    translating complex environmental and operational data into
-                    clear, actionable insights. Created data-driven dashboards
-                    and visual materials using Microsoft 365 tools to guide
-                    executive decision-making and resource allocation. Developed
-                    and implemented Standard Operating Procedures (SOPs) to
-                    improve coordination and workflow efficiency across ORD
-                    divisions. Oversaw executive scheduling, correspondence, and
-                    priority tracking, contributing to strategic and operational
-                    decisions while maintaining discretion with pre-decisional
-                    materials.
-                    <br />
-                    <br />
-                    Notable Skills: Strategic Communication, Executive Decision
-                    Support, Microsoft 365, Data Visualization, Federal Policy
-                    Alignment.
+                    Served as a key advisor to the Office Director during a major administrative transition and reduction in federal staff, taking on responsibilities typically held by the Senior Advisor, Communications Lead, Chief of Staff, and Program Operations Director. Delivered high-impact briefings, memos, and presentations to large audiences, translating complex environmental and operational data into clear, actionable insights. Created data-driven dashboards and visual materials using Microsoft 365 tools to guide executive decision-making and resource allocation. Developed and implemented Standard Operating Procedures (SOPs) to improve coordination and workflow efficiency across ORD divisions. Oversaw executive scheduling, correspondence, and priority tracking, contributing to strategic and operational decisions while maintaining discretion with pre-decisional materials.
+                    <br /><br />
+                    Notable Skills: Strategic Communication, Executive Decision Support, Microsoft 365, Data Visualization, Federal Policy Alignment.
                   </p>
                 </div>
                 <div class="role-item">
                   <img
-                    class="card-badge"
                     src="https://1000logos.net/wp-content/uploads/2025/01/EPA-Emblem.png"
                     alt="United States Environmental Protection Agency seal"
                   />
                   <h4>Program Operations Administrator</h4>
                   <p class="role-meta">
-                    U.S. Environmental Protection Agency
-                    <br />
-                    Office of Research and Development - Center for
-                    Computational Toxicology and Exposure - Scientific Computing
-                    and Data Curation Division
+                    U.S. Environmental Protection Agency<br />
+                    Office of Research and Development — Center for Computational Toxicology and Exposure — Scientific Computing and Data Curation Division
                   </p>
                   <p>
-                    Advanced operational and analytical efficiency to support
-                    data-driven decision making for national environmental
-                    initiatives. Designed Power BI dashboards and visualizations
-                    that enhanced insight into software utilization, budgeting,
-                    and research resource allocation. Contributed to developing
-                    a centralized Postgres- and Qlik-based database to
-                    streamline access to scientific and environmental datasets.
-                    Applied advanced Excel, SQL, and visualization tools to
-                    translate complex data into actionable recommendations,
-                    reinforcing transparency and integrity in environmental
-                    research.
-                    <br />
-                    <br />
-                    Notable Skills: Data Visualization, SQL & Power BI,
-                    Environmental Data Analysis, Process Improvement, Science
-                    Policy Support.
+                    Advanced operational and analytical efficiency to support data-driven decision making for national environmental initiatives. Designed Power BI dashboards and visualizations that enhanced insight into software utilization, budgeting, and research resource allocation. Contributed to developing a centralized Postgres- and Qlik-based database to streamline access to scientific and environmental datasets. Applied advanced Excel, SQL, and visualization tools to translate complex data into actionable recommendations, reinforcing transparency and integrity in environmental research.
+                    <br /><br />
+                    Notable Skills: Data Visualization, SQL &amp; Power BI, Environmental Data Analysis, Process Improvement, Science Policy Support.
                   </p>
                 </div>
                 <div class="role-item">
                   <img
-                    class="card-badge"
                     src="https://beamforall.com/wp-content/uploads/2023/03/NCCETC-Beam-Global.jpg"
                     alt="NC Clean Energy Technology Center logo"
                   />
                   <h4>Energy Policy Research Analyst</h4>
                   <p class="role-meta">NC Clean Energy Technology Center</p>
                   <p>
-                    Researched and analyzed clean energy incentive programs and
-                    policies for the Database of State Incentives for Renewables
-                    & Efficiency (DSIRE), generating insights that informed
-                    state and federal energy planning. Evaluated legislative
-                    frameworks on renewable energy, electric vehicles, and
-                    energy-efficient infrastructure to identify best practices
-                    for equitable adoption. Synthesized complex policy and
-                    market data into clear reports and presentations for state
-                    policymakers, advancing NCCETC’s mission to expand
-                    affordable clean energy access.
-                    <br />
-                    <br />
-                    Notable Skills: Policy & Incentive Analysis, Data
-                    Interpretation, Stakeholder Engagement, Energy Market
-                    Research, Clean Energy Advocacy.
+                    Researched and analyzed clean energy incentive programs and policies for the Database of State Incentives for Renewables &amp; Efficiency (DSIRE), generating insights that informed state and federal energy planning. Evaluated legislative frameworks on renewable energy, electric vehicles, and energy-efficient infrastructure to identify best practices for equitable adoption. Synthesized complex policy and market data into clear reports and presentations for state policymakers, advancing NCCETC’s mission to expand affordable clean energy access.
+                    <br /><br />
+                    Notable Skills: Policy &amp; Incentive Analysis, Data Interpretation, Stakeholder Engagement, Energy Market Research, Clean Energy Advocacy.
                   </p>
                 </div>
                 <div class="role-item">
                   <img
-                    class="card-badge"
                     src="https://www.saw.usace.army.mil/portals/59/docs/recreation/fallslake/Images/RPR_logo.jpg"
                     alt="Raleigh Parks and Recreation logo"
                   />
                   <h4>Conservation Corps Fellow</h4>
                   <p class="role-meta">Raleigh Parks and Recreation</p>
                   <p>
-                    Participated in the Youth Conservation Corps (YCC), a
-                    Raleigh Parks and Recreation program in partnership with
-                    Conservation Corps North Carolina (CCNC). Contributed to
-                    hands-on environmental conservation and park maintenance
-                    projects across Raleigh’s park system, including Dorothea
-                    Dix Park. Supported ecological restoration efforts through
-                    planting native species, removing invasive plants, building
-                    and maintaining trails, and assisting with park planning and
-                    upkeep. Gained valuable experience in teamwork,
-                    environmental stewardship, and sustainable land management.
-                    <br />
-                    <br />
-                    Notable Skills: Environmental Conservation, Trail
-                    Construction, Habitat Restoration, Team Collaboration,
-                    Sustainability Practices.
+                    Participated in the Youth Conservation Corps (YCC), a Raleigh Parks and Recreation program in partnership with Conservation Corps North Carolina (CCNC). Contributed to hands-on environmental conservation and park maintenance projects across Raleigh’s park system, including Dorothea Dix Park. Supported ecological restoration efforts through planting native species, removing invasive plants, building and maintaining trails, and assisting with park planning and upkeep. Gained valuable experience in teamwork, environmental stewardship, and sustainable land management.
+                    <br /><br />
+                    Notable Skills: Environmental Conservation, Trail Construction, Habitat Restoration, Team Collaboration, Sustainability Practices.
                   </p>
                 </div>
               </div>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="page-section experience-section">
-          <div class="experience-intro">
-            <div class="section-header">
-              <span class="eyebrow">Education &amp; certifications</span>
-              <h2>Academic foundations and ongoing learning</h2>
+      <section class="experience-section">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <span class="eyebrow">Education &amp; certifications</span>
+            <h2>Academic foundations and ongoing learning</h2>
+          </div>
+          <div class="education-grid" data-animate="fade-up">
+            <div class="credential-card">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/2/24/North_Carolina_State_University_seal.svg"
+                alt="North Carolina State University seal"
+              />
+              <h3>North Carolina State University</h3>
+              <p>B.A. Political Science, Minor in Environmental Science</p>
+              <p>
+                Bachelor’s degree included a focus on climate change policy and its disproportionate effects on marginalized communities, highlighting the intersection of environmental challenges and social equity. This academic background provided a comprehensive understanding of the systemic issues at the heart of environmental justice.
+              </p>
+              <a class="button secondary" href="../DIPLOMA.pdf" target="_blank" rel="noopener noreferrer">View diploma</a>
+            </div>
+            <div class="credential-card">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"
+                alt="IBM logo"
+              />
+              <h3>IBM Data Science Professional Certificate</h3>
+              <p>Issued 2024</p>
+              <p>
+                Completed 10 courses in data science, including fundamentals like methodology and tools, as well as practical skills in Python for data science, AI, and development. Gained hands-on experience through projects and the Applied Data Science Capstone. Developed expertise in databases and SQL, data analysis and visualization, and machine learning with Python.
+              </p>
+              <a class="button secondary" href="../Luber Data Science.pdf" target="_blank" rel="noopener noreferrer">See credential</a>
+            </div>
+            <div class="credential-card">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"
+                alt="IBM logo"
+              />
+              <h3>IBM Data Analytics Professional Certificate</h3>
+              <p>Issued 2024</p>
+              <p>
+                Completed 9 courses in data analytics, including foundational topics like Excel for data analysis, data visualization, and SQL databases. Gained proficiency in Python for data science, AI, and development, with hands-on experience through a Python project and IBM Data Analyst Capstone. Developed skills in creating dashboards with Excel and Cognos, and applying advanced data visualization techniques.
+              </p>
+              <a class="button secondary" href="../Luber Data Analyst.pdf" target="_blank" rel="noopener noreferrer">See credential</a>
             </div>
           </div>
-          <div class="experience-columns">
-            <article class="experience-group">
-              <h3>Degrees &amp; certificates</h3>
-              <div class="credential-list">
-                <div class="credential-item">
-                  <img
-                    class="card-badge"
-                    src="https://upload.wikimedia.org/wikipedia/en/2/24/North_Carolina_State_University_seal.svg"
-                    alt="North Carolina State University seal"
-                  />
-                  <div class="credential-heading">
-                    <h4>North Carolina State University</h4>
-                    <p class="credential-subtitle">
-                      B.A. Political Science, Minor in Environmental Science
-                    </p>
-                  </div>
-                  <p>
-                    Bachelor’s degree included a focus on climate change policy
-                    and its disproportionate effects on marginalized
-                    communities, highlighting the intersection of environmental
-                    challenges and social equity. This academic background
-                    provided a comprehensive understanding of the systemic
-                    issues at the heart of environmental justice.
-                  </p>
-                  <a
-                    class="button secondary"
-                    href="../DIPLOMA.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >View diploma</a
-                  >
-                </div>
-                <div class="credential-item">
-                  <img
-                    class="card-badge"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"
-                    alt="IBM logo"
-                  />
-                  <div class="credential-heading">
-                    <h4>IBM Data Science Professional Certificate</h4>
-                    <p class="credential-subtitle">Issued 2024</p>
-                  </div>
-                  <p>
-                    Completed 10 courses in data science, including fundamentals
-                    like methodology and tools, as well as practical skills in
-                    Python for data science, AI, and development. Gained
-                    hands-on experience through projects and the Applied Data
-                    Science Capstone. Developed expertise in databases and SQL,
-                    data analysis and visualization, and machine learning with
-                    Python.
-                  </p>
-                  <a
-                    class="button secondary"
-                    href="../Luber Data Science.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >See credential</a
-                  >
-                </div>
-                <div class="credential-item">
-                  <img
-                    class="card-badge"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"
-                    alt="IBM logo"
-                  />
-                  <div class="credential-heading">
-                    <h4>IBM Data Analytics Professional Certificate</h4>
-                    <p class="credential-subtitle">Issued 2024</p>
-                  </div>
-                  <p>
-                    Completed 9 courses in data analytics, including
-                    foundational topics like Excel for data analysis, data
-                    visualization, and SQL databases. Gained proficiency in
-                    Python for data science, AI, and development, with hands-on
-                    experience through a Python project and IBM Data Analyst
-                    Capstone. Developed skills in creating dashboards with Excel
-                    and Cognos, and applying advanced data visualization
-                    techniques.
-                  </p>
-                  <a
-                    class="button secondary"
-                    href="../Luber Data Analyst.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >See credential</a
-                  >
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="page-section">
-          <div class="section-header">
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
             <span class="eyebrow">Project highlights</span>
             <h2>Examples of the work I love to do</h2>
           </div>
-          <div class="project-grid">
+          <div class="project-grid" data-animate="fade-up">
             <div class="project-card" data-skill="python">
               <h3>Python</h3>
               <h4>Analyzing air quality trends and policy impact</h4>
-              <p>
-                <em
-                  >Evaluating the effectiveness of environmental regulations on
-                  pollution reduction.</em
-                >
-              </p>
+              <p><em>Evaluating the effectiveness of environmental regulations on pollution reduction.</em></p>
               <details>
                 <summary>Learn more</summary>
                 <p>
-                  Cleaned historical air-quality datasets, ran statistical
-                  tests, and visualized trends to show how regulations influence
-                  pollution and public health outcomes.
+                  Cleaned historical air-quality datasets, ran statistical tests, and visualized trends to show how regulations influence pollution and public health outcomes.
                 </p>
               </details>
             </div>
-
             <div class="project-card" data-skill="powerbi">
               <h3>Power BI</h3>
               <h4>Environmental justice &amp; environmental burden</h4>
-              <p>
-                <em
-                  >Visualizing environmental risk, resource access, and federal
-                  investment.</em
-                >
-              </p>
+              <p><em>Visualizing environmental risk, resource access, and federal investment.</em></p>
               <details>
                 <summary>Learn more</summary>
                 <p>
-                  Built a Power BI dashboard combining EPA EJSCREEN and
-                  Justice40 datasets to highlight disparities, surface community
-                  stories, and guide equitable resource allocation.
+                  Built a Power BI dashboard combining EPA EJSCREEN and Justice40 datasets to highlight disparities, surface community stories, and guide equitable resource allocation.
                 </p>
               </details>
             </div>
-
             <div class="project-card" data-skill="service-design">
               <h3>Service design</h3>
               <h4>Designing collaborative operations playbooks</h4>
-              <p>
-                <em
-                  >Co-creating workflows that keep interdisciplinary teams
-                  aligned.</em
-                >
-              </p>
+              <p><em>Co-creating workflows that keep interdisciplinary teams aligned.</em></p>
               <details>
                 <summary>Learn more</summary>
                 <p>
-                  Partnered with program leads to map responsibilities, build
-                  low-code automations, and document processes that increased
-                  transparency and reduced duplication.
+                  Partnered with program leads to map responsibilities, build low-code automations, and document processes that increased transparency and reduced duplication.
                 </p>
               </details>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -368,11 +247,7 @@
         <div class="footer-links">
           <a class="icon-link" href="mailto:sarafluber@gmail.com">
             <span class="sr-only">Email</span>
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z"
               />
@@ -380,11 +255,7 @@
           </a>
           <a class="icon-link" href="tel:4435472317">
             <span class="sr-only">Call</span>
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z"
               />
@@ -397,11 +268,7 @@
             rel="noopener"
           >
             <span class="sr-only">LinkedIn</span>
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z"
               />
@@ -411,5 +278,6 @@
         <p class="footer-note">&copy; Built by Sara Luber</p>
       </div>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>
