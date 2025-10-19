@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sara Luber — Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sara Luber — Environmental Communicator</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -14,19 +14,28 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body>
+  <body class="page-home">
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
+      <div class="header-shell">
+        <a class="brand" href="/">
           <span class="brand-mark" aria-hidden="true">SL</span>
-          <div>
-            <p class="site-title">Sara Luber</p>
-            <p class="subtitle">Environmental Communicator</p>
-          </div>
-        </div>
-        <nav class="nav">
+          <span class="brand-text">
+            <span class="site-title">Sara Luber</span>
+            <span class="subtitle">Environmental Communicator</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <path
+              fill="currentColor"
+              d="M4 6.75h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Z"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="nav">
           <a href="/" class="active">Home</a>
-          <a href="/about/">About Me</a>
+          <a href="/about/">About</a>
           <a href="/portfolio/">Portfolio</a>
           <a href="/contact/">Contact</a>
         </nav>
@@ -35,74 +44,108 @@
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
+        <div class="container hero-layout">
           <div class="hero-copy" data-animate="fade-up">
-            <span class="eyebrow">Environmental Communicator </span>
-            <h1>
-              Plain-language stories for teams protecting people and the planet
-            </h1>
+            <span class="eyebrow">Environmental Communicator</span>
+            <h1>Plain-language storytelling for climate and community impact</h1>
             <p class="hero-lede">
-              I am dedicated to addressing the unequal impacts of climate change
-              on disadvantaged communities, with a focus on clean energy
-              solutions driven by a passion for justice and equity. My expertise
-              in research, analysis, and communication allows me to develop
-              strategies that meet environmental standards while prioritizing
-              equity. I'm eager to apply my skills to advance environmental
-              justice and clean energy initiatives for broad, positive impact.
+              I partner with public agencies and nonprofits to translate complex environmental data into narratives that drive equitable action. From executive briefings to community toolkits, I support teams protecting people and the planet.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="/portfolio/"
-                >Browse recent projects</a
-              >
-              <a class="button secondary" href="/contact/"
-                >Start a conversation</a
-              >
+              <a class="button primary" href="/portfolio/">Browse recent projects</a>
+              <a class="button secondary" href="/contact/">Start a conversation</a>
+            </div>
+            <div class="hero-highlights">
+              <div class="hero-highlight">
+                <strong>Raleigh, NC</strong>
+                <span>Serving local partners and collaborating remotely nationwide.</span>
+              </div>
+              <div class="hero-highlight">
+                <strong>Justice &amp; Equity</strong>
+                <span>Focused on the communities most impacted by climate change.</span>
+              </div>
+              <div class="hero-highlight">
+                <strong>Research roots</strong>
+                <span>Analytical and policy experience inside the EPA and clean energy coalitions.</span>
+              </div>
             </div>
           </div>
           <figure class="hero-media" data-animate="fade-up">
-            <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber Headshot" />
-            <figcaption>Based in Raleigh, NC - Open to relocating</figcaption>
+            <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber smiling" />
+            <figcaption>Based in Raleigh, NC — open to collaborating nationwide</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section landing-links">
+      <section class="section">
         <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Quick glimpse</span>
-            <h2>Where to learn more in just a few clicks</h2>
+          <div class="section-header" data-animate="fade-up">
+            <span class="eyebrow">Quick routes</span>
+            <h2>Explore the essentials in a few clicks</h2>
             <p>
-              Each page dives deeper—start with a snapshot here and keep
-              exploring if it resonates.
+              Dive into the pages below for a deeper look at my background, featured work, and how to partner together. Each link opens a curated starting point.
             </p>
           </div>
           <div class="landing-grid" data-animate="fade-up">
             <a class="landing-card" href="/about/">
               <span class="eyebrow">Meet Sara</span>
-              <h3>My background &amp; passions</h3>
+              <h3>Roots, inspirations, and how I collaborate</h3>
               <p>
-                A quick look at the experiences, values, and hobbies that shape
-                my perspective.
+                Learn how community care, operational rigor, and creativity shape my approach to environmental communication.
               </p>
-              <span class="landing-cta">About Me page →</span>
+              <span class="landing-cta">About page &rarr;</span>
             </a>
             <a class="landing-card" href="/portfolio/">
               <span class="eyebrow">Case studies</span>
-              <h3>Work &amp; education highlights</h3>
+              <h3>Experience, education, and project snapshots</h3>
               <p>
-                Explore featured projects alongside roles and academic training.
+                Explore roles at the EPA, policy analysis, and featured writing that highlight cross-sector collaboration.
               </p>
-              <span class="landing-cta">Portfolio page →</span>
+              <span class="landing-cta">Portfolio page &rarr;</span>
             </a>
             <a class="landing-card" href="/contact/">
-              <span class="eyebrow">Start a project</span>
-              <h3>Get in touch</h3>
+              <span class="eyebrow">Get in touch</span>
+              <h3>Share what support you’re looking for</h3>
               <p>
-                Share your goals and timelines so we can shape support that
-                fits.
+                Send a note with project details, timelines, or questions and I’ll respond as soon as possible.
               </p>
-              <span class="landing-cta">Contact page →</span>
+              <span class="landing-cta">Contact page &rarr;</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="two-column" data-animate="fade-up">
+            <div>
+              <div class="section-header">
+                <span class="eyebrow">Capabilities</span>
+                <h2>What partners count on</h2>
+                <p>
+                  I bridge policy analysis, stakeholder care, and creative storytelling. Whether you need to brief executives or mobilize community partners, we’ll translate the data into action.
+                </p>
+              </div>
+              <div class="metric-cards">
+                <div class="metric-card">
+                  <strong>Data-informed stories</strong>
+                  <span>Dashboards, memos, and presentations that ground decisions in evidence.</span>
+                </div>
+                <div class="metric-card">
+                  <strong>Operational clarity</strong>
+                  <span>Systems that keep cross-functional teams aligned and accountable.</span>
+                </div>
+                <div class="metric-card">
+                  <strong>Community focus</strong>
+                  <span>Plain-language resources that respect lived experience and local context.</span>
+                </div>
+              </div>
+            </div>
+            <div class="callout">
+              <p>
+                “Sara translates dense environmental data into human-centered stories that leadership can act on. She’s the strategic partner every mission-driven team wants in the room.”
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -113,11 +156,7 @@
         <div class="footer-links">
           <a class="icon-link" href="mailto:sarafluber@gmail.com">
             <span class="sr-only">Email</span>
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z"
               />
@@ -125,11 +164,7 @@
           </a>
           <a class="icon-link" href="tel:4435472317">
             <span class="sr-only">Call</span>
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z"
               />
@@ -142,11 +177,7 @@
             rel="noopener"
           >
             <span class="sr-only">LinkedIn</span>
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z"
               />
