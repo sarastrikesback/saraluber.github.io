@@ -300,7 +300,24 @@ main {
 .hero::after {
   width: 220px;
   height: 220px;
-@@ -327,203 +327,203 @@ main {
+  bottom: -140px;
+  right: -120px;
+}
+
+.hero-grid {
+  display: grid;
+  gap: clamp(2.4rem, 5vw, 3.6rem);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+}
+
+.hero-copy {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+  max-width: 60ch;
+}
+
+.hero-lede {
   font-size: 1.05rem;
   color: var(--color-muted);
 }
@@ -336,6 +353,245 @@ main {
   font-size: 0.92rem;
 }
 
+/* -------------------------------- Page hero -------------------------------- */
+
+.page-hero {
+  display: grid;
+  gap: clamp(2.2rem, 5vw, 3.2rem);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+}
+
+.page-hero__content {
+  display: grid;
+  gap: clamp(1rem, 2.6vw, 1.7rem);
+}
+
+.page-hero__media {
+  position: relative;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.page-hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: inherit;
+  border: 1px dashed rgba(42, 157, 143, 0.45);
+  pointer-events: none;
+}
+
+.page-hero__media figcaption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+}
+
+.about-hero--with-image {
+  align-items: start;
+}
+
+/* ------------------------------- About collage ------------------------------ */
+
+.collage-grid {
+  display: grid;
+  gap: clamp(1.6rem, 3vw, 2.4rem);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.collage-card {
+  --card-shift: 0px;
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  overflow: hidden;
+}
+
+.collage-card summary {
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  cursor: pointer;
+}
+
+.collage-card summary:focus-visible {
+  outline-offset: 6px;
+}
+
+.collage-card--offset-1 {
+  --card-shift: 10px;
+}
+
+.collage-card--offset-2 {
+  --card-shift: 18px;
+}
+
+.collage-card--offset-3 {
+  --card-shift: 26px;
+}
+
+.collage-card--offset-4 {
+  --card-shift: 14px;
+}
+
+.collage-card--offset-5 {
+  --card-shift: 20px;
+}
+
+.collage-card--offset-6 {
+  --card-shift: 28px;
+}
+
+/* ------------------------------ Experience list ---------------------------- */
+
+.experience-section {
+  display: grid;
+  gap: clamp(2rem, 4vw, 2.8rem);
+}
+
+.experience-intro {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 1.8rem);
+  justify-items: start;
+}
+
+.experience-columns {
+  display: grid;
+  gap: clamp(1.8rem, 3vw, 2.4rem);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.experience-group {
+  display: grid;
+  gap: clamp(1.4rem, 3vw, 2rem);
+}
+
+.role-list,
+.credential-list {
+  display: grid;
+  gap: clamp(1.4rem, 3vw, 2rem);
+}
+
+.role-item,
+.credential-item {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  padding: clamp(1.4rem, 3vw, 1.9rem);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-sm);
+}
+
+.role-item h4,
+.credential-item h4 {
+  margin: 0;
+}
+
+.card-badge {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: inset 0 0 0 1px rgba(229, 122, 68, 0.18);
+}
+
+.role-meta,
+.credential-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.credential-heading {
+  display: grid;
+  gap: 0.35rem;
+}
+
+/* ------------------------------- Project cards ----------------------------- */
+
+.project-grid {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.2rem);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-secondary);
+}
+
+.project-card[data-skill="python"] {
+  background: linear-gradient(140deg, rgba(42, 157, 143, 0.22), rgba(233, 196, 106, 0.18));
+}
+
+.project-card[data-skill="powerbi"] {
+  background: linear-gradient(140deg, rgba(233, 196, 106, 0.22), rgba(229, 122, 68, 0.18));
+}
+
+.project-card[data-skill="service-design"] {
+  background: linear-gradient(140deg, rgba(229, 122, 68, 0.18), rgba(42, 157, 143, 0.18));
+}
+
+.project-card details {
+  margin-top: 0.6rem;
+}
+
+.project-card details p {
+  margin-top: 0.6rem;
+}
+
+/* --------------------------------- Contact -------------------------------- */
+
+.contact-layout {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.2rem);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
+}
+
+.contact-card {
+  position: relative;
+  padding: clamp(1.6rem, 3vw, 2.1rem);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form {
+  gap: 1.2rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
 /* -------------------------------- Buttons -------------------------------- */
 
 .button,
@@ -361,124 +617,7 @@ input[type="submit"] {
   color: #fffaf6;
 }
 
-.button.primary:hover,
-button:hover,
-input[type="submit"]:hover,
-.button.primary:focus-visible,
-button:focus-visible,
-input[type="submit"]:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-}
-
-.button.secondary {
-  background: rgba(233, 196, 106, 0.26);
-  border: 1px solid var(--color-border-strong);
-  color: var(--color-primary);
-}
-
-.button.secondary:hover,
-.button.secondary:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-  background: rgba(233, 196, 106, 0.36);
-}
-
-/* ---------------------------- Landing navigation ------------------------- */
-
-.landing-links .section-header {
-  max-width: 48ch;
-}
-
-.landing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: clamp(1.2rem, 3vw, 2rem);
-}
-
-.landing-card {
-  position: relative;
-  display: grid;
-  gap: 0.75rem;
-  padding: clamp(1.7rem, 3vw, 2.2rem);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base), box-shadow var(--transition-base),
-    background-color var(--transition-base);
-  overflow: hidden;
-}
-
-.landing-card::after {
-  content: "";
-  position: absolute;
-  inset: auto -40px -40px auto;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: rgba(42, 157, 143, 0.22);
-  transition: transform var(--transition-base), opacity var(--transition-base);
-  opacity: 0.6;
-}
-
-.landing-card:hover,
-.landing-card:focus-visible {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: var(--shadow-md);
-}
-
-.landing-card:hover::after,
-.landing-card:focus-visible::after {
-  transform: translate(-16px, 10px) scale(1.08);
-  opacity: 0.9;
-}
-
-.landing-card h3 {
-  font-size: 1.15rem;
-  color: var(--color-primary);
-}
-
-.landing-card p {
-  font-size: 0.96rem;
-  color: var(--color-muted);
-}
-
-.landing-cta {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--color-primary);
-}
-
-/* ------------------------------ Focus switcher --------------------------- */
-
-.focus-section {
-  background: linear-gradient(140deg, rgba(255, 248, 237, 0.92), rgba(233, 196, 106, 0.32));
-}
-
-.focus-layout {
-  display: grid;
-  gap: clamp(2rem, 4vw, 2.8rem);
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  align-items: start;
-}
-
-.focus-intro {
-  display: grid;
-  gap: 1.1rem;
-}
-
-.focus-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.focus-toggle {
-  border-radius: 999px;
-  background: rgba(42, 157, 143, 0.16);
+@@ -482,51 +738,50 @@ input[type="submit"]:focus-visible {
   color: var(--color-primary);
   padding: 0.55rem 1.2rem;
   border: 1px solid transparent;
@@ -504,7 +643,6 @@ input[type="submit"]:focus-visible {
 }
 
 .focus-panel {
-@@ -612,51 +612,51 @@ input[type="submit"]:focus-visible {
 }
 
 .collage-card summary::-webkit-details-marker {
@@ -530,7 +668,7 @@ input[type="submit"]:focus-visible {
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
   background: rgba(66, 40, 32, 0.78);
-  color: #fffaf0;
+@@ -534,51 +789,50 @@ input[type="submit"]:focus-visible {
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -556,7 +694,6 @@ input[type="submit"]:focus-visible {
   transform: translateY(calc(var(--card-shift) - 6px)) scale(1.01);
   box-shadow: var(--shadow-lg);
 }
-@@ -791,51 +791,51 @@ input[type="submit"]:focus-visible {
 
 .project-card {
   display: grid;
@@ -582,7 +719,7 @@ input[type="submit"]:focus-visible {
 
 .project-card details {
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(229, 122, 68, 0.26);
+@@ -586,51 +840,50 @@ input[type="submit"]:focus-visible {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.6);
 }
@@ -608,7 +745,6 @@ input[type="submit"]:focus-visible {
 }
 
 .project-card details[open] summary::after {
-@@ -884,172 +884,172 @@ input[type="submit"]:focus-visible {
   font-weight: 600;
   color: var(--color-secondary);
 }
