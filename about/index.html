@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About — Sara Luber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="header-shell">
         <a class="brand" href="/">
@@ -29,7 +32,7 @@
             />
           </svg>
         </button>
-        <nav id="site-nav" class="nav">
+        <nav id="site-nav" class="nav" aria-label="Primary" aria-hidden="false">
           <a href="/">Home</a>
           <a href="/about/" class="active">About</a>
           <a href="/portfolio/">Portfolio</a>
@@ -38,7 +41,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="page-hero">
         <div class="container page-hero__grid">
           <div class="page-hero__content" data-animate="fade-up">
@@ -79,6 +82,9 @@
             <img
               src="https://lh6.googleusercontent.com/proxy/lCaWcrMXZgF2PTyNVpXrH_FGWlGVy9x8urvfeTKDLOToWo4LOpFT7npV46UQUJJDsbj7BaFH7p6sPczFxlP9A3_0qJQJJ7XBCDx9fdzwld964wP3XONfwfw"
               alt="Vintage postcard illustration of Raleigh, North Carolina"
+              width="1200"
+              height="780"
+              decoding="async"
             />
             <figcaption>Currently located in Raleigh, North Carolina</figcaption>
           </figure>
@@ -98,7 +104,14 @@
             <details class="collage-card">
               <summary>
                 <figure class="collage-card__media">
-                  <img src="../beach.jpg" alt="Waves rolling onto a North Carolina beach" />
+                  <img
+                    src="../beach.jpg"
+                    alt="Waves rolling onto a North Carolina beach"
+                    width="4032"
+                    height="3024"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <figcaption>Coastal grounding</figcaption>
                 </figure>
                 <span class="collage-card__prompt">Click to open</span>
@@ -113,7 +126,14 @@
             <details class="collage-card">
               <summary>
                 <figure class="collage-card__media">
-                  <img src="../cary%20ducks.jpg" alt="Ducks swimming in a Cary, North Carolina park pond" />
+                  <img
+                    src="../cary%20ducks.jpg"
+                    alt="Ducks swimming in a Cary, North Carolina park pond"
+                    width="3024"
+                    height="4032"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <figcaption>Cary park companions</figcaption>
                 </figure>
                 <span class="collage-card__prompt">Click to open</span>
@@ -128,7 +148,14 @@
             <details class="collage-card">
               <summary>
                 <figure class="collage-card__media">
-                  <img src="../raleigh%20parks.jpg" alt="Trail through Raleigh Park with dense greenery" />
+                  <img
+                    src="../raleigh%20parks.jpg"
+                    alt="Trail through Raleigh Park with dense greenery"
+                    width="4032"
+                    height="3024"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <figcaption>Raleigh parks internship</figcaption>
                 </figure>
                 <span class="collage-card__prompt">Click to open</span>
@@ -143,7 +170,14 @@
             <details class="collage-card">
               <summary>
                 <figure class="collage-card__media">
-                  <img src="../graduation.JPG" alt="Sara standing in graduation regalia and smiling" />
+                  <img
+                    src="../graduation.JPG"
+                    alt="Sara standing in graduation regalia and smiling"
+                    width="3600"
+                    height="2880"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <figcaption>First-gen milestone</figcaption>
                 </figure>
                 <span class="collage-card__prompt">Click to open</span>
@@ -158,7 +192,14 @@
             <details class="collage-card">
               <summary>
                 <figure class="collage-card__media">
-                  <img src="../snorkeling.jpg" alt="Snorkeler in clear blue water" />
+                  <img
+                    src="../snorkeling.jpg"
+                    alt="Snorkeler in clear blue water"
+                    width="4032"
+                    height="3024"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <figcaption>Seeking sea life</figcaption>
                 </figure>
                 <span class="collage-card__prompt">Click to open</span>
@@ -173,7 +214,14 @@
             <details class="collage-card">
               <summary>
                 <figure class="collage-card__media">
-                  <img src="../roxane%20gay.jpg" alt="Author Roxane Gay on tour" />
+                  <img
+                    src="../roxane%20gay.jpg"
+                    alt="Author Roxane Gay on tour"
+                    width="3024"
+                    height="4032"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <figcaption>On the road with authors</figcaption>
                 </figure>
                 <span class="collage-card__prompt">Click to open</span>
@@ -199,38 +247,7 @@
               </p>
               <p>
                 I’m eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.
-              </p>
-            </div>
-          </div>
-          <div class="metric-cards">
-            <div class="metric-card">
-              <strong>Policy insight</strong>
-              <span>Clean energy incentive research with the NC Clean Energy Technology Center.</span>
-            </div>
-            <div class="metric-card">
-              <strong>Operational rigor</strong>
-              <span>Executive support, SOP development, and priority tracking inside the EPA.</span>
-            </div>
-            <div class="metric-card">
-              <strong>Community roots</strong>
-              <span>Hands-on stewardship through Raleigh Parks, civic organizing, and storytelling.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-links">
-          <a class="icon-link" href="mailto:sarafluber@gmail.com">
-            <span class="sr-only">Email</span>
-            <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z"
-              />
-            </svg>
-          </a>
+@@ -234,28 +282,28 @@
           <a class="icon-link" href="tel:4435472317">
             <span class="sr-only">Call</span>
             <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
@@ -256,6 +273,6 @@
         <p class="footer-note">&copy; Built by Sara Luber</p>
       </div>
     </footer>
-    <script src="../script.js"></script>
+    <script src="../script.js" defer></script>
   </body>
 </html>
