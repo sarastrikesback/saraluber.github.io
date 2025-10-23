@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
@@ -15,27 +15,24 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-      <div class="header-shell">
+      <div class="container header-inner">
         <a class="brand" href="/">
-          <span class="brand-mark" aria-hidden="true">SL</span>
-          <span class="brand-text">
-            <span class="site-title">Sara Luber</span>
-            <span class="subtitle">Environmental Communicator</span>
-          </span>
+          <span class="brand-name">Sara Luber</span>
+          <span class="brand-role">Environmental Communicator</span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-            <path
-              fill="currentColor"
-              d="M4 6.75h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Z"
-            />
-          </svg>
-        </button>
-        <nav id="site-nav" class="nav" aria-label="Primary" aria-hidden="false">
+        <nav class="site-nav" aria-label="Primary">
           <a href="/">Home</a>
-          <a href="/about/" class="active">About</a>
+          <a class="active" href="/about/">About</a>
           <a href="/portfolio/">Portfolio</a>
+          <a class="icon-link" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M7 3.75h6.75L19.5 9v11.25H7z" stroke-linejoin="round" />
+              <path d="M13.5 3.75v5.25H19.5" stroke-linejoin="round" />
+              <path d="M9.5 14.5h5" stroke-linecap="round" />
+              <path d="M9.5 17.5h5" stroke-linecap="round" />
+            </svg>
+            <span>Resume</span>
+          </a>
           <a href="/contact/">Contact</a>
         </nav>
       </div>
@@ -44,278 +41,168 @@
     <main id="main-content">
       <section class="page-hero">
         <div class="container page-hero__grid">
-          <div class="page-hero__content" data-animate="fade-up">
+          <img
+            class="page-hero__media"
+            src="../raleigh%20parks.jpg"
+            alt="Raleigh park path surrounded by greenery"
+            width="4032"
+            height="3024"
+          />
+          <div class="page-hero__content">
             <span class="eyebrow">About Sara</span>
             <h1>Systems-minded storytelling grounded in community care</h1>
             <p>
-              I’m an environmental communicator and operations partner based in Raleigh, North Carolina. My work sits at the intersection of policy, data, and care—helping teams surface human stories inside complex environmental programs.
+              I’m an environmental communicator based in Raleigh, North Carolina. My work sits at the intersection of policy,
+              data, and care—helping teams surface human stories inside complex environmental programs.
             </p>
             <p>
-              Collaborations with public agencies, clean energy coalitions, and community partners taught me how to translate technical insights into plain language and facilitate equitable decisions.
+              Collaborations with federal agencies, clean energy coalitions, and local partners taught me how to translate
+              technical insights into accessible narratives. I love designing processes that help teams stay aligned while we
+              honor the communities most impacted by climate change.
             </p>
-            <div class="about-values">
-              <div class="value-card">
-                <h3>Embedded with teams</h3>
-                <p>
-                  I thrive when I’m part of the crew—co-designing workflows, documenting SOPs, and keeping moving pieces aligned.
-                </p>
-              </div>
-              <div class="value-card">
-                <h3>Story-first data</h3>
-                <p>
-                  Dashboards, memos, and briefings should resonate. I translate research into narratives stakeholders can use.
-                </p>
-              </div>
-              <div class="value-card">
-                <h3>Care for place</h3>
-                <p>
-                  From neighborhood parks to coastal ecosystems, I carry a deep commitment to the communities most impacted by climate change.
-                </p>
-              </div>
-            </div>
-            <div class="hero-actions">
-              <a class="button primary" href="/portfolio/">See collaborative work</a>
-              <a class="button secondary" href="/contact/">Start a conversation</a>
-            </div>
-          </div>
-          <figure class="page-hero__media" data-animate="fade-up">
-            <img
-              src="https://lh6.googleusercontent.com/proxy/lCaWcrMXZgF2PTyNVpXrH_FGWlGVy9x8urvfeTKDLOToWo4LOpFT7npV46UQUJJDsbj7BaFH7p6sPczFxlP9A3_0qJQJJ7XBCDx9fdzwld964wP3XONfwfw"
-              alt="Vintage postcard illustration of Raleigh, North Carolina"
-              width="1200"
-              height="780"
-              decoding="async"
-            />
-            <figcaption>Currently located in Raleigh, North Carolina</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <span class="eyebrow">Snapshot stories</span>
-            <h2>Click each keepsake to reveal the story underneath</h2>
-            <p>
-              These artifacts capture the blend of community care, operations, and creativity I bring to every collaboration. Tap an image to explore the memory that inspires my work.
-            </p>
-          </div>
-          <div class="collage-grid" data-animate="fade-up">
-            <details class="collage-card">
-              <summary>
-                <figure class="collage-card__media">
-                  <img
-                    src="../beach.jpg"
-                    alt="Waves rolling onto a North Carolina beach"
-                    width="4032"
-                    height="3024"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Coastal grounding</figcaption>
-                </figure>
-                <span class="collage-card__prompt">Click to open</span>
-              </summary>
-              <div class="collage-card__body">
-                <p>
-                  The shoreline reminds me why environmental storytelling matters—North Carolina’s natural beauty is both fragile and worth celebrating. These scenes keep me committed to protecting the ecosystems my neighbors call home.
-                </p>
-              </div>
-            </details>
-
-            <details class="collage-card">
-              <summary>
-                <figure class="collage-card__media">
-                  <img
-                    src="../cary%20ducks.jpg"
-                    alt="Ducks swimming in a Cary, North Carolina park pond"
-                    width="3024"
-                    height="4032"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Cary park companions</figcaption>
-                </figure>
-                <span class="collage-card__prompt">Click to open</span>
-              </summary>
-              <div class="collage-card__body">
-                <p>
-                  I frequently meet these ducks while walking Cary’s parks. They nudge me to look closely at everyday wildlife and weave local stewardship into every project brief.
-                </p>
-              </div>
-            </details>
-
-            <details class="collage-card">
-              <summary>
-                <figure class="collage-card__media">
-                  <img
-                    src="../raleigh%20parks.jpg"
-                    alt="Trail through Raleigh Park with dense greenery"
-                    width="4032"
-                    height="3024"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Raleigh parks internship</figcaption>
-                </figure>
-                <span class="collage-card__prompt">Click to open</span>
-              </summary>
-              <div class="collage-card__body">
-                <p>
-                  During my Raleigh Parks &amp; Recreation internship I tracked how funding choices ripple through habitats and visitor experience. Immersing in that work sharpened my perspective on resource allocation and community accountability.
-                </p>
-              </div>
-            </details>
-
-            <details class="collage-card">
-              <summary>
-                <figure class="collage-card__media">
-                  <img
-                    src="../graduation.JPG"
-                    alt="Sara standing in graduation regalia and smiling"
-                    width="3600"
-                    height="2880"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>First-gen milestone</figcaption>
-                </figure>
-                <span class="collage-card__prompt">Click to open</span>
-              </summary>
-              <div class="collage-card__body">
-                <p>
-                  As a first-generation college graduate, I carry the lessons of student government, campus jobs, internships, and civic organizing into every collaboration. My education is rooted in community participation.
-                </p>
-              </div>
-            </details>
-
-            <details class="collage-card">
-              <summary>
-                <figure class="collage-card__media">
-                  <img
-                    src="../snorkeling.jpg"
-                    alt="Snorkeler in clear blue water"
-                    width="4032"
-                    height="3024"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Seeking sea life</figcaption>
-                </figure>
-                <span class="collage-card__prompt">Click to open</span>
-              </summary>
-              <div class="collage-card__body">
-                <p>
-                  Whenever travel permits, I sign up for nature-forward excursions like snorkeling. Living in Raleigh means ocean life feels distant, so these moments recharge my curiosity and deepen my respect for marine ecosystems.
-                </p>
-              </div>
-            </details>
-
-            <details class="collage-card">
-              <summary>
-                <figure class="collage-card__media">
-                  <img
-                    src="../roxane%20gay.jpg"
-                    alt="Author Roxane Gay on tour"
-                    width="3024"
-                    height="4032"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>On the road with authors</figcaption>
-                </figure>
-                <span class="collage-card__prompt">Click to open</span>
-              </summary>
-              <div class="collage-card__body">
-                <p>
-                  Supporting Roxane Gay’s book tour reminded me how words can mobilize people. I carry that same intentionality into environmental communications, ensuring community voices are centered.
-                </p>
-              </div>
-            </details>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container two-column" data-animate="fade-up">
-          <div>
-            <div class="section-header">
-              <span class="eyebrow">What drives me</span>
-              <h2>Justice-forward collaborations</h2>
+        <div class="container two-column">
+          <div class="stack">
+            <h2>How I show up to every collaboration</h2>
+            <ul class="highlight-list">
+              <li>
+                <strong>Embedded partner</strong>
+                Co-design workflows, document SOPs, and share progress so cross-functional teams can trust the process.
+              </li>
+              <li>
+                <strong>Story-first data</strong>
+                Translate research and analytics into clear, empathetic messages that reach executive and community audiences.
+              </li>
+              <li>
+                <strong>Care for place</strong>
+                Keep environmental justice and local knowledge at the center of every communication plan.
+              </li>
+            </ul>
+          </div>
+          <div class="stack">
+            <h2>Values that guide my work</h2>
+            <div class="info-card">
+              <h3>Community care</h3>
               <p>
-                I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity.
+                I grew up in Maryland and now call North Carolina home. Daily walks through Raleigh’s parks and coastal trips to
+                the Outer Banks keep me grounded in why environmental storytelling matters.
               </p>
+            </div>
+            <div class="info-card">
+              <h3>Transparency</h3>
               <p>
-                I’m eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.
+                From executive briefings to community toolkits, I prioritize clarity, context, and documentation that makes the
+                next step obvious for everyone involved.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>Curiosity</h3>
+              <p>
+                My background in data analysis fuels thoughtful questions, rigorous research, and communications that feel both
+                human and actionable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
-        <div class="container" data-animate="fade-up">
-          <div class="callout">
-            <h2>Have a project in mind?</h2>
+        <div class="container two-column">
+          <div class="stack">
+            <h2>Snapshots that inspire me</h2>
             <p>
-              Whether you need narrative strategy, facilitation support, or clear reporting,
-              I’d love to discuss how we can collaborate.
+              These keepsakes remind me to balance strategy with compassion. They’re the stories I reference when designing
+              communications for clients and partners.
             </p>
-            <a class="button primary" href="/contact/">Connect with Sara</a>
+            <ul class="highlight-list">
+              <li>
+                <strong>Raleigh Parks internship</strong>
+                Tracking funding decisions and visitor experience taught me how operations and storytelling shape public trust.
+              </li>
+              <li>
+                <strong>Community wildlife</strong>
+                Gentle encounters with Cary’s neighborhood ducks remind me to slow down and observe the ecosystems we serve.
+              </li>
+              <li>
+                <strong>First-generation milestone</strong>
+                Graduating as a first-gen college student instilled accountability, gratitude, and a deep commitment to
+                accessibility.
+              </li>
+            </ul>
+          </div>
+          <div class="stack">
+            <div class="info-card">
+              <h3>Outside of work</h3>
+              <p>
+                You’ll find me exploring urban greenways, volunteering with community organizations, and experimenting with new
+                creative projects.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>Let’s connect</h3>
+              <p>
+                I’m always happy to share more about my background or hear what you’re building. Send me a note if you’d like a
+                more detailed case study or resume walkthrough.
+              </p>
+              <a class="button" href="mailto:sarafluber@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path
+                    d="M4.5 6.25h15a1.75 1.75 0 0 1 1.75 1.75v8a1.75 1.75 0 0 1-1.75 1.75h-15A1.75 1.75 0 0 1 2.75 16V8a1.75 1.75 0 0 1 1.75-1.75Z"
+                  />
+                  <path d="M4 7.5 12 13l8-5.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Say hello</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-contact">
-          <p class="footer-heading">Connect with Sara</p>
-          <p class="footer-copy">
-            Prefer email, a quick call, or LinkedIn? Use whichever works best and I’ll follow up
-            soon.
-          </p>
-        </div>
+      <div class="container footer-inner">
+        <p class="footer-note">Connect with Sara</p>
         <ul class="footer-links">
           <li>
-            <a class="footer-link" href="mailto:sarafluber@gmail.com">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z"
-                  />
-                </svg>
-              </span>
-              <span class="link-label">sarafluber@gmail.com</span>
+            <a href="mailto:sarafluber@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path
+                  d="M4.5 6.25h15a1.75 1.75 0 0 1 1.75 1.75v8a1.75 1.75 0 0 1-1.75 1.75h-15A1.75 1.75 0 0 1 2.75 16V8a1.75 1.75 0 0 1 1.75-1.75Z"
+                />
+                <path d="M4 7.5 12 13l8-5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>sarafluber@gmail.com</span>
             </a>
           </li>
           <li>
-            <a class="footer-link" href="tel:4435472317">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z"
-                  />
-                </svg>
-              </span>
-              <span class="link-label">443-547-2317</span>
+            <a href="tel:4435472317">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path
+                  d="M8.5 4.25c.3-.57.85-.9 1.5-.9.4 0 .78.12 1.1.36l1.7 1.27c.56.42.75 1.18.49 1.83l-.8 1.98a.9.9 0 0 0 .27 1l2.4 1.87c.36.28.84.34 1.26.15l1.7-.77a1.8 1.8 0 0 1 2.1.45l1.24 1.45c.48.56.6 1.35.29 2-.9 1.9-2.9 3.14-5.07 3.14-3.46 0-7.4-2.62-10.32-6.7-2.92-4.08-3.74-8.38-1.67-11.24.43-.6 1.15-.92 1.88-.85.73.07 1.39.5 1.71 1.15l.83 1.76c.18.38.18.83-.02 1.2l-.82 1.63c-.2.38-.16.84.08 1.18 1.09 1.64 2.6 3.13 4.23 4.26.37.25.84.29 1.25.1l1.64-.75a1.2 1.2 0 0 0 .58-1.57l-.79-1.85a.9.9 0 0 1 .08-.86Z"
+                />
+              </svg>
+              <span>443-547-2317</span>
             </a>
           </li>
           <li>
-            <a
-              class="footer-link"
-              href="https://www.linkedin.com/in/sara-luber-3698111a7/"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z"
-                  />
-                </svg>
-              </span>
-              <span class="link-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M6.5 9.25h2.75v8.5H6.5z" />
+                <path d="M7.88 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+                <path
+                  d="M11.75 9.25h2.63v1.22h.04c.37-.73 1.28-1.44 2.64-1.44 2.82 0 3.34 1.84 3.34 4.22v4.5H17.7v-4.03c0-.94-.02-2.15-1.34-2.15-1.34 0-1.55 1.03-1.55 2.08v4.1h-3.06z"
+                />
+              </svg>
+              <span>LinkedIn</span>
             </a>
           </li>
         </ul>
-        <p class="footer-note">&copy; Built by Sara Luber</p>
+        <p class="footer-note">© Built by Sara Luber</p>
       </div>
     </footer>
-    <script src="../script.js" defer></script>
   </body>
 </html>
