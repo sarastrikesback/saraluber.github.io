@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,27 +19,24 @@
   <body class="page-home">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-      <div class="header-shell">
+      <div class="container header-inner">
         <a class="brand" href="/">
-          <span class="brand-mark" aria-hidden="true">SL</span>
-          <span class="brand-text">
-            <span class="site-title">Sara Luber</span>
-            <span class="subtitle">Environmental Communicator</span>
-          </span>
+          <span class="brand-name">Sara Luber</span>
+          <span class="brand-role">Environmental Communicator</span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-            <path
-              fill="currentColor"
-              d="M4 6.75h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Zm0 6h16a.75.75 0 1 0 0-1.5H4a.75.75 0 1 0 0 1.5Z"
-            />
-          </svg>
-        </button>
-        <nav id="site-nav" class="nav" aria-label="Primary" aria-hidden="false">
-          <a href="/" class="active">Home</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="active" href="/">Home</a>
           <a href="/about/">About</a>
           <a href="/portfolio/">Portfolio</a>
+          <a class="icon-link" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M7 3.75h6.75L19.5 9v11.25H7z" stroke-linejoin="round" />
+              <path d="M13.5 3.75v5.25H19.5" stroke-linejoin="round" />
+              <path d="M9.5 14.5h5" stroke-linecap="round" />
+              <path d="M9.5 17.5h5" stroke-linecap="round" />
+            </svg>
+            <span>Resume</span>
+          </a>
           <a href="/contact/">Contact</a>
         </nav>
       </div>
@@ -47,155 +44,197 @@
 
     <main id="main-content">
       <section class="hero">
-        <div class="container hero-layout">
-          <div class="hero-copy" data-animate="fade-up">
-            <span class="eyebrow">Environmental Communicator</span>
-            <h1>Plain-language storytelling for climate and community impact</h1>
-            <p class="hero-lede">
-              I partner with public agencies and nonprofits to translate complex environmental data into narratives that drive equitable action. From executive briefings to community toolkits, I support teams protecting people and the planet.
+        <div class="container hero-grid">
+          <div class="hero-media">
+            <figure>
+              <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber smiling outdoors" width="1500" height="2100" />
+            </figure>
+          </div>
+          <div class="hero-content">
+            <span class="eyebrow">Raleigh, North Carolina</span>
+            <h1 class="hero-title">Sara Luber</h1>
+            <p class="hero-subtitle">Plain-language storytelling for climate and community impact.</p>
+            <p class="hero-description">
+              I translate complex environmental data into memorable narratives and clear action plans. From federal agencies to
+              local nonprofits, I help teams design communications that center people and the planet.
             </p>
-            <div class="hero-actions">
-              <a class="button primary" href="/portfolio/">Browse recent projects</a>
-              <a class="button secondary" href="/contact/">Start a conversation</a>
-            </div>
-            <div class="hero-highlights">
-              <div class="hero-highlight">
-                <strong>Raleigh, NC</strong>
-                <span>Serving local partners and collaborating remotely nationwide.</span>
-              </div>
-              <div class="hero-highlight">
-                <strong>Justice &amp; Equity</strong>
-                <span>Focused on the communities most impacted by climate change.</span>
-              </div>
-              <div class="hero-highlight">
-                <strong>Research roots</strong>
-                <span>Analytical and policy experience inside the EPA and clean energy coalitions.</span>
-              </div>
+            <div class="circle-links">
+              <a class="circle-link resume" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+                <span class="circle-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M6.5 3.75h7L18.5 8.5v11.75H6.5z" stroke-linejoin="round" />
+                    <path d="M13.5 3.75V8.5h5" stroke-linejoin="round" />
+                    <path d="M9 14.5h6" stroke-linecap="round" />
+                    <path d="M9 17.5h4.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>Resume</span>
+              </a>
+              <a class="circle-link portfolio" href="/portfolio/">
+                <span class="circle-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M4.75 7.5h14.5l-1 11.75H5.75z" stroke-linejoin="round" />
+                    <path d="M9 7.5V5.75a2.25 2.25 0 0 1 2.25-2.25h1.5A2.25 2.25 0 0 1 15 5.75V7.5" />
+                    <path d="M4.5 11.5h15" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>Portfolio</span>
+              </a>
+              <a class="circle-link contact" href="/contact/">
+                <span class="circle-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M5 5.75h14a1.75 1.75 0 0 1 1.75 1.75v9a1.75 1.75 0 0 1-1.75 1.75H5A1.75 1.75 0 0 1 3.25 16.5v-9A1.75 1.75 0 0 1 5 5.75Z" />
+                    <path d="M5.75 8 12 12l6.25-4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>Contact</span>
+              </a>
+              <a class="circle-link about" href="/about/">
+                <span class="circle-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 12.75a3.75 3.75 0 1 0-3.75-3.75A3.75 3.75 0 0 0 12 12.75Z" />
+                    <path d="M6.5 19.25a5.5 5.5 0 0 1 11 0" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span>About</span>
+              </a>
             </div>
           </div>
-          <figure class="hero-media" data-animate="fade-up">
-            <img
-              src="Luber_Sara_Headshot.jpeg"
-              alt="Sara Luber smiling"
-              width="1500"
-              height="2100"
-              decoding="async"
-            />
-            <figcaption>Based in Raleigh, NC — open to collaborating nationwide</figcaption>
-          </figure>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <div class="section-header" data-animate="fade-up">
-            <span class="eyebrow">Quick routes</span>
-            <h2>Explore the essentials in a few clicks</h2>
+          <div class="section-header">
+            <span class="eyebrow">Focus areas</span>
+            <h2>What I help teams deliver</h2>
             <p>
-              Dive into the pages below for a deeper look at my background, featured work, and how to partner together. Each link opens a curated starting point.
+              Clear communications that pair scientific rigor with accessible storytelling. These pillars guide how I support
+              collaborators.
             </p>
           </div>
-          <div class="landing-grid" data-animate="fade-up">
-            <a class="landing-card" href="/about/">
-              <span class="eyebrow">Meet Sara</span>
-              <h3>Roots, inspirations, and how I collaborate</h3>
+          <div class="card-grid">
+            <article class="info-card">
+              <h3>Data-informed narratives</h3>
               <p>
-                Learn how community care, operational rigor, and creativity shape my approach to environmental communication.
+                Transform dashboards, policy research, and stakeholder interviews into messages that resonate across executive
+                and community audiences.
               </p>
-              <span class="landing-cta">About page &rarr;</span>
-            </a>
-            <a class="landing-card" href="/portfolio/">
-            <span class="eyebrow">Case studies</span>
-              <h3>See how complex insights become clear actions</h3>
+            </article>
+            <article class="info-card">
+              <h3>Operational clarity</h3>
               <p>
-                Browse briefs, reports, and facilitation projects that translate policy, data,
-                and community feedback into decisions stakeholders can trust.
+                Build workflows, SOPs, and briefing systems that keep teams aligned and make complex initiatives easier to
+                steward.
               </p>
-              <span class="landing-cta">Portfolio highlights &rarr;</span>
-            </a>
-            <a class="landing-card" href="/contact/">
-              <span class="eyebrow">Start a project</span>
-              <h3>Outline your communications needs in minutes</h3>
+            </article>
+            <article class="info-card">
+              <h3>Community-centered impact</h3>
               <p>
-                Share your goals, timeline, and collaborators so we can scope a partnership that
-                keeps your audiences informed and engaged.
+                Elevate stories from the communities most impacted by climate change and ensure communications reflect their
+                expertise.
               </p>
-              <span class="landing-cta">Contact page &rarr;</span>
-            </a>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container" data-animate="fade-up">
-          <div class="callout">
-            <h2>Let’s build practical communications together</h2>
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Recent collaborations</span>
+            <h2>Partners who trust practical storytelling</h2>
             <p>
-              From stakeholder workshops to executive memos, I help teams weave clarity into
-              every deliverable. Reach out when you’re ready for a partner who can navigate
-              research, policy, and community impact with care.
+              I’ve supported environmental programs inside the U.S. Environmental Protection Agency, NC Clean Energy Technology
+              Center, and Raleigh Parks. Each project reinforced that clarity builds momentum.
             </p>
-            <a class="button primary" href="/contact/">Schedule a conversation</a>
+          </div>
+          <div class="card-grid">
+            <article class="info-card">
+              <h3>Federal research operations</h3>
+              <p>
+                Guided executive communications and workflow design across the EPA’s Office of Research and Development during a
+                major leadership transition.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Clean energy policy insights</h3>
+              <p>
+                Translated energy incentive research into actionable recommendations for policymakers and community advocates in
+                North Carolina.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Local stewardship storytelling</h3>
+              <p>
+                Highlighted Raleigh’s conservation programs, sharing on-the-ground lessons from park restoration and community
+                engagement.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="callout">
+            <h2>Working on an environmental communications project?</h2>
+            <p>
+              Let’s pair your team’s expertise with story-driven strategy. I can help with research synthesis, messaging
+              architecture, and the tools that keep collaborators aligned.
+            </p>
+            <a class="button" href="/contact/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5.25 12h13.5" stroke-linecap="round" />
+                <path d="M12 5.25 18.75 12 12 18.75" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>Start a conversation</span>
+            </a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-contact">
-          <p class="footer-heading">Connect with Sara</p>
-          <p class="footer-copy">
-            Prefer email, a quick call, or LinkedIn? Use whichever works best and I’ll follow up
-            soon.
-          </p>
-        </div>
+      <div class="container footer-inner">
+        <p class="footer-note">Connect with Sara</p>
         <ul class="footer-links">
           <li>
-            <a class="footer-link" href="mailto:sarafluber@gmail.com">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M4.5 5.25h15a1.25 1.25 0 0 1 1.25 1.25v11a1.25 1.25 0 0 1-1.25 1.25h-15A1.25 1.25 0 0 1 3.25 17.5v-11A1.25 1.25 0 0 1 4.5 5.25Zm.75 2.02v9.23h13.5V7.27l-6.22 4.14a1.25 1.25 0 0 1-1.35 0L5.25 7.27ZM5.51 6.75l6.49 4.32 6.49-4.32H5.51Z"
-                  />
-                </svg>
-              </span>
-              <span class="link-label">sarafluber@gmail.com</span>
+            <a href="mailto:sarafluber@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path
+                  d="M4.5 6.25h15a1.75 1.75 0 0 1 1.75 1.75v8a1.75 1.75 0 0 1-1.75 1.75h-15A1.75 1.75 0 0 1 2.75 16V8a1.75 1.75 0 0 1 1.75-1.75Z"
+                />
+                <path d="M4 7.5 12 13l8-5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>sarafluber@gmail.com</span>
             </a>
           </li>
           <li>
-            <a class="footer-link" href="tel:4435472317">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.78 4.2c.3-.6.9-.92 1.6-.92.43 0 .85.14 1.2.42l1.46 1.15c.66.52.88 1.41.55 2.17l-.86 1.99a.93.93 0 0 0 .28 1.06l2.29 1.8c.36.28.84.33 1.25.13l1.92-.93a1.9 1.9 0 0 1 2.24.46l1.33 1.52c.51.58.63 1.41.3 2.12-.96 2.03-3.03 3.35-5.36 3.35-3.64 0-7.8-2.73-10.87-6.95-3.07-4.23-3.9-8.68-1.75-11.64.46-.62 1.21-.95 1.98-.88.78.07 1.49.53 1.83 1.24l.91 1.91c.19.4.19.87-.01 1.27l-.88 1.74c-.2.4-.17.86.08 1.23 1.15 1.72 2.73 3.28 4.44 4.46.38.27.89.31 1.32.11l1.85-.87a1.25 1.25 0 0 0 .61-1.64l-.85-1.99a.99.99 0 0 1 .08-.93Z"
-                  />
-                </svg>
-              </span>
-              <span class="link-label">443-547-2317</span>
+            <a href="tel:4435472317">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path
+                  d="M8.5 4.25c.3-.57.85-.9 1.5-.9.4 0 .78.12 1.1.36l1.7 1.27c.56.42.75 1.18.49 1.83l-.8 1.98a.9.9 0 0 0 .27 1l2.4 1.87c.36.28.84.34 1.26.15l1.7-.77a1.8 1.8 0 0 1 2.1.45l1.24 1.45c.48.56.6 1.35.29 2-.9 1.9-2.9 3.14-5.07 3.14-3.46 0-7.4-2.62-10.32-6.7-2.92-4.08-3.74-8.38-1.67-11.24.43-.6 1.15-.92 1.88-.85.73.07 1.39.5 1.71 1.15l.83 1.76c.18.38.18.83-.02 1.2l-.82 1.63c-.2.38-.16.84.08 1.18 1.09 1.64 2.6 3.13 4.23 4.26.37.25.84.29 1.25.1l1.64-.75a1.2 1.2 0 0 0 .58-1.57l-.79-1.85a.9.9 0 0 1 .08-.86Z"
+                />
+              </svg>
+              <span>443-547-2317</span>
             </a>
           </li>
           <li>
-            <a
-              class="footer-link"
-              href="https://www.linkedin.com/in/sara-luber-3698111a7/"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6.54 8.25a1.79 1.79 0 1 1 0-3.58 1.79 1.79 0 0 1 0 3.58ZM5 9.75h3.08v9.5H5v-9.5Zm5.52 0h2.95v1.3h.04c.41-.77 1.42-1.58 2.93-1.58 3.13 0 3.7 2.05 3.7 4.7v5.08h-3.08v-4.5c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H10.5v-9.5Z"
-                  />
-                </svg>
-              </span>
-              <span class="link-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M6.5 9.25h2.75v8.5H6.5z" />
+                <path d="M7.88 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+                <path
+                  d="M11.75 9.25h2.63v1.22h.04c.37-.73 1.28-1.44 2.64-1.44 2.82 0 3.34 1.84 3.34 4.22v4.5H17.7v-4.03c0-.94-.02-2.15-1.34-2.15-1.34 0-1.55 1.03-1.55 2.08v4.1h-3.06z"
+                />
+              </svg>
+              <span>LinkedIn</span>
             </a>
           </li>
         </ul>
-        <p class="footer-note">&copy; Built by Sara Luber</p>
+        <p class="footer-note">© Built by Sara Luber</p>
       </div>
     </footer>
-    <script src="script.js" defer></script>
   </body>
 </html>
