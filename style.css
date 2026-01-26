@@ -411,7 +411,7 @@ main {
 
 /* Slightly larger logo for CliftonStrengths */
 .card-icon--clifton {
-  max-height: 48px; /* default is ~32px */
+  max-height: 52px;
 }
 
 /* Callout + button */
