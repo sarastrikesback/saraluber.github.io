@@ -945,4 +945,23 @@ main {
 .page-contact .section {
   padding-top: clamp(2rem, 4vw, 3rem);
   }
-]
+}
+/* Portfolio card micro-animations */
+.portfolio-card {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-card {
+    transition: none;
+  }
+}
+
