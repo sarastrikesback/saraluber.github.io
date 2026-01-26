@@ -409,6 +409,11 @@ main {
   color: var(--color-text-muted);
 }
 
+/* Slightly larger logo for CliftonStrengths */
+.card-icon--clifton {
+  max-height: 48px; /* default is ~32px */
+}
+
 /* Callout + button */
 .callout {
   background: var(--color-surface);
