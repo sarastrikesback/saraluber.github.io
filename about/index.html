@@ -43,6 +43,15 @@
         text-underline-offset: 3px;
         font-weight: 600;
       }
+
+      /* NEW: small card icon/image at top of About cards */
+      .page-about .card-icon {
+        width: 44px;
+        height: auto;
+        margin-bottom: 0.85rem;
+        opacity: 0.95;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .page-about .info-card {
           transition: none;
@@ -104,7 +113,6 @@
             <p>
               My interests lay at the intersection of communication and data: translating research, policy, and analysis into clear information, tools, and decisions that people can trust — and that actually help systems work better over time.
             </p>
-            </p>
           </div>
         </div>
       </section>
@@ -122,22 +130,31 @@
 
           <div class="card-grid" data-animate>
             <article class="info-card">
+              <!-- NEW icon -->
+              <img class="card-icon" src="../mdflag.png" alt="Maryland state flag" loading="lazy" decoding="async" />
+
               <h3>Where I grew up</h3>
               <p>
-                I’m originally from <strong>Northern Maryland</strong>, where I lived in a smaller town with a few animals and lots of siblings. 
+                I’m originally from <strong>Northern Maryland</strong>, where I lived in a smaller town with a few animals and lots of siblings.
                 Here, I developed a strong appreciation for the four seasons of weather, community, and accessbility to public spaces.
               </p>
             </article>
 
             <article class="info-card">
+              <!-- NEW icon -->
+              <img class="card-icon" src="../ncstate.png" alt="NC State logo" loading="lazy" decoding="async" />
+
               <h3>Undergrad: Political Science</h3>
               <p>
-               I studied <strong>Political Science</strong> to better understand how policy shapes people’s lives — and why systemic inequities persist for underserved communities.
+                I studied <strong>Political Science</strong> to better understand how policy shapes people’s lives — and why systemic inequities persist for underserved communities.
                 That foundation strengthened my empathy and sharpened my interest in justice-centered work.
               </p>
             </article>
 
             <article class="info-card">
+              <!-- NEW icon -->
+              <img class="card-icon" src="../ibm.png" alt="IBM logo" loading="lazy" decoding="async" />
+
               <h3>Building technical depth</h3>
               <p>
                 After graduating, I earned two professional certificates through IBM to strengthen my technical background and confirm my
@@ -156,6 +173,9 @@
             </article>
 
             <article class="info-card">
+              <!-- NEW icon -->
+              <img class="card-icon" src="../ncstate.png" alt="NC State logo" loading="lazy" decoding="async" />
+
               <h3>Now: Climate Change &amp; Society (M.S.) + GIS</h3>
               <p>
                 I’m currently pursuing my <strong>M.S. in Climate Change &amp; Society at NC State</strong> — an interdisciplinary program —
@@ -278,7 +298,7 @@
               <img
                 class="inline-photo"
                 src="../cary%20ducks.jpg"
-                alt="Raleigh parks and community space"
+                alt="Ducks in Cary, North Carolina"
                 loading="lazy"
                 decoding="async"
               />
