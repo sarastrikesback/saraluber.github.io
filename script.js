@@ -1,55 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ----------------------------
+  // ============================================================
+  // Helpers
+  // ============================================================
+  const prefersReducedMotion =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const setBodyScrollLock = (locked) => {
+    // Only lock scroll on small screens when menu is open
+    document.documentElement.style.overflow = locked ? "hidden" : "";
+  };
+
+  // ============================================================
   // Mobile nav toggle
-  // ----------------------------
+  // ============================================================
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("site-nav");
-
-  const closeNav = () => {
-    if (!navToggle || !nav) return;
-    nav.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-    nav.setAttribute("aria-hidden", "true");
-  };
-
-  const openNav = () => {
-    if (!navToggle || !nav) return;
-    nav.classList.add("is-open");
-    navToggle.setAttribute("aria-expanded", "true");
-    nav.setAttribute("aria-hidden", "false");
-  };
 
   if (navToggle && nav) {
     const mobileQuery = window.matchMedia("(max-width: 640px)");
 
     const syncNavState = () => {
-      // On desktop, nav is always visible
       if (!mobileQuery.matches) {
-        nav.removeAttribute("aria-hidden");
+        // Desktop: nav always visible
         nav.classList.remove("is-open");
         navToggle.setAttribute("aria-expanded", "false");
+        nav.removeAttribute("aria-hidden");
+        setBodyScrollLock(false);
         return;
       }
 
-      // On mobile, reflect open/closed in aria-hidden
+      // Mobile: reflect open/closed
       const isOpen = nav.classList.contains("is-open");
       nav.setAttribute("aria-hidden", String(!isOpen));
+      setBodyScrollLock(isOpen);
+    };
+
+    const closeNav = () => {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      nav.setAttribute("aria-hidden", "true");
+      setBodyScrollLock(false);
+    };
+
+    const openNav = () => {
+      nav.classList.add("is-open");
+      navToggle.setAttribute("aria-expanded", "true");
+      nav.setAttribute("aria-hidden", "false");
+      setBodyScrollLock(true);
+
+      // Move focus into the nav for keyboard users
+      const firstLink = nav.querySelector("a");
+      if (firstLink) firstLink.focus();
     };
 
     navToggle.addEventListener("click", () => {
       const isOpen = nav.classList.contains("is-open");
       if (isOpen) closeNav();
       else openNav();
-    });
-
-    // Close when clicking outside the nav (mobile only)
-    document.addEventListener("click", (e) => {
-      if (!mobileQuery.matches) return;
-      if (!nav.classList.contains("is-open")) return;
-      const target = e.target;
-      if (!(target instanceof HTMLElement)) return;
-      const clickedInside = nav.contains(target) || navToggle.contains(target);
-      if (!clickedInside) closeNav();
     });
 
     // Close menu after clicking a link (mobile only)
@@ -59,26 +67,54 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // Close when clicking outside (mobile only)
+    document.addEventListener("click", (e) => {
+      if (!mobileQuery.matches) return;
+      if (!nav.classList.contains("is-open")) return;
+
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const clickedInside = nav.contains(target) || navToggle.contains(target);
+      if (!clickedInside) closeNav();
+    });
+
     // Close on Escape
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeNav();
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        closeNav();
+        navToggle.focus();
+      }
+    });
+
+    // Close when focus leaves nav (mobile only) – keyboard usability
+    document.addEventListener("focusin", (e) => {
+      if (!mobileQuery.matches) return;
+      if (!nav.classList.contains("is-open")) return;
+
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const focusInside = nav.contains(target) || navToggle.contains(target);
+      if (!focusInside) closeNav();
     });
 
     mobileQuery.addEventListener("change", syncNavState);
     syncNavState();
   }
 
-  // ----------------------------
+  // ============================================================
   // Tabs (optional)
-  // Requires: .tab-link[data-tab="sectionId"] and .tab-section#sectionId
-  // ----------------------------
+  // Requires:
+  //  - .tab-link[data-tab="sectionId"]
+  //  - .tab-section#sectionId
+  // ============================================================
   const tabs = document.querySelectorAll(".tab-link");
   const sections = document.querySelectorAll(".tab-section");
 
   if (tabs.length && sections.length) {
     sections.forEach((section) => section.classList.remove("active"));
 
-    // Default: first tab’s target (or first section)
     const firstTabTarget = tabs[0]?.getAttribute("data-tab");
     const defaultSection =
       (firstTabTarget && document.getElementById(firstTabTarget)) || sections[0];
@@ -98,10 +134,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ----------------------------
+  // ============================================================
   // Focus panels (optional)
-  // Requires: .focus-toggle[data-focus="panelId"] and .focus-panel#panelId
-  // ----------------------------
+  // Requires:
+  //  - .focus-toggle[data-focus="panelId"]
+  //  - .focus-panel#panelId
+  // ============================================================
   const focusToggles = document.querySelectorAll(".focus-toggle");
   const focusPanels = document.querySelectorAll(".focus-panel");
 
@@ -142,12 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ----------------------------
+  // ============================================================
   // Reveal on scroll (for [data-animate])
-  // ----------------------------
+  // ============================================================
   const animatedItems = document.querySelectorAll("[data-animate]");
+
   if (animatedItems.length) {
-    if ("IntersectionObserver" in window) {
+    if (prefersReducedMotion) {
+      animatedItems.forEach((item) => item.classList.add("is-visible"));
+    } else if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -166,10 +207,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ----------------------------
+  // ============================================================
   // Contact form (optional)
-  // Requires: <form id="contact-form" action="https://..."> + .success-message/.error-message
-  // ----------------------------
+  // Requires:
+  //  - <form id="contact-form" action="https://...">
+  //  - .success-message and/or .error-message
+  // ============================================================
   const form = document.getElementById("contact-form");
   const successMessage = document.querySelector(".success-message");
   let errorMessage = document.querySelector(".error-message");
