@@ -547,6 +547,19 @@ main {
   max-width: 70ch;
 }
 
+.page-hero__grid--single {
+  justify-items: center;
+  text-align: center;
+}
+
+.page-hero__grid--single .page-hero__content {
+  align-items: center;
+}
+
+.page-hero__grid--single .page-hero__content p {
+  max-width: 65ch;
+}
+
 /* ---------------------------
    Lists / Grids
 --------------------------- */
