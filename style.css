@@ -224,8 +224,8 @@ main {
 
 .hero-media figure {
   width: min(320px, 80vw);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
+  aspect-ratio: 3 / 4; /* rectangular portrait */
+  border-radius: 24px; /* soft rounded corners */
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   border: 10px solid var(--color-surface);
