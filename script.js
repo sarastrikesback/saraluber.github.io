@@ -42,6 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
       else openNav();
     });
 
+    // Close when clicking outside the nav (mobile only)
+    document.addEventListener("click", (e) => {
+      if (!mobileQuery.matches) return;
+      if (!nav.classList.contains("is-open")) return;
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) return;
+      const clickedInside = nav.contains(target) || navToggle.contains(target);
+      if (!clickedInside) closeNav();
+    });
+
     // Close menu after clicking a link (mobile only)
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
