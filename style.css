@@ -893,4 +893,17 @@ main {
     opacity: 1;
     transform: none;
   }
+
+  /* Location eyebrow */
+.location-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.location-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.75;
+  
 }
