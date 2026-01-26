@@ -1,13 +1,16 @@
 :root {
   color-scheme: light;
+
   --font-body: "Manrope", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-heading: "Manrope", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --color-page: #f4f6fb;
   --color-surface: #ffffff;
   --color-surface-muted: #f0f2f8;
+
   --color-text: #1f2937;
   --color-text-muted: #5f6b7c;
+
   --color-border: rgba(15, 23, 42, 0.08);
   --color-accent: #1c4ed8;
   --color-focus: rgba(28, 78, 216, 0.4);
@@ -22,7 +25,9 @@
   --max-width: 1100px;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -64,19 +69,24 @@ img {
   display: block;
 }
 
+/* ---------------------------
+   Accessibility
+--------------------------- */
+
 .skip-link {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -120%);
   top: 1rem;
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  z-index: 200;
+
   background: var(--color-surface);
   color: var(--color-text);
   padding: 0.75rem 1.25rem;
   border-radius: 999px;
   box-shadow: var(--shadow-subtle);
   transition: transform 0.2s ease, opacity 0.2s ease;
-  opacity: 0;
-  z-index: 200;
 }
 
 .skip-link:focus-visible {
@@ -84,10 +94,22 @@ img {
   opacity: 1;
 }
 
+/* ---------------------------
+   Layout helpers
+--------------------------- */
+
 .container {
   width: min(var(--max-width), 100% - 3rem);
   margin: 0 auto;
 }
+
+main {
+  padding-bottom: 4rem;
+}
+
+/* ---------------------------
+   Header / Navigation
+--------------------------- */
 
 .site-header {
   padding: 2rem 0 1.5rem;
@@ -152,6 +174,7 @@ img {
   height: 18px;
 }
 
+/* Mobile menu button */
 .nav-toggle {
   display: none;
   border: 1px solid var(--color-border);
@@ -171,11 +194,10 @@ img {
   display: inline-block;
 }
 
-main {
-  padding-bottom: 4rem;
-}
+/* ---------------------------
+   Hero
+--------------------------- */
 
-/* HERO */
 .hero {
   padding-block: clamp(4rem, 8vw, 6.5rem);
 }
@@ -242,7 +264,13 @@ main {
   color: var(--color-text-muted);
 }
 
-/* CIRCLE LINKS */
+.hero-description a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Quick links */
 .circle-links {
   display: flex;
   flex-wrap: wrap;
@@ -252,18 +280,22 @@ main {
 
 .circle-link {
   --circle-color: #d1d5db;
+
   width: 140px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+
   font-weight: 600;
   text-align: center;
   background: var(--circle-color);
   color: #0f172a;
+
   box-shadow: var(--shadow-subtle);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   will-change: transform;
@@ -286,12 +318,26 @@ main {
   text-decoration: none;
 }
 
-.circle-link.resume { --circle-color: #c5f6d6; }
-.circle-link.portfolio { --circle-color: #ffe6a7; }
-.circle-link.contact { --circle-color: #cfe3ff; }
-.circle-link.about { --circle-color: #e8e4f7; }
+.circle-link.resume {
+  --circle-color: #c5f6d6;
+}
 
-/* SECTIONS */
+.circle-link.portfolio {
+  --circle-color: #ffe6a7;
+}
+
+.circle-link.contact {
+  --circle-color: #cfe3ff;
+}
+
+.circle-link.about {
+  --circle-color: #e8e4f7;
+}
+
+/* ---------------------------
+   Sections / Cards
+--------------------------- */
+
 .section {
   padding-block: clamp(3rem, 7vw, 5rem);
 }
@@ -341,7 +387,6 @@ main {
   color: var(--color-text-muted);
 }
 
-/* CALLOUT */
 .callout {
   background: var(--color-surface);
   padding: clamp(2rem, 6vw, 3rem);
@@ -363,7 +408,6 @@ main {
   color: var(--color-text-muted);
 }
 
-/* BUTTON */
 .button {
   display: inline-flex;
   align-items: center;
@@ -392,12 +436,10 @@ main {
   text-decoration: none;
 }
 
-a[aria-disabled="true"] {
-  pointer-events: none;
-  opacity: 0.75;
-}
+/* ---------------------------
+   Footer
+--------------------------- */
 
-/* FOOTER */
 .site-footer {
   padding-block: 3rem;
   border-top: 1px solid var(--color-border);
@@ -436,7 +478,10 @@ a[aria-disabled="true"] {
   margin: 0;
 }
 
-/* PAGE HERO */
+/* ---------------------------
+   Page hero (About / Portfolio / Contact)
+--------------------------- */
+
 .page-hero {
   padding-block: clamp(3.5rem, 8vw, 5rem);
 }
@@ -479,7 +524,10 @@ a[aria-disabled="true"] {
   max-width: 70ch;
 }
 
-/* STACK + LISTS */
+/* ---------------------------
+   Lists / Grids
+--------------------------- */
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -512,7 +560,10 @@ a[aria-disabled="true"] {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* PORTFOLIO */
+/* ---------------------------
+   Portfolio cards + badges
+--------------------------- */
+
 .portfolio-grid {
   display: grid;
   gap: 1.5rem;
@@ -538,7 +589,28 @@ a[aria-disabled="true"] {
   color: var(--color-text-muted);
 }
 
-/* LOGOS */
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.badge-list li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  background: var(--color-surface-muted);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* ---------------------------
+   About: Logos row
+--------------------------- */
+
 .logo-row {
   display: flex;
   flex-wrap: wrap;
@@ -549,7 +621,8 @@ a[aria-disabled="true"] {
 .logo-row img {
   height: 44px;
   width: auto;
-  opacity: 0.9;
+  max-width: 160px;
+  opacity: 0.95;
   filter: grayscale(100%);
   transition: transform 200ms ease, opacity 200ms ease, filter 200ms ease;
 }
@@ -560,31 +633,36 @@ a[aria-disabled="true"] {
   transform: translateY(-2px);
 }
 
-/* BADGES */
-.badge-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+/* ---------------------------
+   About: Photos / grids
+--------------------------- */
+
+.inline-photo {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
 }
 
-/* Supports both formats:
-   - <li><span>Text</span></li>
-   - <li>Text</li>
-*/
-.badge-list li,
-.badge-list span {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.8rem;
-  background: var(--color-surface-muted);
-  border-radius: 999px;
-  font-size: 0.85rem;
+.photo-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* CONTACT */
+.photo-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* ---------------------------
+   Contact page (kept for your form)
+--------------------------- */
+
 .contact-grid {
   display: grid;
   gap: 2rem;
@@ -679,29 +757,10 @@ a[aria-disabled="true"] {
   color: #b91c1c;
 }
 
-/* ABOUT PHOTOS */
-.inline-photo {
-  margin-top: 1rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-subtle);
-}
+/* ---------------------------
+   Reveal animations
+--------------------------- */
 
-.photo-grid {
-  margin-top: 1rem;
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.photo-grid img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-subtle);
-}
-
-/* REVEAL ANIMATIONS */
 [data-animate] {
   opacity: 0;
   transform: translateY(14px);
@@ -713,7 +772,10 @@ a[aria-disabled="true"] {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
+/* ---------------------------
+   Responsive
+--------------------------- */
+
 @media (max-width: 900px) {
   .hero-grid,
   .page-hero__grid {
@@ -760,6 +822,7 @@ a[aria-disabled="true"] {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
   }
 
   .nav-toggle {
@@ -794,8 +857,13 @@ a[aria-disabled="true"] {
     width: 120px;
   }
 
+  .logo-row {
+    justify-content: center;
+  }
+
   .logo-row img {
-    height: 38px;
+    height: 36px;
+    max-width: 140px;
   }
 
   .photo-grid {
@@ -806,6 +874,10 @@ a[aria-disabled="true"] {
     height: auto;
   }
 }
+
+/* ---------------------------
+   Reduced motion
+--------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -821,22 +893,4 @@ a[aria-disabled="true"] {
     opacity: 1;
     transform: none;
   }
-
-  .circle-link:hover,
-  .button:hover {
-    transform: none;
-  }
-
-a[aria-disabled="true"].button {
-  background: rgba(28, 78, 216, 0.65);
-  box-shadow: none;
-  }
-  
-.hero-description a {
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  
-}
-
 }
