@@ -410,8 +410,11 @@ main {
 }
 
 /* Slightly larger logo for CliftonStrengths */
+/* Make CliftonStrengths logo visually match MBTI size */
 .card-icon--clifton {
-  max-height: 52px;
+  max-height: 72px;          /* BIGGER */
+  transform: scale(1.15);   /* compensates for internal whitespace */
+  transform-origin: left center;
 }
 
 /* Callout + button */
