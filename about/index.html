@@ -4,27 +4,51 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About — Sara Luber</title>
+    <meta
+      name="description"
+      content="About Sara Luber — environmental communicator focused on equity-centered storytelling, research translation, and systems-minded operations."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+    <link rel="manifest" href="../site.webmanifest" />
   </head>
-  <body>
+
+  <body class="page-about">
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/">
+        <a class="brand" href="../">
           <span class="brand-name">Sara Luber</span>
           <span class="brand-role">Environmental Communicator</span>
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="/">Home</a>
-          <a class="active" href="/about/">About</a>
-          <a href="/portfolio/">Portfolio</a>
-          <a class="icon-link" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="../">Home</a>
+          <a class="active" href="../about/">About</a>
+          <a href="../portfolio/">Portfolio</a>
+          <a class="icon-link" href="../Luber_Resume.pdf" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M7 3.75h6.75L19.5 9v11.25H7z" stroke-linejoin="round" />
               <path d="M13.5 3.75v5.25H19.5" stroke-linejoin="round" />
@@ -33,15 +57,15 @@
             </svg>
             <span>Resume</span>
           </a>
-          <a href="/contact/">Contact</a>
+          <a href="../contact/">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="page-hero">
+      <section class="page-hero" data-animate>
         <div class="container page-hero__grid page-hero__grid--single">
-          <div class="page-hero__content">
+          <div class="page-hero__content" data-animate>
             <span class="eyebrow">About Sara</span>
             <h1>Systems-minded storytelling grounded in community care</h1>
             <p>
@@ -50,14 +74,86 @@
             </p>
             <p>
               Collaborations with federal agencies, clean energy coalitions, and local partners taught me how to translate
-              technical insights into accessible narratives. I am enthusiastic about designing processes that help teams stay aligned while we
-              honor the communities most impacted by climate change.
+              technical insights into accessible narratives. I enjoy building processes that keep teams aligned while honoring
+              the communities most impacted by climate change.
             </p>
           </div>
         </div>
       </section>
 
-  
+      <section class="section" data-animate>
+        <div class="container">
+          <div class="section-header" data-animate>
+            <span class="eyebrow">How I work</span>
+            <h2>Clear, human-centered communication for complex systems</h2>
+            <p>
+              I help teams connect research and policy to the people those decisions affect—using plain language, good visuals,
+              and reliable operations.
+            </p>
+          </div>
+
+          <div class="card-grid" data-animate>
+            <article class="info-card">
+              <h3>Translate complexity</h3>
+              <p>Turn technical findings into narratives and materials that are accurate, accessible, and action-oriented.</p>
+            </article>
+            <article class="info-card">
+              <h3>Build alignment</h3>
+              <p>Create systems, SOPs, and lightweight planning tools so teams stay coordinated across stakeholders.</p>
+            </article>
+            <article class="info-card">
+              <h3>Center equity</h3>
+              <p>Design communications that respect time, reduce barriers, and amplify community expertise.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-animate>
+        <div class="container two-column">
+          <div class="stack" data-animate>
+            <div class="section-header">
+              <span class="eyebrow">Highlights</span>
+              <h2>What I bring</h2>
+              <p>A snapshot of strengths I lean on across projects and roles.</p>
+            </div>
+
+            <ul class="highlight-list">
+              <li>
+                <strong>Stakeholder-ready writing</strong>
+                Reports, briefings, and messaging that meet audiences where they are.
+              </li>
+              <li>
+                <strong>Data-informed storytelling</strong>
+                Dashboards, metrics, and analysis translated into decisions.
+              </li>
+              <li>
+                <strong>Operational calm</strong>
+                Planning, coordination, and documentation that keeps work moving.
+              </li>
+            </ul>
+          </div>
+
+          <div class="stack" data-animate>
+            <div class="callout">
+              <h2>Want to collaborate?</h2>
+              <p>
+                I’m always excited to learn what your team is working on and explore where communications can help create
+                impact.
+              </p>
+              <a class="button" href="../contact/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M5.25 12h13.5" stroke-linecap="round" />
+                  <path d="M12 5.25 18.75 12 12 18.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Get in touch</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-note">Connect with me</p>
@@ -77,7 +173,7 @@
             <a href="tel:4435472317">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                 <path
-                  d="M8.5 4.25c.3-.57.85-.9 1.5-.9.4 0 .78.12 1.1.36l1.7 1.27c.56.42.75 1.18.49 1.83l-.8 1.98a.9.9 0 0 0 .27 1l2.4 1.87c.36.28.84.34 1.26.15l1.7-.77a1.8 1.8 0 0 1 2.1.45l1.24 1.45c.48.56.6 1.35.29 2-.9 1.9-2.9 3.14-5.07 3.14-3.46 0-7.4-2.62-10.32-6.7-2.92-4.08-3.74-8.38-1.67-11.24.43-.6 1.15-.92 1.88-.85.73.07 1.39.5 1.71 1.15l.83 1.76c.18.38.18.83-.02 1.2l-.82 1.63c-.2.38-.16.84.08 1.18 1.09 1.64 2.6 3.13 4.23 4.26.37.25.84.29 1.25.1l1.64-.75a1.2 1.2 0 0 0 .58-1.57l-.79-1.85a.9.9 0 0 1 .08-.86Z"
+                  d="M8.5 4.25c.3-.57.85-.9 1.5-.9.4 0 .78.12 1.1.36l1.7 1.27c.56.42.75 1.18.49 1.83l-.8 1.98a.9.9 0 0 0 .27 1l2.4 1.87c.36.28.84.34 1.26.15l1.7-.77a1.8 1.8 0 0 1 2.1.45l1.24 1.45c.48.56.6 1.35.29 2-.9 1.9-2.9 3.14-5.07 3.14-3.46 0-7.4-2.62-10.32-6.7-2.92-4.08-3.74-8.38-1.67-11.24.43-.6 1.15-.92 1.88-.85.73.07 1.39.5 1.71 1.15l.83 1.76c.18.38.18.83-.02 1.2l-.82 1.63c-.2.38-.16.84.08 1.18 1.09 1.64 2.6 3.13 4.23 4.26.37.25.84.29 1.25.1l1.64-.75a1.2 1.2 0 0 0 .58-1.57l-.79-1.85a.9 0 0 1 .08-.86Z"
                 />
               </svg>
               <span>443-547-2317</span>
@@ -99,5 +195,7 @@
         <p class="footer-note">© Built by Sara Luber</p>
       </div>
     </footer>
+
+    <script src="../script.js" defer></script>
   </body>
 </html>

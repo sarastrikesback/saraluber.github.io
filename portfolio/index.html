@@ -4,27 +4,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio — Sara Luber</title>
+    <meta
+      name="description"
+      content="Portfolio highlights from Sara Luber: environmental communications, program operations, clean energy policy research, and community storytelling."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+    <link rel="manifest" href="../site.webmanifest" />
   </head>
-  <body>
+
+  <body class="page-portfolio">
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/">
+        <a class="brand" href="../">
           <span class="brand-name">Sara Luber</span>
           <span class="brand-role">Environmental Communicator</span>
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="/">Home</a>
-          <a href="/about/">About</a>
-          <a class="active" href="/portfolio/">Portfolio</a>
-          <a class="icon-link" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="../">Home</a>
+          <a href="../about/">About</a>
+          <a class="active" href="../portfolio/">Portfolio</a>
+          <a class="icon-link" href="../Luber_Resume.pdf" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M7 3.75h6.75L19.5 9v11.25H7z" stroke-linejoin="round" />
               <path d="M13.5 3.75v5.25H19.5" stroke-linejoin="round" />
@@ -33,14 +52,15 @@
             </svg>
             <span>Resume</span>
           </a>
-          <a href="/contact/">Contact</a>
+          <a href="../contact/">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="page-hero">
+      <section class="page-hero" data-animate>
         <div class="container page-hero__grid page-hero__grid--single">
+          <div class="page-hero__content">
             <span class="eyebrow">Portfolio</span>
             <h1>Experience, education, and project highlights</h1>
             <p>
@@ -55,57 +75,61 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" data-animate>
         <div class="container">
           <div class="section-header">
             <span class="eyebrow">Experience snapshot</span>
             <h2>Recent roles and responsibilities</h2>
             <p>Highlights from roles where I combined strategic communications with data-driven operations.</p>
           </div>
+
           <div class="portfolio-grid">
             <article class="portfolio-card">
               <h3>Assistant to the Office Director — U.S. EPA</h3>
               <p>
-                Led executive communications, scheduling, and SOP development for the Office of Research and Development, Office of Resource Management during a
-                major leadership transition, ensuring teams stayed aligned on priorities.
+                Led executive communications, scheduling, and SOP development for the Office of Research and Development,
+                Office of Resource Management during a major leadership transition—keeping teams aligned on priorities.
               </p>
-              <ul class="badge-list">
-                <span>Strategic Communication</span>
-                <span>Executive Support</span>
-                <span>Federal Policy Alignment</span>
-                <span>Data Visualization</span>
-                <span>Microsoft 365 Suite</span>
+              <ul class="badge-list" aria-label="Skills used">
+                <li>Strategic communication</li>
+                <li>Executive support</li>
+                <li>Federal policy alignment</li>
+                <li>Data visualization</li>
+                <li>Microsoft 365</li>
               </ul>
             </article>
+
             <article class="portfolio-card">
               <h3>Program Operations Administrator — U.S. EPA</h3>
               <p>
                 Built dashboards and database systems that surfaced insights about software usage, budgeting, and research
                 resources for environmental initiatives.
               </p>
-              <ul class="badge-list">
-                <span>Process Improvement</span>
-                <span>Postgres, PowerBI &amp; SQL</span>
-                <span>Data Visualization</span>
+              <ul class="badge-list" aria-label="Skills used">
+                <li>Process improvement</li>
+                <li>Postgres &amp; SQL</li>
+                <li>Power BI</li>
+                <li>Reporting &amp; stakeholder updates</li>
               </ul>
             </article>
+
             <article class="portfolio-card">
               <h3>Energy Policy Research Analyst — NCCETC</h3>
               <p>
                 Analyzed clean energy incentive programs and translated findings into accessible reports for policymakers and
                 community advocates.
               </p>
-              <ul class="badge-list">
-                <span>Clean Energy Advocacy</span>
-                <span>Energy Market Research</span></span>
-                <span>Policy &amp; Incentive Analysis</span>
+              <ul class="badge-list" aria-label="Skills used">
+                <li>Clean energy advocacy</li>
+                <li>Energy market research</li>
+                <li>Policy &amp; incentive analysis</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" data-animate>
         <div class="container">
           <div class="section-header">
             <span class="eyebrow">Selected projects</span>
@@ -115,14 +139,16 @@
               confidence.
             </p>
           </div>
+
           <div class="portfolio-grid">
             <article class="portfolio-card">
               <h3>Resource planning briefings</h3>
               <p>
-                Crafted concise presentations and memos for EPA leadership that translated complex operational data into
-                near-term decisions on staffing, budgeting, and research priorities.
+                Crafted concise presentations and memos for EPA leadership that translated operational data into near-term
+                decisions on staffing, budgeting, and research priorities.
               </p>
             </article>
+
             <article class="portfolio-card">
               <h3>Clean energy incentive reports</h3>
               <p>
@@ -130,10 +156,11 @@
                 public engagement.
               </p>
             </article>
+
             <article class="portfolio-card">
               <h3>Community stewardship storytelling</h3>
               <p>
-                Documented restoration projects for Raleigh Parks and community partners, highlighting local expertise and care
+                Documented restoration projects for Raleigh Parks and community partners—highlighting local expertise and care
                 for shared greenspaces.
               </p>
             </article>
@@ -141,36 +168,38 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" data-animate>
         <div class="container two-column">
           <div class="stack">
             <div class="section-header">
               <span class="eyebrow">Toolkit</span>
               <h2>Skills and platforms I reach for</h2>
               <p>
-                These tools support the research, writing, and operational systems behind every engagement. I’m always learning
-                and adapting to partner needs.
+                These tools support the research, writing, and operational systems behind every engagement. I’m always
+                learning and adapting to partner needs.
               </p>
             </div>
-            <ul class="badge-list">
-              <span>Power BI</span>
-              <span>SQL</span>
-              <span>Python</span>
-              <span>Microsoft 365</span>
-              <span>Data visualization</span>
-              <span>Plain-language writing</span>
-              <span>Stakeholder facilitation</span>
-              <span>Process documentation</span>
+
+            <ul class="badge-list" aria-label="Tools">
+              <li>Power BI</li>
+              <li>SQL</li>
+              <li>Python</li>
+              <li>Microsoft 365</li>
+              <li>Data visualization</li>
+              <li>Plain-language writing</li>
+              <li>Stakeholder facilitation</li>
+              <li>Process documentation</li>
             </ul>
           </div>
+
           <div class="stack">
             <div class="callout">
               <h2>Prefer a deeper dive?</h2>
               <p>
-                I’m happy to walk through detailed examples, share work samples, or tailor a presentation for your team. Let’s
-                schedule time to explore how we can collaborate.
+                I’m happy to walk through detailed examples, share work samples, or tailor a presentation for your team.
+                Let’s schedule time to explore how we can collaborate.
               </p>
-              <a class="button" href="/contact/">
+              <a class="button" href="../contact/">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                   <path d="M5.25 12h13.5" stroke-linecap="round" />
                   <path d="M12 5.25 18.75 12 12 18.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -186,6 +215,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-note">Connect with me</p>
+
         <ul class="footer-links">
           <li>
             <a href="mailto:sarafluber@gmail.com">
@@ -198,16 +228,18 @@
               <span>sarafluber@gmail.com</span>
             </a>
           </li>
+
           <li>
             <a href="tel:4435472317">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                 <path
-                  d="M8.5 4.25c.3-.57.85-.9 1.5-.9.4 0 .78.12 1.1.36l1.7 1.27c.56.42.75 1.18.49 1.83l-.8 1.98a.9.9 0 0 0 .27 1l2.4 1.87c.36.28.84.34 1.26.15l1.7-.77a1.8 1.8 0 0 1 2.1.45l1.24 1.45c.48.56.6 1.35.29 2-.9 1.9-2.9 3.14-5.07 3.14-3.46 0-7.4-2.62-10.32-6.7-2.92-4.08-3.74-8.38-1.67-11.24.43-.6 1.15-.92 1.88-.85.73.07 1.39.5 1.71 1.15l.83 1.76c.18.38.18.83-.02 1.2l-.82 1.63c-.2.38-.16.84.08 1.18 1.09 1.64 2.6 3.13 4.23 4.26.37.25.84.29 1.25.1l1.64-.75a1.2 1.2 0 0 0 .58-1.57l-.79-1.85a.9.9 0 0 1 .08-.86Z"
+                  d="M8.5 4.25c.3-.57.85-.9 1.5-.9.4 0 .78.12 1.1.36l1.7 1.27c.56.42.75 1.18.49 1.83l-.8 1.98a.9.9 0 0 0 .27 1l2.4 1.87c.36.28.84.34 1.26.15l1.7-.77a1.8 1.8 0 0 1 2.1.45l1.24 1.45c.48.56.6 1.35.29 2-.9 1.9-2.9 3.14-5.07 3.14-3.46 0-7.4-2.62-10.32-6.7-2.92-4.08-3.74-8.38-1.67-11.24.43-.6 1.15-.92 1.88-.85.73.07 1.39.5 1.71 1.15l.83 1.76c.18.38.18.83-.02 1.2l-.82 1.63c-.2.38-.16.84.08 1.18 1.09 1.64 2.6 3.13 4.23 4.26.37.25.84.29 1.25.1l1.64-.75a1.2 1.2 0 0 0 .58-1.57l-.79-1.85a.9 0 0 1 .08-.86Z"
                 />
               </svg>
               <span>443-547-2317</span>
             </a>
           </li>
+
           <li>
             <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -221,8 +253,11 @@
             </a>
           </li>
         </ul>
+
         <p class="footer-note">© Built by Sara Luber</p>
       </div>
     </footer>
+
+    <script src="../script.js" defer></script>
   </body>
 </html>
