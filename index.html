@@ -4,31 +4,48 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sara Luber — Environmental Communicator</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Use relative paths so it works on GitHub Pages root OR /repo-name/ -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
   </head>
+
   <body class="page-home">
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/">
+        <a class="brand" href="./">
           <span class="brand-name">Sara Luber</span>
           <span class="brand-role">Environmental Communicator</span>
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a class="active" href="/">Home</a>
-          <a href="/about/">About</a>
-          <a href="/portfolio/">Portfolio</a>
-          <a class="icon-link" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a class="active" href="./">Home</a>
+          <a href="./about/">About</a>
+          <a href="./portfolio/">Portfolio</a>
+          <a class="icon-link" href="./Luber_Resume.pdf" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M7 3.75h6.75L19.5 9v11.25H7z" stroke-linejoin="round" />
               <path d="M13.5 3.75v5.25H19.5" stroke-linejoin="round" />
@@ -37,27 +54,41 @@
             </svg>
             <span>Resume</span>
           </a>
-          <a href="/contact/">Contact</a>
+          <a href="./contact/">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="hero">
+      <section class="hero" data-animate>
         <div class="container hero-grid">
-          <div class="hero-media">
+          <div class="hero-media" data-animate>
             <figure>
-              <img src="Luber_Sara_Headshot.jpeg" alt="Sara Luber smiling outdoors" width="1500" height="2100" />
+              <img
+                src="./Luber_Sara_Headshot.jpeg"
+                alt="Sara Luber smiling outdoors"
+                width="1500"
+                height="2100"
+                loading="eager"
+                decoding="async"
+              />
             </figure>
           </div>
-          <div class="hero-content">
+
+          <div class="hero-content" data-animate>
             <span class="eyebrow">Raleigh, North Carolina</span>
-            <h1 class="hero-title">Hi! I'm Sara</h1>
+            <h1 class="hero-title">Hi! I’m Sara</h1>
+
             <p class="hero-description">
-              I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities, with a focus on clean energy solutions driven by a passion for justice and equity. My expertise in research, analysis, and communication allows me to develop strategies that meet environmental standards while prioritizing equity. I'm eager to apply my skills to advance environmental justice and clean energy initiatives for broad, positive impact.
+              I am dedicated to addressing the unequal impacts of climate change on disadvantaged communities,
+              with a focus on clean energy solutions driven by a passion for justice and equity. My expertise
+              in research, analysis, and communication allows me to develop strategies that meet environmental
+              standards while prioritizing equity. I’m eager to apply my skills to advance environmental justice
+              and clean energy initiatives for broad, positive impact.
             </p>
-            <div class="circle-links">
-              <a class="circle-link resume" href="/Luber_Resume.pdf" target="_blank" rel="noopener">
+
+            <div class="circle-links" aria-label="Quick links">
+              <a class="circle-link resume" href="./Luber_Resume.pdf" target="_blank" rel="noopener">
                 <span class="circle-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                     <path d="M6.5 3.75h7L18.5 8.5v11.75H6.5z" stroke-linejoin="round" />
@@ -68,7 +99,8 @@
                 </span>
                 <span>Resume</span>
               </a>
-              <a class="circle-link portfolio" href="/portfolio/">
+
+              <a class="circle-link portfolio" href="./portfolio/">
                 <span class="circle-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                     <path d="M4.75 7.5h14.5l-1 11.75H5.75z" stroke-linejoin="round" />
@@ -78,7 +110,8 @@
                 </span>
                 <span>Portfolio</span>
               </a>
-              <a class="circle-link contact" href="/contact/">
+
+              <a class="circle-link contact" href="./contact/">
                 <span class="circle-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                     <path d="M5 5.75h14a1.75 1.75 0 0 1 1.75 1.75v9a1.75 1.75 0 0 1-1.75 1.75H5A1.75 1.75 0 0 1 3.25 16.5v-9A1.75 1.75 0 0 1 5 5.75Z" />
@@ -87,7 +120,8 @@
                 </span>
                 <span>Contact</span>
               </a>
-              <a class="circle-link about" href="/about/">
+
+              <a class="circle-link about" href="./about/">
                 <span class="circle-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                     <path d="M12 12.75a3.75 3.75 0 1 0-3.75-3.75A3.75 3.75 0 0 0 12 12.75Z" />
@@ -100,10 +134,12 @@
           </div>
         </div>
       </section>
+    </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-note">Connect with me</p>
+
         <ul class="footer-links">
           <li>
             <a href="mailto:sarafluber@gmail.com">
@@ -116,6 +152,7 @@
               <span>sarafluber@gmail.com</span>
             </a>
           </li>
+
           <li>
             <a href="tel:4435472317">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -126,6 +163,7 @@
               <span>443-547-2317</span>
             </a>
           </li>
+
           <li>
             <a href="https://www.linkedin.com/in/sara-luber-3698111a7/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
@@ -139,8 +177,11 @@
             </a>
           </li>
         </ul>
+
         <p class="footer-note">© Built by Sara Luber</p>
       </div>
     </footer>
+
+    <script src="./script.js" defer></script>
   </body>
 </html>
