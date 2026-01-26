@@ -936,3 +936,13 @@ main {
     transform: none;
   }
 }
+
+/* Contact page spacing tweaks */
+.page-contact .page-hero {
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.page-contact .section {
+  padding-top: clamp(2rem, 4vw, 3rem);
+  }
+]
