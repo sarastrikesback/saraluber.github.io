@@ -6,7 +6,7 @@
     <title>Portfolio — Sara Luber</title>
     <meta
       name="description"
-      content="Portfolio — selected work in environmental communication, program operations, analytics, clean energy research, and GIS-informed climate analysis."
+      content="Portfolio — a growing collection of work in climate communication, clean energy, GIS, analytics, and environmental justice."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +22,62 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
     <link rel="manifest" href="../site.webmanifest" />
+
+    <style>
+      .page-portfolio .portfolio-card {
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        will-change: transform;
+      }
+
+      .page-portfolio .portfolio-card:hover,
+      .page-portfolio .portfolio-card:focus-within {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .page-portfolio .portfolio-card__meta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .page-portfolio .portfolio-card__meta img {
+        height: 26px;
+        width: auto;
+        max-width: 120px;
+        opacity: 0.9;
+      }
+
+      .page-portfolio .portfolio-card__label {
+        font-weight: 600;
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+      }
+
+      .page-portfolio .coming-soon {
+        border: 1px dashed var(--color-border);
+        background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(240,242,248,0.85));
+      }
+
+      .page-portfolio .portfolio-note {
+        margin-top: 1.5rem;
+        color: var(--color-text-muted);
+        max-width: 68ch;
+      }
+
+      .page-portfolio .section-callout {
+        background: var(--color-surface);
+        border-radius: var(--radius-lg);
+        padding: clamp(1.5rem, 4vw, 2.25rem);
+        box-shadow: var(--shadow-subtle);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .page-portfolio .portfolio-card {
+          transition: none;
+        }
+      }
+    </style>
   </head>
 
   <body class="page-portfolio">
@@ -63,186 +119,191 @@
         <div class="container page-hero__grid page-hero__grid--single">
           <div class="page-hero__content" data-animate>
             <span class="eyebrow">Portfolio</span>
-            <h1>Selected work</h1>
+            <h1>Work in progress — thoughtfully built</h1>
             <p>
-              A growing set of examples across environmental communication, program operations, analytics, clean energy research,
-              and GIS-informed climate work. I’m actively expanding these into full case studies.
+              This page is evolving as I continue building a body of work in climate, clean energy,
+              GIS, analytics, and environmental communication. Rather than fill it with vague summaries,
+              I’m using this space to show the kinds of projects I’m actively developing and the direction
+              I’m growing toward.
+            </p>
+            <p>
+              As I begin my graduate program this fall, I plan to add GIS-based and data-driven case studies
+              focused on climate impacts, clean energy transition, and environmental justice.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- PORTFOLIO CARDS -->
+      <!-- CURRENT FOCUS AREAS -->
       <section class="section" data-animate>
         <div class="container">
           <header class="section-header" data-animate>
-            <h2>Case study highlights</h2>
-            <p>Representative projects and work themes — with more detail coming soon.</p>
+            <span class="eyebrow">Current focus areas</span>
+            <h2>The kinds of work I’m building toward</h2>
+            <p>
+              These are the areas where I’m currently developing experience, tools, and project depth.
+            </p>
           </header>
 
           <div class="portfolio-grid" data-animate>
-            <!-- EPA / Program Ops -->
-            <article class="portfolio-card">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
+            <article class="portfolio-card coming-soon">
+              <div class="portfolio-card__meta">
                 <img
-                  src="../epa.png"
-                  alt="U.S. Environmental Protection Agency logo"
+                  src="../ncstate.png"
+                  alt="NC State University logo"
                   loading="lazy"
                   decoding="async"
-                  style="height:26px; width:auto; max-width:90px; opacity:0.9;"
                 />
-                <span style="font-weight:600; color: var(--color-text-muted); font-size:0.95rem;">Program Operations</span>
+                <span class="portfolio-card__label">GIS + spatial analysis</span>
               </div>
 
-              <h3 style="margin-top:0.75rem;">Program operations systems + documentation</h3>
+              <h3 style="margin-top: 0.75rem;">Climate mapping & spatial storytelling</h3>
               <p>
-                Process improvements, SOPs, and workflow updates that supported consistency, handoffs, and stakeholder-ready
-                clarity across program operations.
+                Planned future work includes maps and spatial analyses that examine climate exposure,
+                vulnerability, access, and environmental justice patterns — with a focus on making
+                technical findings clear and usable.
               </p>
-              <ul class="badge-list" aria-label="Tools used">
-                <li><span>Process design</span></li>
-                <li><span>Documentation</span></li>
-                <li><span>Stakeholder support</span></li>
+              <ul class="badge-list" aria-label="Future tools">
+                <li><span>GIS</span></li>
+                <li><span>Spatial data</span></li>
+                <li><span>Climate impacts</span></li>
+                <li><span>Environmental justice</span></li>
               </ul>
             </article>
 
-            <!-- EPA / Analytics -->
-            <article class="portfolio-card">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
-                <img
-                  src="../epa.png"
-                  alt="U.S. Environmental Protection Agency logo"
-                  loading="lazy"
-                  decoding="async"
-                  style="height:26px; width:auto; max-width:90px; opacity:0.9;"
-                />
-                <span style="font-weight:600; color: var(--color-text-muted); font-size:0.95rem;">Analytics</span>
-              </div>
-
-              <h3 style="margin-top:0.75rem;">Operational dashboards + reporting</h3>
-              <p>
-                Reporting and dashboards to support planning, workload visibility, and decision-making — translating complex
-                data into leadership-ready insights.
-              </p>
-              <ul class="badge-list" aria-label="Tools used">
-                <li><span>Power BI</span></li>
-                <li><span>Excel</span></li>
-                <li><span>Data QA</span></li>
-              </ul>
-            </article>
-
-            <!-- NCCETC / Clean Energy -->
-            <article class="portfolio-card">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
+            <article class="portfolio-card coming-soon">
+              <div class="portfolio-card__meta">
                 <img
                   src="../nccetc.png"
                   alt="North Carolina Clean Energy Technology Center logo"
                   loading="lazy"
                   decoding="async"
-                  style="height:26px; width:auto; max-width:120px; opacity:0.9;"
                 />
-                <span style="font-weight:600; color: var(--color-text-muted); font-size:0.95rem;">Clean Energy</span>
+                <span class="portfolio-card__label">Clean energy</span>
               </div>
 
-              <h3 style="margin-top:0.75rem;">Clean energy incentives research + validation</h3>
+              <h3 style="margin-top: 0.75rem;">Energy policy, affordability & transition</h3>
               <p>
-                Policy research and database validation supporting public-facing incentives information — with an emphasis on
-                accuracy, usability, and clarity for broad audiences.
+                I’m interested in projects that explore how policy, incentives, and implementation shape
+                equitable access to clean energy — especially where data and communication can support
+                more informed decision-making.
               </p>
-              <ul class="badge-list" aria-label="Tools used">
+              <ul class="badge-list" aria-label="Focus areas">
                 <li><span>Policy research</span></li>
-                <li><span>Data validation</span></li>
-                <li><span>Public communication</span></li>
+                <li><span>Affordability</span></li>
+                <li><span>Energy transition</span></li>
+                <li><span>Public-facing communication</span></li>
               </ul>
             </article>
 
-            <!-- NC State / GIS -->
-            <article class="portfolio-card">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
+            <article class="portfolio-card coming-soon">
+              <div class="portfolio-card__meta">
                 <img
-                  src="../ncstate.png"
-                  alt="North Carolina State University logo"
+                  src="../epa.png"
+                  alt="U.S. Environmental Protection Agency logo"
                   loading="lazy"
                   decoding="async"
-                  style="height:26px; width:auto; max-width:120px; opacity:0.9;"
                 />
-                <span style="font-weight:600; color: var(--color-text-muted); font-size:0.95rem;">GIS + Spatial Analysis</span>
+                <span class="portfolio-card__label">Analytics + communication</span>
               </div>
 
-              <h3 style="margin-top:0.75rem;">GIS-informed climate mitigation + justice work</h3>
+              <h3 style="margin-top: 0.75rem;">Data visualization & research translation</h3>
               <p>
-                Mapping exposure, access, and risk to support equitable planning — using spatial analysis to connect climate
-                impacts to actionable interventions.
+                A core through-line in my work is turning complex information into something people can
+                understand and use. Future case studies here will focus on dashboards, visuals, and written
+                materials that support decisions across technical and non-technical audiences.
               </p>
               <ul class="badge-list" aria-label="Tools used">
-                <li><span>GIS</span></li>
-                <li><span>Spatial analysis</span></li>
-                <li><span>Climate Science</span></li>
-                <li><span>Environmental Justice</span></li>
-              </ul>
-            </article>
-
-            <!-- Comms / Storytelling -->
-            <article class="portfolio-card">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
-                <span
-                  aria-hidden="true"
-                  style="height:26px; width:26px; border-radius:8px; background: var(--color-surface-muted); display:inline-flex; align-items:center; justify-content:center; box-shadow: var(--shadow-subtle);"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px; height:16px;">
-                    <path d="M6.5 8.5h11" stroke-linecap="round" />
-                    <path d="M6.5 12h7.5" stroke-linecap="round" />
-                    <path d="M6.5 15.5h9" stroke-linecap="round" />
-                    <path d="M7.5 4.75h9a2 2 0 0 1 2 2v10.5a2 2 0 0 1-2 2h-9l-3-3v-11.5a2 2 0 0 1 2-2Z" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <span style="font-weight:600; color: var(--color-text-muted); font-size:0.95rem;">Communication</span>
-              </div>
-
-              <h3 style="margin-top:0.75rem;">Internal & External Communications</h3>
-              <p>
-                Clear, evidence-based writing designed for public and partner audiences — translating research and policy
-                into accessible narratives and usable materials.
-              </p>
-              <ul class="badge-list" aria-label="Tools used">
-                <li><span>Organizational branding</span></li>
-                <li><span>Executive communications</span></li>
+                <li><span>Power BI</span></li>
+                <li><span>Python</span></li>
                 <li><span>Research translation</span></li>
-              </ul>
-            </article>
-
-            <!-- Systems / Cross-functional -->
-            <article class="portfolio-card">
-              <div style="display:flex; align-items:center; gap:0.75rem;">
-                <span
-                  aria-hidden="true"
-                  style="height:26px; width:26px; border-radius:8px; background: var(--color-surface-muted); display:inline-flex; align-items:center; justify-content:center; box-shadow: var(--shadow-subtle);"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px; height:16px;">
-                    <path d="M7.5 8.5h9" stroke-linecap="round" />
-                    <path d="M6 12h12" stroke-linecap="round" />
-                    <path d="M7.5 15.5h9" stroke-linecap="round" />
-                    <path d="M5.5 4.75h13a2 2 0 0 1 2 2v10.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2V6.75a2 2 0 0 1 2-2Z" stroke-linejoin="round" />
-                  </svg>
-                </span>
-                <span style="font-weight:600; color: var(--color-text-muted); font-size:0.95rem;">Systems</span>
-              </div>
-
-              <h3 style="margin-top:0.75rem;">Cross-functional systems support</h3>
-              <p>
-                Bridging operations, analysis, and communication — building lightweight systems that help teams stay aligned and
-                make progress visible.
-              </p>
-              <ul class="badge-list" aria-label="Tools used">
-                <li><span>Process automation</span></li>
-                <li><span>Program operations</span></li>
-                <li><span>Continuous improvement</span></li>
+                <li><span>Decision support</span></li>
               </ul>
             </article>
           </div>
 
-          <div style="margin-top: 1.5rem" data-animate>
-            <a class="button" href="../contact/">Want to collaborate? Let’s connect</a>
+          <p class="portfolio-note" data-animate>
+            I’d rather share fewer, stronger examples than fill this page with placeholders that don’t reflect my actual work.
+            As projects are completed, this page will grow into a more traditional portfolio with case studies, visuals, and
+            technical summaries.
+          </p>
+        </div>
+      </section>
+
+      <!-- WHAT'S COMING NEXT -->
+      <section class="section" data-animate>
+        <div class="container">
+          <div class="section-callout" data-animate>
+            <div class="section-header" style="margin-bottom: 1.25rem;">
+              <span class="eyebrow">What’s next</span>
+              <h2>Projects I plan to add</h2>
+              <p>
+                As I move further into my graduate work, I plan to add a small set of focused portfolio pieces such as:
+              </p>
+            </div>
+
+            <ul class="highlight-list">
+              <li>
+                <strong>GIS-based climate vulnerability mapping</strong>
+                Spatial analysis connecting environmental exposure, demographics, and access.
+              </li>
+              <li>
+                <strong>Clean energy policy or affordability analysis</strong>
+                A project that combines research, data, and communication for a public-facing audience.
+              </li>
+              <li>
+                <strong>Data visualization case study</strong>
+                A dashboard, briefing, or narrative visualization that translates technical insight into decisions.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- IN THE MEANTIME -->
+      <section class="section" data-animate>
+        <div class="container two-column">
+          <div class="stack" data-animate>
+            <div class="section-header">
+              <span class="eyebrow">In the meantime</span>
+              <h2>What this page can still tell you</h2>
+              <p>
+                Even while my project portfolio is still growing, this page reflects the direction of my work
+                and the problems I’m committed to helping solve.
+              </p>
+            </div>
+
+            <ul class="highlight-list">
+              <li>
+                <strong>Climate + energy focus</strong>
+                I’m especially interested in equitable clean energy transition, environmental justice, and climate resilience.
+              </li>
+              <li>
+                <strong>Communication + analytics</strong>
+                I care about making technical information clear, credible, and useful.
+              </li>
+              <li>
+                <strong>GIS + data visualization growth</strong>
+                I’m actively building a portfolio that demonstrates spatial analysis, mapping, and decision support.
+              </li>
+            </ul>
+          </div>
+
+          <div class="stack" data-animate>
+            <div class="callout">
+              <h2>Want to follow along?</h2>
+              <p>
+                I’m always happy to connect with others working in climate, clean energy, GIS, and environmental justice.
+                If you’d like to talk about my background, current interests, or future project work, I’d love to hear from you.
+              </p>
+              <a class="button" href="../contact/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M5.25 12h13.5" stroke-linecap="round" />
+                  <path d="M12 5.25 18.75 12 12 18.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Get in touch</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
