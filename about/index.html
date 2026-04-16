@@ -6,7 +6,7 @@
     <title>About — Sara Luber</title>
     <meta
       name="description"
-      content="About Sara Luber — environmental communicator and program analyst blending communications, analytics, and GIS-informed spatial analysis to support clean energy, climate resilience, and environmental justice."
+      content="About Sara Luber — an environmental communicator and analyst focused on clean energy transition, environmental justice, and translating complex research into clear, actionable insight."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,17 +23,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
     <link rel="manifest" href="../site.webmanifest" />
 
-    <!-- Micro-animation (safe, subtle). No need to edit your main CSS. -->
     <style>
       .page-about .info-card {
         transition: transform 220ms ease, box-shadow 220ms ease;
         will-change: transform;
       }
+
       .page-about .info-card:hover,
       .page-about .info-card:focus-within {
         transform: translateY(-4px);
         box-shadow: var(--shadow-soft);
       }
+
       .page-about .text-link {
         display: inline-flex;
         align-items: center;
@@ -44,7 +45,6 @@
         font-weight: 600;
       }
 
-      /* NEW: small card icon/image at top of About cards */
       .page-about .card-icon {
         width: 44px;
         height: auto;
@@ -52,9 +52,18 @@
         opacity: 0.95;
       }
 
+      .page-about .card-icon--clifton {
+        max-height: 72px;
+        width: auto;
+        transform: scale(1.15);
+        transform-origin: left center;
+      }
+
       @media (prefers-reduced-motion: reduce) {
-        .page-about .info-card {
+        .page-about .info-card,
+        .page-about .card-icon--clifton {
           transition: none;
+          transform: none;
         }
       }
     </style>
@@ -99,125 +108,111 @@
         <div class="container page-hero__grid page-hero__grid--single">
           <div class="page-hero__content" data-animate>
             <span class="eyebrow">About</span>
-            <h1>Rooted in care. Driven by clarity.</h1>
+            <h1>Rooted in purpose. Focused on impact.</h1>
 
             <p>
-              I’m Sara — an environmental communicator and analyst based in Raleigh, North Carolina
-              (<strong>open to relocation</strong>). I’m motivated by work that protects human health and the environment, supports communities, and takes the long view of what we owe to future generations.
+              My motivation to contribute to the clean energy transition comes from both my professional
+              experience and a strong commitment to addressing the interconnected challenges of energy access,
+              affordability, and environmental impact.
             </p>
 
             <p>
-              I’m especially drawn to work that can endure beyond political cycles — grounded in science, empathy, and practical impact. I care about helping people understand complex climate and clean energy issues, not just in theory, but in ways that feel usable, relevant, and fair.
+              I believe energy is fundamental to modern life, yet current systems are often both economically
+              burdensome for communities and environmentally unsustainable. I’m driven to help advance solutions
+              that improve access, reduce costs, and support a more sustainable energy system for both people
+              and the planet.
             </p>
 
             <p>
-              My interests lay at the intersection of communication and data: translating research, policy, and analysis into clear information, tools, and decisions that people can trust — and that actually help systems work better over time.
+              My work is grounded in communication, analysis, and long-term thinking. I’m especially interested
+              in translating complex climate and clean energy information into clear, actionable insights that
+              can support real decisions and durable change.
+            </p>
+
+            <p>
+              I’m currently based in <strong>Raleigh, North Carolina</strong>, and I’m
+              <strong>flexible and open to relocation</strong> for opportunities that align with this work.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- STORY / PATH -->
+      <!-- PERSONAL / HUMAN SIDE -->
       <section class="section" data-animate>
         <div class="container">
           <div class="section-header" data-animate>
-            <span class="eyebrow">My path</span>
-            <h2>My Background</h2>
+            <span class="eyebrow">Outside of work</span>
+            <h2>A bit more about me</h2>
             <p>
-              The places I’ve lived and learned shaped what I care about: community, public service, and long-term climate solutions.
+              The routines, interests, and local connections that keep me grounded, curious, and connected
+              to the communities around me.
             </p>
           </div>
 
           <div class="card-grid" data-animate>
             <article class="info-card">
-              <!-- NEW icon -->
-              <img class="card-icon" src="../mdflag.png" alt="Maryland state flag" loading="lazy" decoding="async" />
-
-              <h3>Where I grew up</h3>
+              <h3>Reading</h3>
               <p>
-                I’m originally from <strong>Northern Maryland</strong>, where I lived in a smaller town with a few animals and lots of siblings.
-                Here, I developed a strong appreciation for the four seasons of weather, community, and accessbility to public spaces.
+                I enjoy reading, especially work that explores systems, justice, and human behavior. It shapes
+                how I think about communication and helps me approach environmental work with both empathy and
+                perspective.
               </p>
             </article>
 
             <article class="info-card">
-              <!-- NEW icon -->
-              <img class="card-icon" src="../ncstate.png" alt="NC State logo" loading="lazy" decoding="async" />
-
-              <h3>Undergrad: Political Science</h3>
+              <h3>Plants &amp; daily rituals</h3>
               <p>
-                I studied <strong>Political Science</strong> to better understand how policy shapes people’s lives — and why systemic inequities persist for underserved communities.
-                That foundation strengthened my empathy and sharpened my interest in justice-centered work.
+                Taking care of my plants has become one of the small routines that helps me slow down and stay
+                present. I value building balance into my life, especially while doing work that asks us to think
+                seriously about long-term change.
               </p>
             </article>
 
             <article class="info-card">
-              <!-- NEW icon -->
-              <img class="card-icon" src="../ibm.png" alt="IBM logo" loading="lazy" decoding="async" />
-
-              <h3>Building technical depth</h3>
+              <h3>Raleigh community</h3>
               <p>
-                After graduating, I earned two professional certificates through IBM to strengthen my technical background and confirm my
-                interest in advancing my education.
-              </p>
-
-              <p style="margin-top: 0.5rem">
-                <a class="text-link" href="../Luber%20Data%20Analyst.pdf" target="_blank" rel="noopener">
-                  IBM Data Analytics certificate →
-                </a>
-                <br />
-                <a class="text-link" href="../Luber%20Data%20Science.pdf" target="_blank" rel="noopener">
-                  IBM Data Science certificate →
-                </a>
-              </p>
-            </article>
-
-            <article class="info-card">
-              <!-- NEW icon -->
-              <img class="card-icon" src="../ncstate.png" alt="NC State logo" loading="lazy" decoding="async" />
-
-              <h3>Now: Climate Change &amp; Society (M.S.) + GIS</h3>
-              <p>
-                I’m currently pursuing my <strong>M.S. in Climate Change &amp; Society at NC State</strong> — an interdisciplinary program —
-                with a <strong>professional certification in GIS</strong>. I’m focused on spatial analysis that supports climate mitigation
-                and environmental justice.
+                I enjoy staying active in the Raleigh community through volunteering, exploring local businesses,
+                and finding ways to stay connected to the place I live. I care about local environments and the
+                people who shape them.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- HOW I WORK (PERSONALITY / STRENGTHS) -->
+      <!-- HOW I WORK -->
       <section class="section" data-animate>
         <div class="container">
           <div class="section-header" data-animate>
             <span class="eyebrow">How I work</span>
             <h2>Values-driven, structured, and people-centered</h2>
             <p>
-              These frameworks help describe how I approach collaboration, decision-making, and long-term work — especially in complex,
-              mission-driven environments.
+              These frameworks offer a snapshot of how I approach collaboration, problem-solving, and long-term
+              work in complex, mission-driven environments.
             </p>
           </div>
 
           <div class="card-grid" data-animate>
-            <!-- CliftonStrengths -->
             <article class="info-card">
-                     <img
-        class="card-icon card-icon--clifton"
-        src="../cliftonstrengths.png"
-        alt="CliftonStrengths logo"
-        loading="lazy"
-        decoding="async"
+              <img
+                class="card-icon card-icon--clifton"
+                src="../cliftonstrengths.png"
+                alt="CliftonStrengths logo"
+                loading="lazy"
+                decoding="async"
               />
-          <h3>CliftonStrengths — Achiever</h3>
+
+              <h3>CliftonStrengths — Achiever</h3>
+
               <p>
-                <strong>Achiever</strong> reflects my internal drive to make steady, meaningful progress. I’m energized by moving work
-                forward and take pride in being reliable, organized, and accountable — especially when projects are complex or evolving.
+                <strong>Achiever</strong> reflects my internal drive to create momentum and make steady,
+                meaningful progress. I’m energized by moving work forward and take pride in being reliable,
+                organized, and accountable — especially when projects are complex or evolving.
               </p>
 
               <p>
-                This strength shows up in how I manage timelines, follow through on commitments, and support teams by creating momentum and
-                structure. I value productivity not for its own sake, but because it enables real-world impact.
+                This shows up in how I manage timelines, follow through on commitments, and help teams build
+                structure and clarity. I value productivity because it enables real-world impact.
               </p>
 
               <a
@@ -230,8 +225,7 @@
               </a>
             </article>
 
-            <!-- Myers-Briggs / 16Personalities -->
-           <article class="info-card">
+            <article class="info-card">
               <img
                 class="card-icon"
                 src="../mbti.png"
@@ -239,82 +233,28 @@
                 loading="lazy"
                 decoding="async"
               />
-            
+
               <h3>Myers–Briggs — Advocate (INFJ-T)</h3>
+
               <p>
-                As an <strong>INFJ (Advocate)</strong>, I’m motivated by work that aligns with deeply held values and contributes to
-                long-term good. I tend to think in systems, anticipate downstream impacts, and approach collaboration with empathy and care.
+                As an <strong>INFJ (Advocate)</strong>, I’m motivated by work that aligns with deeply held
+                values and contributes to long-term good. I naturally think in systems, anticipate downstream
+                impacts, and approach collaboration with empathy and intention.
               </p>
 
               <p>
-                This perspective shapes how I communicate research, design equitable solutions, and support teams working on climate, clean
-                energy, and environmental justice initiatives. I value clarity, purpose, and thoughtful decision-making.
+                This perspective shapes how I communicate research, design equitable solutions, and contribute
+                to climate and clean energy work — always aiming for clarity, purpose, and thoughtful impact.
               </p>
 
-              <a href="https://www.16personalities.com/infj-personality" target="_blank" rel="noopener" class="text-link">
+              <a
+                href="https://www.16personalities.com/infj-personality"
+                target="_blank"
+                rel="noopener"
+                class="text-link"
+              >
                 Read more about the Advocate personality →
               </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- BEYOND WORK -->
-      <section class="section" data-animate>
-        <div class="container">
-          <div class="section-header" data-animate>
-            <span class="eyebrow">Beyond work</span>
-            <h2>What keeps me curious and grounded</h2>
-            <p>
-              The personal interests and experiences that shape how I think about storytelling, care, and community.
-            </p>
-          </div>
-
-          <div class="card-grid" data-animate>
-            <article class="info-card">
-              <h3>Reading</h3>
-              <p>
-                I’m a big reader — especially work that explores voice, accountability, and complexity. Those themes influence how I think
-                about environmental storytelling and public-facing communication.
-              </p>
-
-              <img
-                class="inline-photo"
-                src="../roxane%20gay.jpg"
-                alt="Sara at a Roxane Gay event in Washington, DC"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-
-            <article class="info-card">
-              <h3>Sewing, quilting &amp; making</h3>
-              <p>
-                I sew in my free time and tend to be a part of craft shows in the Triangle Area. It’s a creative outlet that reinforces
-                patience and iteration. It is also a great way to meet new folks in the community!
-              </p>
-
-              <div class="photo-grid" aria-label="Sewing project photos">
-                <img src="../Boxed%20Pouch.JPG" alt="Handmade boxed pouch" loading="lazy" decoding="async" />
-                <img src="../Laptop%20Sleeve.JPG" alt="Handmade laptop sleeve" loading="lazy" decoding="async" />
-                <img src="../Pickleball%20Bag.JPG" alt="Handmade pickleball bag" loading="lazy" decoding="async" />
-              </div>
-            </article>
-
-            <article class="info-card">
-              <h3>Concerts, movies &amp; exploring</h3>
-              <p>
-                I love live music, movies, and exploring new places — and I’m always excited by the chance to see more of the world. That’s
-                one reason I’m open to relocation and motivated by opportunities that expand my perspective.
-              </p>
-
-              <img
-                class="inline-photo"
-                src="../cary%20ducks.jpg"
-                alt="Ducks in Cary, North Carolina"
-                loading="lazy"
-                decoding="async"
-              />
             </article>
           </div>
         </div>
