@@ -419,6 +419,10 @@ main {
   margin-bottom: 1rem;
   opacity: 0.95;
   transform: none;
+
+  display: block;
+  align-self: flex-start;
+  margin-bottom: 0.85rem;
 }
 
 /* Callout + button */
